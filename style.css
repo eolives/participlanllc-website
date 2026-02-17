@@ -1,0 +1,123 @@
+body {
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 1.5px;
+    
+    background-image: 
+        linear-gradient(rgba(200, 200, 200, 0.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 200, 200, 0.5) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0 auto; 
+    padding: 20px; 
+    max-width: 1120px;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'franklin-gothic-atf', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    display: flex;
+    align-items: center; /* Vertically centers them */
+    justify-content: center; /* Horizontally centers both */
+    gap: -10px; /* Space between image and text */
+    margin: 32px 0 0 0;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    
+    nav a {
+        margin: 0;
+    }
+}
+
+/* ── Clockwise logo spin ── */
+@keyframes spin-clockwise {
+    0%   { transform: rotate(0deg); }
+    10%  { transform: rotate(360deg); }  /* Quick spin in first 10% */
+    100% { transform: rotate(360deg); }  /* Hold at 360 for the rest */
+}
+
+.logo-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    animation: spin-clockwise 8s linear infinite;
+    transform-origin: center center;
+}
+
+/* ── Sequential color cycle on h1 text ── */
+/* Colors: blue → pink → green → orange → purple → back to default */
+@keyframes color-cycle {
+    0%,  100% { color: #333333; }
+    15%        { color: #7DD2F4; }   /* blue  */
+    25%         { color: #333333; }
+    50%        { color: #E90A8D; }   /* pink  */
+    60%         { color: #333333;}
+    90%        { color: #9ccc58; }   /* green */
+}
+
+.color-cycle {
+    animation: color-cycle 12s ease-in-out infinite;
+}
+
+a {
+    color: #333333;
+    text-decoration: none;
+    margin: 0 0 0 32px; /* Currently sets the space just between the nav items*/
+    transition: color 0.3s;
+}
+
+a.link-1:hover { /* About */
+    color: #7DD2F4;
+}
+
+a.link-2:hover { /* Services */
+    color: #E90A8D;
+}
+
+a.link-3:hover { /* Contact */
+    color: #9ccc58;
+}
+
+a.link-4:hover {
+    color: #000000;
+}
+
+section {
+    margin: 4px 0 32px 0;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    margin: 16px 0px 0px 0px;
+}

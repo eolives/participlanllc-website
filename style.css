@@ -38,6 +38,13 @@ h1 {
     h1 {
         font-size: 32px;
     }
+
+    section {
+        font-size: 16px;
+        margin: 8px 0 24px 0;
+        line-height: 1.4;
+        padding: 0 10px;
+    }
     
     nav {
         display: flex;
@@ -122,3 +129,4 @@ footer a {
     margin: 16px 0px 0px 0px;
 
 }
+

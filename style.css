@@ -117,6 +117,9 @@ a.link-4:hover {
 section {
     margin: 4px 0 32px 0;
     text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 footer {
@@ -129,4 +132,5 @@ footer a {
     margin: 16px 0px 0px 0px;
 
 }
+
 

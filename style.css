@@ -245,6 +245,7 @@ main {
 @media (max-width: 768px) {
     .about-content {
         margin: 32px auto;
+        padding: 0 10px; 
     }
     
     .about-section h2 {
@@ -253,5 +254,6 @@ main {
     
     .focus-areas ul {
         grid-template-columns: 1fr; /* Single column layout on mobile */
+        padding: 0 10px; 
     }
 }

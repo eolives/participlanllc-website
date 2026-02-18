@@ -1,101 +1,142 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   BODY STYLES - Base styles for the entire page
+   ═══════════════════════════════════════════════════════════════════════════ */
+
 body {
-    font-family: Arial;
-    font-size: 16px;
-    line-height: 1.5;
+    font-family: Arial; /* Sets the default font for all text on the page*/
+    font-size: 16px; /* Base font size - 16px is standard web default*/
+    line-height: 1.5; /* Line height multiplier - creates comfortable spacing between lines of text*/
     
+    /* Creates a grid pattern background using two gradient layers*/
     background-image: 
-        linear-gradient(rgba(200, 200, 200, 0.5) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(200, 200, 200, 0.5) 1px, transparent 1px);
-    background-size: 24px 24px;
-    background-color: #ffffff;
-    color: #333333;
-    margin: 0 auto; 
-    padding: 20px; 
-    max-width: 1120px;
-    width: 100%;
-    box-sizing: border-box; 
+        linear-gradient(rgba(200, 200, 200, 0.5) 1px, transparent 1px), /* Horizontal lines - gray with 50% opacity*/
+        linear-gradient(90deg, rgba(200, 200, 200, 0.5) 1px, transparent 1px); /* Vertical lines - rotated 90 degrees*/
+    background-size: 24px 24px; /* Makes each grid square 24px x 24px */
+    background-color: #ffffff; /* White background behind the grid */
+    background-attachment: fixed; /* Keeps background stationary while content scrolls over it */
+    color: #333333; /* Dark grey text color - almost black */
+    margin: 0 auto; /* 0 top/bottom margin, auto left/right centers the body */
+    padding: 0 20px; /* 20px space on all sides inside the body */
+    height: 100vh; 
+    overflow: hidden;
+    display: flex; 
+    flex-direction: column; 
+    max-width: 1120px; /* Maximum width prevents content from getting too wide on large screens */
+    width: 100%; /* Takes full width up to the max width */
+    box-sizing: border-box; /* Includes padding in the total width calculation */
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   HEADER STYLES - Logo, title, tagline, and navigation
+   ═══════════════════════════════════════════════════════════════════════════ */
 
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* Uses flexbox layout for flexible positioning */
+    flex-direction: column; /* Stacks children vertically (logo, tagline, nav) */
+    align-items: center; /* Centers children horizontally */
+    justify-content: center; /* Centers children vertically */
+    padding: 0 0 24px 0; /* 0 top, 24px bottom, 0 left/right */
+    position: sticky; /* Scrolls with page until reaching the top, then stays fixed */
+    top: 0; /* Position where header sticks at top of viewport */
+    z-index: 100; /* Stacking order - ensures header stays above other content */
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   H1 STYLES - Main heading with logo and company name
+   ═══════════════════════════════════════════════════════════════════════════ */
 
 h1 {
-    font-family: 'franklin-gothic-atf', sans-serif;
-    font-size: 40px;
-    font-weight: 800;
-    display: flex;
-    align-items: center; /* Vertically centers them */
-    justify-content: center; /* Horizontally centers both */
+    font-family: 'franklin-gothic-atf', sans-serif; /* Custom font from Adobe Typekit */
+    font-size: 40px; /* Large heading size */
+    font-weight: 800; /* Extra bold weight */
+    display: flex; /* Flexbox to arrange logo and text horizontally */
+    align-items: center; /* Vertically centers logo and text with each other */
+    justify-content: center; /* Horizontally centers the entire h1 content */
     gap: -10px; /* Space between image and text */
-    margin: 32px 0 0 0;
+    flex-wrap: wrap; /* Allows items to wrap to new line on small screens */
+    text-align: center; /* Centers text if it wraps to multiple lines */
+    margin: 32px 0 0 0; /* Removes default browser margin from h1 */ 
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 32px;
-    }
+/* ═══════════════════════════════════════════════════════════════════════════
+   MOBILE RESPONSIVE STYLES - Adjustments for screens 768px and smaller
+   ═══════════════════════════════════════════════════════════════════════════ */
 
-    section {
-        font-size: 16px;
-        margin: 8px 0 24px 0;
-        line-height: 1.4;
-        padding: 0 10px;
+@media (max-width: 768px) { /* Only applies when viewport is 768px wide or less */
+    h1 {
+        font-size: 32px; /* Smaller heading on mobile for better fit */
     }
     
+    section {
+        font-size: 14px; /* Smaller tagline text on mobile */
+        margin: 8px 0 24px 0; /* Adjusted spacing: 8px top, 0 left/right, 24px bottom */
+        line-height: 1.4; /* Tighter line height for mobile */
+        padding: 0 10px; /* 10px padding left/right to prevent edge touching */
+    }
+
     nav {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        align-items: center;
+        display: flex; /* Flexbox for navigation links */
+        flex-direction: column; /* Stacks nav links vertically on mobile */
+        gap: 12px; /* 12px space between each nav link */
+        align-items: center; /* Centers links horizontally */
     }
     
     nav a {
-        margin: 0;
+        margin: 0; /* Removes horizontal margin (since links are now stacked) */
     }
 }
 
-/* ── Clockwise logo spin ── */
-@keyframes spin-clockwise {
-    0%   { transform: rotate(0deg); }
-    10%  { transform: rotate(360deg); }  /* Quick spin in first 10% */
-    100% { transform: rotate(360deg); }  /* Hold at 360 for the rest */
+/* ═══════════════════════════════════════════════════════════════════════════
+   LOGO ANIMATION - Clockwise spin (index.html only)
+   ═══════════════════════════════════════════════════════════════════════════ */
+@keyframes spin-clockwise { /* Defines animation named "spin-clockwise" */
+    0%   { transform: rotate(0deg); } /* Starting position - no rotation */
+    10%  { transform: rotate(360deg); }  /* At 10% of animation - full rotation complete */
+    100% { transform: rotate(360deg); }  /* Stays at 360° for rest of animation cycle */
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   LOGO WRAPPER - Container for logo images
+   ═══════════════════════════════════════════════════════════════════════════ */
 
 .logo-wrap {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-    flex-shrink: 0;
-    animation: spin-clockwise 8s linear infinite;
+    display: inline-flex; /* Inline flexbox - shrinks to content size */
+    align-items: center; /* Centers logo image vertically */
+    justify-content: center; /* Centers logo image horizontally */
+    width: 80px; /* Fixed width matching logo size */
+    height: 80px; /* Fixed height matching logo size */
+    flex-shrink: 0; /* Prevents wrapper from shrinking in flex container */
+    animation: spin-clockwise 8s linear infinite; /* Applies spin-clockwise animation, 8 seconds, loops forever */
     transform-origin: center center;
+    position: relative; /* Creates positioning context for absolutely positioned children */
+    align-self: center; /* Centers the wrapper itself within parent flex container */
 }
 
-/* ── Sequential color cycle on h1 text ── */
-/* Colors: blue → pink → green → orange → purple → back to default */
-@keyframes color-cycle {
+/* ═══════════════════════════════════════════════════════════════════════════
+   COLOR CYCLE ANIMATION - Company name cycles through brand colors (not active)
+   ═══════════════════════════════════════════════════════════════════════════ */
+@keyframes color-cycle { /* Defines animation that cycles through different colors */
     0%,  100% { color: #333333; }
     15%        { color: #7DD2F4; }   /* blue  */
     25%         { color: #333333; }
     50%        { color: #E90A8D; }   /* pink  */
     60%         { color: #333333;}
-    90%        { color: #9ccc58; }   /* green */
+    90%        { color: #fcf754; }   /* yellow */
 }
 
 .color-cycle {
-    animation: color-cycle 12s ease-in-out infinite;
+    animation: color-cycle 12s ease-in-out infinite; /* Applies color-cycle animation, 6 seconds, smooth easing, loops forever */
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   LINK STYLES - Navigation and footer links
+   ═══════════════════════════════════════════════════════════════════════════ */
+
 a {
-    color: #333333;
-    text-decoration: none;
-    margin: 0 0 0 32px; /* Currently sets the space just between the nav items*/
-    transition: color 0.3s;
+    color: #333333; /* Dark gray link color (matches body text) */
+    text-decoration: none; /* Removes underline from links */
+    margin: 0 0 0 32px; /* 32px left margin creates space between nav links */
+    transition: color 0.3s; /* Smooth color change over 0.3 seconds on hover */
 }
 
 a.link-1:hover { /* About */
@@ -107,30 +148,110 @@ a.link-2:hover { /* Services */
 }
 
 a.link-3:hover { /* Contact */
-    color: #9ccc58;
+    color: #fcf754;
 }
 
 a.link-4:hover {
     color: #000000;
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   SECTION STYLES - Tagline section
+   ═══════════════════════════════════════════════════════════════════════════ */
+
 section {
-    margin: 4px 0 32px 0;
-    text-align: center;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    max-width: 100%;
+    margin: 4px 0 32px 0; /* Spacing: 4px top, 0 left/right, 32px bottom */
+    text-align: center; /* Centers text horizontally */
+    word-wrap: break-word; /* Allows long words to break and wrap to next line */
+    overflow-wrap: break-word; /* Modern version of word-wrap for better browser support */
+    max-width: 100%; /* Ensures section never exceeds container width */
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   FOOTER STYLES - Social media links at bottom of page
+   ═══════════════════════════════════════════════════════════════════════════ */
+
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* Flexbox for centering content at bottom of the page */ 
+    align-items: center; /* Centers content vertically */ 
+    justify-content: center; /* Centers content horizontally */
+    margin-top: 24px; /* 24px space above footer */
 }
 
 footer a {
-    margin: 16px 0px 0px 0px;
-
+    margin: 0px 0px 8px 0px; /* 8px bottom margin */
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   ABOUT PAGE STYLES - Styles specific to the About page
+   ═══════════════════════════════════════════════════════════════════════════ */
 
+main {
+    flex: 1; /* Main element grows to fill all available space */ 
+    overflow-y: auto; /* Creates vertical scroll bar when content is overflowed */ 
+    width: 100%; /* Makes main take up full width of the container */
+}  
+
+.about-content {
+    max-width: 800px; /* Narrower width for readability */
+    margin: 0 auto;
+    padding: 0px 20px; 
+}
+
+.about-section {
+    margin-bottom: 48px; /* 48px space below each section */ 
+}
+
+.about-section h2 {
+    font-family: 'franklin-gothic-atf', sans-serif;
+    font-size: 28px;
+    font-weight: 700; /* Bold weight */ 
+    color: #333333;
+    margin-bottom: 16px; /* 16px space below heading */
+    border-bottom: 2px solid #7DD2F4; /* Blue underline, 2px thick */
+    padding-bottom: 8px; /* 8px space between text and underline*/ 
+}
+
+.about-section p {
+    margin-bottom: 16px; /* 16px space below each paragraph */
+    line-height: 1.6; /* Comfortable reading line height */
+}
+
+.focus-areas ul {
+    list-style: none; /* Removes bullet points */ 
+    padding: 0; /* Removes default list padding */
+    display: grid; /* Uses CSS grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates responsive columns, minimum 200px wide */
+    gap: 12px; /* 12px space between grid items */
+}
+
+.focus-areas li {
+    padding: 12px 16px; /* 12px top/bottom, 16px left/right padding */
+    background-color: #f5f5f5; /* Light gray background */
+    border-left: 3px solid #E90A8D; /* Pink left border, 3px wide */
+    transition: all 0.3s; /* Smooth transition for all properties over 0.3 seconds*/
+}
+
+.focus-areas li:hover {
+    background-color: #e8e8e8; /* Slightly darker gray hover */
+    border-left-color: #fcf754; /* Border changes to yellow on hover */
+    transform: translateX(4px); /* Shift items 4px to the right on hover */
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   ABOUT PAGE MOBILE STYLES - Responsive adjustments for About page
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+    .about-content {
+        margin: 32px auto;
+    }
+    
+    .about-section h2 {
+        font-size: 24px;
+    }
+    
+    .focus-areas ul {
+        grid-template-columns: 1fr; /* Single column layout on mobile */
+    }
+}

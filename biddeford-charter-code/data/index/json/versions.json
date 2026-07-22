@@ -1,0 +1,26 @@
+{
+  "charter": {
+    "currentThrough": "As transcribed from https://ecode360.com/BI3074 on 2026-07-09",
+    "indexedAt": "2026-07-20T22:53:53.882Z",
+    "sectionCount": 74,
+    "dataQuality": "hand-verified"
+  },
+  "ordinances": {
+    "currentThrough": "As transcribed from https://ecode360.com/BI3074 on 2026-07-14",
+    "indexedAt": "2026-07-20T22:53:53.902Z",
+    "sectionCount": 1239,
+    "dataQuality": "automated-parse"
+  },
+  "land_dev": {
+    "currentThrough": "As transcribed from https://ecode360.com/BI3074 on 2026-07-14",
+    "indexedAt": "2026-07-20T22:53:53.911Z",
+    "sectionCount": 209,
+    "dataQuality": "automated-parse"
+  },
+  "home_rule": {
+    "currentThrough": "As transcribed from https://legislature.maine.gov/statutes/30-A/title30-Ach111sec0.html on 2025-10-23",
+    "indexedAt": "2026-07-20T22:53:53.912Z",
+    "sectionCount": 9,
+    "dataQuality": "hand-verified"
+  }
+}

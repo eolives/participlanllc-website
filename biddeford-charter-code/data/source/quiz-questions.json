@@ -1,0 +1,999 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "theme": 1,
+      "type": "mc",
+      "q": "What is the primary purpose of Biddeford's City Charter?",
+      "options": [
+        "To establish city tax rates",
+        "To serve as the City's constitution",
+        "To regulate businesses",
+        "To list every city ordinance"
+      ],
+      "correct": 1,
+      "explain": "The Charter is Biddeford's foundational governing document — it establishes the structure of city government and grants its powers, the way a constitution does for a state or country.",
+      "citation": "Art. I",
+      "group": "I"
+    },
+    {
+      "id": 2,
+      "theme": 1,
+      "type": "mc",
+      "q": "Which document contains most of Biddeford's day-to-day local laws?",
+      "options": [
+        "The City Charter",
+        "The Code of Ordinances",
+        "The Comprehensive Plan",
+        "The Annual Budget"
+      ],
+      "correct": 1,
+      "explain": "The Charter sets up the framework of government; the Code of Ordinances holds the detailed, day-to-day laws passed under that framework.",
+      "citation": "Art. XII, Sec. 2",
+      "group": "XII"
+    },
+    {
+      "id": 3,
+      "theme": 1,
+      "type": "mc",
+      "q": "Which of these is most likely to require changing the Charter?",
+      "options": [
+        "Creating a new parking regulation",
+        "Changing the City's form of government",
+        "Setting next year's tax rate",
+        "Approving a road project"
+      ],
+      "correct": 1,
+      "explain": "Structural changes — like altering how the City's government itself is organized — go to the heart of the Charter and require the Charter's own amendment process, not an ordinary vote.",
+      "citation": "Art. XII, Sec. 6",
+      "group": "XII"
+    },
+    {
+      "id": 4,
+      "theme": 1,
+      "type": "mc",
+      "q": "Which best describes the relationship between the Charter and City ordinances?",
+      "options": [
+        "Ordinances override the Charter",
+        "The Charter establishes the framework, while ordinances provide detailed laws",
+        "They are the same document",
+        "Ordinances only apply during emergencies"
+      ],
+      "correct": 1,
+      "explain": "Ordinances operate within — and must be consistent with — the framework the Charter sets up. They can't override it.",
+      "citation": "Art. XII, Sec. 2",
+      "group": "XII"
+    },
+    {
+      "id": 5,
+      "theme": 1,
+      "type": "tf",
+      "q": "True or False: Every Biddeford resident should understand the Charter because it explains how local government works.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 0,
+      "explain": "That's the whole idea behind this quiz! The Charter lays out who holds power, how decisions get made, and how residents can participate — genuinely useful things to know.",
+      "citation": "Art. I",
+      "group": "I"
+    },
+    {
+      "id": 6,
+      "theme": 2,
+      "type": "mc",
+      "q": "Who serves as Biddeford's Chief Executive?",
+      "options": [
+        "Mayor",
+        "City Manager",
+        "Council President",
+        "City Clerk"
+      ],
+      "correct": 0,
+      "explain": "The Charter names the Mayor as the City's Chief Executive — though as you'll see in a few other questions, day-to-day department operations are actually run by the City Manager.",
+      "citation": "Art. II, Sec. 1",
+      "group": "II"
+    },
+    {
+      "id": 7,
+      "theme": 2,
+      "type": "mc",
+      "q": "Who oversees the day-to-day operations of City government?",
+      "options": [
+        "Mayor",
+        "City Manager",
+        "City Council",
+        "Finance Director"
+      ],
+      "correct": 1,
+      "explain": "The City Manager is the City's chief administrative officer, responsible for the day-to-day administration of City affairs and direct supervision of departments.",
+      "citation": "Art. IV, Sec. 2",
+      "group": "IV"
+    },
+    {
+      "id": 8,
+      "theme": 2,
+      "type": "mc",
+      "q": "Which body adopts the City's annual budget?",
+      "options": [
+        "Mayor",
+        "Budget Committee",
+        "City Council",
+        "Finance Committee"
+      ],
+      "correct": 2,
+      "explain": "The Budget Committee proposes a budget and the City Council formally adopts the annual appropriation resolve.",
+      "citation": "Art. XI, Sec. 3",
+      "group": "XI"
+    },
+    {
+      "id": 9,
+      "theme": 2,
+      "type": "mc",
+      "q": "Which body oversees the public schools?",
+      "options": [
+        "City Council",
+        "Mayor",
+        "School Committee",
+        "City Manager"
+      ],
+      "correct": 2,
+      "explain": "The School Committee has all powers and duties for the care and management of Biddeford's public schools.",
+      "citation": "Art. V, Sec. 3",
+      "group": "V"
+    },
+    {
+      "id": 10,
+      "theme": 2,
+      "type": "mc",
+      "q": "Who prepares the proposed municipal budget?",
+      "options": [
+        "Finance Committee",
+        "Mayor",
+        "City Manager",
+        "City Clerk"
+      ],
+      "correct": 2,
+      "explain": "The City Manager prepares and submits the annual municipal budget (the School Department submits its own budget separately, through the Superintendent).",
+      "citation": "Art. IV, Sec. 2",
+      "group": "IV"
+    },
+    {
+      "id": 11,
+      "theme": 4,
+      "type": "mc",
+      "q": "How often are municipal elections held?",
+      "options": [
+        "Every year",
+        "Every two years",
+        "Every four years",
+        "Every six years"
+      ],
+      "correct": 1,
+      "explain": "Biddeford holds regular municipal elections biennially — every two years.",
+      "citation": "Art. VIII, Sec. 1",
+      "group": "VIII"
+    },
+    {
+      "id": 12,
+      "theme": 4,
+      "type": "mc",
+      "q": "How many wards does Biddeford have?",
+      "options": [
+        "Five",
+        "Six",
+        "Seven",
+        "Eight"
+      ],
+      "correct": 2,
+      "explain": "For election purposes, the City is divided into seven wards.",
+      "citation": "Art. III, Sec. 1",
+      "group": "III"
+    },
+    {
+      "id": 13,
+      "theme": 4,
+      "type": "mc",
+      "q": "How are at-large councilors different from ward councilors?",
+      "options": [
+        "At-large councilors are elected citywide; ward councilors are elected by voters in their specific ward",
+        "At-large councilors serve four-year terms; ward councilors serve two-year terms",
+        "At-large councilors are appointed, not elected",
+        "There is no real difference"
+      ],
+      "correct": 0,
+      "explain": "Two councilors are elected at large (by the whole city), and one is elected from each of the seven wards, by that ward's voters.",
+      "citation": "Art. III, Sec. 2",
+      "group": "III"
+    },
+    {
+      "id": 14,
+      "theme": 4,
+      "type": "mc",
+      "q": "Who can vote in municipal elections?",
+      "options": [
+        "Registered Biddeford voters",
+        "Any Maine resident",
+        "Property owners only",
+        "Registered York County voters"
+      ],
+      "correct": 0,
+      "explain": "Municipal elections in Biddeford are governed by state election law and are open to the City's own registered voters.",
+      "citation": "Art. VIII, Sec. 9",
+      "group": "VIII"
+    },
+    {
+      "id": 15,
+      "theme": 4,
+      "type": "mc",
+      "q": "Which office represents the entire city?",
+      "options": [
+        "Ward Councilor",
+        "Mayor",
+        "At-Large Councilor",
+        "Both the Mayor and At-Large Councilors"
+      ],
+      "correct": 3,
+      "explain": "Both the Mayor and the two At-Large Councilors are elected citywide, representing all of Biddeford rather than a single ward.",
+      "citation": "Art. II, Sec. 4",
+      "group": "II"
+    },
+    {
+      "id": 16,
+      "theme": 2,
+      "type": "mc",
+      "q": "What happens after residents elect a Mayor?",
+      "options": [
+        "The Mayor is sworn into office on the first Tuesday after the first Monday in December",
+        "The Mayor immediately appoints all department heads",
+        "The Mayor must wait one year before taking office",
+        "The City Council selects a new Mayor from among the candidates"
+      ],
+      "correct": 0,
+      "explain": "The Mayor is sworn in at 7:00 p.m. on the first Tuesday after the first Monday in December following the election, by the City Clerk.",
+      "citation": "Art. II, Sec. 4",
+      "group": "II"
+    },
+    {
+      "id": 17,
+      "theme": 2,
+      "type": "mc",
+      "q": "Which official hires most department heads?",
+      "options": [
+        "Mayor",
+        "City Council",
+        "City Manager",
+        "Finance Committee"
+      ],
+      "correct": 2,
+      "explain": "Department heads are appointed by the City Manager (and confirmed by the Mayor and City Council) — another way the City Manager runs day-to-day operations.",
+      "citation": "Art. X, Sec. 1",
+      "group": "X"
+    },
+    {
+      "id": 18,
+      "theme": 2,
+      "type": "mc",
+      "q": "Which official keeps official City records?",
+      "options": [
+        "Finance Director",
+        "City Clerk",
+        "Mayor",
+        "City Manager"
+      ],
+      "correct": 1,
+      "explain": "The City Clerk is the Clerk of the City Council and keeps the official record of its proceedings, among other recordkeeping duties.",
+      "citation": "Art. X, Sec. 3",
+      "group": "X"
+    },
+    {
+      "id": 19,
+      "theme": 2,
+      "type": "mc",
+      "q": "Which official certifies elections?",
+      "options": [
+        "Mayor",
+        "City Clerk",
+        "City Manager",
+        "Finance Director"
+      ],
+      "correct": 1,
+      "explain": "The City Clerk prepares ballots, performs the Charter's election duties, and certifies petitions and election results.",
+      "citation": "Art. X, Sec. 3",
+      "group": "X"
+    },
+    {
+      "id": 20,
+      "theme": 2,
+      "type": "mc",
+      "q": "Who appoints the City Manager?",
+      "options": [
+        "Mayor alone",
+        "City Council alone",
+        "Mayor with City Council confirmation",
+        "Voters"
+      ],
+      "correct": 2,
+      "explain": "The City Manager is nominated by the Mayor, and that appointment must be confirmed by the City Council.",
+      "citation": "Art. IV, Sec. 1",
+      "group": "IV"
+    },
+    {
+      "id": 21,
+      "theme": 3,
+      "type": "mc",
+      "q": "Why does the City adopt a budget every year?",
+      "options": [
+        "To appropriate the funds necessary for City operations for the upcoming fiscal year",
+        "Because state law requires a brand-new budget only once a decade",
+        "To set the Mayor's salary",
+        "Only when there's a budget deficit"
+      ],
+      "correct": 0,
+      "explain": "The City Council adopts an annual appropriation resolve each year to fund general City purposes for that fiscal year.",
+      "citation": "Art. XI, Sec. 3",
+      "group": "XI"
+    },
+    {
+      "id": 22,
+      "theme": 3,
+      "type": "mc",
+      "q": "Before adopting the budget, what opportunity does the Charter require?",
+      "options": [
+        "Public hearing",
+        "Referendum",
+        "County review",
+        "State approval"
+      ],
+      "correct": 0,
+      "explain": "The Charter requires at least one public hearing on the City budget before the City Council adopts it.",
+      "citation": "Art. XI, Sec. 2",
+      "group": "XI"
+    },
+    {
+      "id": 23,
+      "theme": 3,
+      "type": "mc",
+      "q": "What is a Capital Improvement Program?",
+      "options": [
+        "A 5-year plan for funding major infrastructure and capital projects",
+        "A tax rebate program for residents",
+        "A one-time emergency spending bill",
+        "A state grant program"
+      ],
+      "correct": 0,
+      "explain": "The City Manager and School Committee submit a 5-Year Capital Improvement Budget Plan each November, covering major infrastructure and capital projects.",
+      "citation": "Art. XI, Sec. 2",
+      "group": "XI"
+    },
+    {
+      "id": 24,
+      "theme": 3,
+      "type": "mc",
+      "q": "When does Biddeford's fiscal year begin?",
+      "options": [
+        "January 1",
+        "July 1",
+        "October 1",
+        "April 1"
+      ],
+      "correct": 1,
+      "explain": "The City's fiscal year runs from July 1 through June 30 of the following year.",
+      "citation": "Art. XI, Sec. 5",
+      "group": "XI"
+    },
+    {
+      "id": 25,
+      "theme": 3,
+      "type": "mc",
+      "q": "Why might the City borrow money?",
+      "options": [
+        "To fund permanent public improvements like buildings, land, and equipment",
+        "To pay municipal employees' everyday salaries",
+        "To cover the Mayor's personal expenses",
+        "Borrowing is prohibited by the Charter"
+      ],
+      "correct": 0,
+      "explain": "The Charter allows borrowing (via bonds or notes) for land acquisition, construction, major repairs, equipment, and similar permanent public improvements.",
+      "citation": "Art. XI, Sec. 6",
+      "group": "XI"
+    },
+    {
+      "id": 26,
+      "theme": 4,
+      "type": "mc",
+      "q": "How can residents ask the City to hold a general meeting of citizens?",
+      "options": [
+        "By submitting a requisition signed by 100 qualified voters",
+        "By calling the Governor's office",
+        "By posting the request on social media",
+        "Only the Mayor can call such a meeting"
+      ],
+      "correct": 0,
+      "explain": "General meetings of citizens are warned by the City Council upon the requisition of 100 qualified voters of the City.",
+      "citation": "Art. XII, Sec. 4",
+      "group": "XII"
+    },
+    {
+      "id": 27,
+      "theme": 4,
+      "type": "mc",
+      "q": "What is a referendum?",
+      "options": [
+        "A vote by residents to decide directly on a proposed measure or question",
+        "A meeting open only to elected officials",
+        "An annual budget report",
+        "A type of city ordinance"
+      ],
+      "correct": 0,
+      "explain": "A referendum lets voters decide a question directly at the ballot — for example, approving a charter amendment or a citizen-initiated measure.",
+      "citation": "Art. XII, Sec. 7",
+      "group": "XII"
+    },
+    {
+      "id": 28,
+      "theme": 4,
+      "type": "mc",
+      "q": "How many registered voters must sign a citizen referendum petition?",
+      "options": [
+        "5%",
+        "10%",
+        "15%",
+        "25%"
+      ],
+      "correct": 2,
+      "explain": "Biddeford's Charter requires signatures from at least 15% of the City's registered voters to bring a matter to referendum.",
+      "citation": "Art. XII, Sec. 8",
+      "group": "XII"
+    },
+    {
+      "id": 29,
+      "theme": 4,
+      "type": "mc",
+      "q": "What is the first step in starting a citizen referendum petition?",
+      "options": [
+        "Register a copy of the petition with the City Clerk",
+        "Collect all the signatures first, then notify the City",
+        "Hold a public rally",
+        "File directly with the State of Maine"
+      ],
+      "correct": 0,
+      "explain": "A copy of the petition must be registered with the City Clerk at the very start of the petition drive, before signature-gathering begins in earnest.",
+      "citation": "Art. XII, Sec. 8",
+      "group": "XII"
+    },
+    {
+      "id": 30,
+      "theme": 4,
+      "type": "tf",
+      "q": "True or False: All referendum questions must be written in the affirmative.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 0,
+      "explain": "The Charter requires referendum questions to be limited to one part and stated in the affirmative — no confusingly-worded double negatives.",
+      "citation": "Art. XII, Sec. 7",
+      "group": "XII"
+    },
+    {
+      "id": 31,
+      "theme": 4,
+      "type": "mc",
+      "q": "Why are ethics rules included in the Charter?",
+      "options": [
+        "To prevent conflicts of interest and preserve public trust in City government",
+        "To increase the Mayor's salary",
+        "Ethics rules aren't actually part of the Charter",
+        "To regulate private businesses only"
+      ],
+      "correct": 0,
+      "explain": "The Charter's ethics provisions exist to keep officials from using public office for private financial gain, protecting residents' trust in City government.",
+      "citation": "Art. XII, Sec. 1",
+      "group": "XII"
+    },
+    {
+      "id": 32,
+      "theme": 4,
+      "type": "tf",
+      "q": "Can an elected official vote on a contract that would financially benefit them?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "correct": 1,
+      "explain": "The Charter prohibits officials from having a substantial financial interest in a City contract they have a role in approving — any such contract is void.",
+      "citation": "Art. XII, Sec. 1",
+      "group": "XII"
+    },
+    {
+      "id": 33,
+      "theme": 4,
+      "type": "tf",
+      "q": "Can City officials receive special gifts from contractors?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "correct": 1,
+      "explain": "Officials may not accept free passes, tickets, services, or other special favors from anyone operating under a City franchise, contract, or license.",
+      "citation": "Art. XII, Sec. 1",
+      "group": "XII"
+    },
+    {
+      "id": 34,
+      "theme": 4,
+      "type": "mc",
+      "q": "Why does the City maintain a Code of Ethics?",
+      "options": [
+        "To establish standards of conduct for elected and appointed officials",
+        "It's optional and rarely used",
+        "To regulate school curriculum",
+        "To set the tax rate"
+      ],
+      "correct": 0,
+      "explain": "The Code of Ethics sets clear standards of conduct that all elected and appointed City officials must follow.",
+      "citation": "Art. XII, Sec. 10",
+      "group": "XII"
+    },
+    {
+      "id": 35,
+      "theme": 4,
+      "type": "tf",
+      "q": "True or False: The Charter requires the City to maintain a Code of Ethics.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct": 0,
+      "explain": "The Charter explicitly requires the City to maintain an ordinance establishing a Code of Ethics for elected and appointed officials.",
+      "citation": "Art. XII, Sec. 10",
+      "group": "XII"
+    },
+    {
+      "id": 36,
+      "theme": 5,
+      "type": "mc",
+      "q": "Imagine this: the Mayor vetoes funding for a new park. What happens next?",
+      "options": [
+        "The project automatically ends",
+        "The Council may override the veto",
+        "The voters decide",
+        "The City Manager decides"
+      ],
+      "correct": 1,
+      "explain": "If 2/3 of the City Council votes to pass the resolve again after a veto, it takes effect the same as if the Mayor had signed it.",
+      "citation": "Art. II, Sec. 3",
+      "group": "II"
+    },
+    {
+      "id": 37,
+      "theme": 5,
+      "type": "mc",
+      "q": "Imagine this: a resident wants to speak about the City budget before it's adopted. When would they most likely have the opportunity?",
+      "options": [
+        "During a required public hearing",
+        "Only after the budget is approved",
+        "During the next election",
+        "By writing directly to the Governor"
+      ],
+      "correct": 0,
+      "explain": "The Charter requires at least one public hearing on the budget before the City Council adopts it — that's a resident's guaranteed chance to weigh in.",
+      "citation": "Art. XI, Sec. 2",
+      "group": "XI"
+    },
+    {
+      "id": 38,
+      "theme": 5,
+      "type": "mc",
+      "q": "Imagine this: the City wants to create a Department of Sustainability. Who has the authority to establish a new department?",
+      "options": [
+        "Mayor",
+        "City Council, by ordinance",
+        "City Manager",
+        "State Legislature"
+      ],
+      "correct": 1,
+      "explain": "The Mayor and City Council have the power, by ordinance, to create additional City departments, agencies, or boards.",
+      "citation": "Art. X, Sec. 8",
+      "group": "X"
+    },
+    {
+      "id": 39,
+      "theme": 5,
+      "type": "mc",
+      "q": "Imagine this: a councilor moves out of the ward they were elected to represent. What issue could arise?",
+      "options": [
+        "Their seat could become vacant, since ward councilors must represent the ward they live in",
+        "Nothing changes — they can keep serving",
+        "They automatically become an at-large councilor",
+        "The Mayor must resign"
+      ],
+      "correct": 0,
+      "explain": "A councilor's removal from the ward they were elected to represent is one of the events that can create a vacancy on the Council.",
+      "citation": "Art. III, Sec. 4",
+      "group": "III"
+    },
+    {
+      "id": 40,
+      "theme": 5,
+      "type": "mc",
+      "q": "Imagine this: a neighborhood group wants to place an issue on the ballot through a referendum. What should they do first?",
+      "options": [
+        "Collect signatures immediately",
+        "Register a copy of the petition with the City Clerk",
+        "Ask the Mayor for permission",
+        "Ask the City Council to schedule the vote"
+      ],
+      "correct": 1,
+      "explain": "Before signature-gathering, a copy of the petition has to be registered with the City Clerk at the start of the drive.",
+      "citation": "Art. XII, Sec. 8",
+      "group": "XII"
+    },
+    {
+      "id": 41,
+      "theme": 5,
+      "type": "mc",
+      "q": "Imagine this: the City needs to transfer money from the Parks Department to Public Works during the fiscal year. What approval is likely required?",
+      "options": [
+        "A 2/3 vote of the full City Council",
+        "Approval from the Governor",
+        "A citywide referendum",
+        "No approval is needed"
+      ],
+      "correct": 0,
+      "explain": "Transferring appropriated funds between departments requires a resolution adopted by a 2/3 vote of the full City Council, and the vote must be recorded.",
+      "citation": "Art. XI, Sec. 3",
+      "group": "XI"
+    },
+    {
+      "id": 42,
+      "theme": 5,
+      "type": "mc",
+      "q": "Imagine this: a contractor offers a free vacation to an elected official. According to the Charter, what should happen?",
+      "options": [
+        "The official must decline — accepting it would violate the Charter's ethics rules",
+        "The official may accept if it's a modest gift",
+        "The official may keep it as long as they report it",
+        "It's fine if the Mayor approves it"
+      ],
+      "correct": 0,
+      "explain": "The Charter bars officials from accepting free services or special favors from anyone operating under a City contract, franchise, or license.",
+      "citation": "Art. XII, Sec. 1",
+      "group": "XII"
+    },
+    {
+      "id": 43,
+      "theme": 5,
+      "type": "mc",
+      "q": "Imagine this: a resident says, \"The Mayor runs every City department.\" How would you respond?",
+      "options": [
+        "Not quite — the City Manager directs day-to-day department operations, though the Mayor has general oversight",
+        "That's correct, the Mayor runs every department directly",
+        "Actually, the City Council runs every department",
+        "No one is really in charge of departments"
+      ],
+      "correct": 0,
+      "explain": "The Mayor is the City's Chief Executive, but the City Manager is the chief administrative officer who actually directs and supervises departments day to day.",
+      "citation": "Art. IV, Sec. 2",
+      "group": "IV"
+    },
+    {
+      "id": 44,
+      "theme": 5,
+      "type": "mc",
+      "q": "Imagine this: the City Manager resigns. Who is responsible for selecting a replacement?",
+      "options": [
+        "The Mayor nominates a new City Manager, subject to City Council confirmation",
+        "The City Council selects one without the Mayor's involvement",
+        "The outgoing City Manager selects their successor",
+        "The voters elect a new City Manager"
+      ],
+      "correct": 0,
+      "explain": "Just like the original appointment, a new City Manager is nominated by the Mayor and confirmed by the City Council.",
+      "citation": "Art. IV, Sec. 1",
+      "group": "IV"
+    },
+    {
+      "id": 45,
+      "theme": 5,
+      "type": "mc",
+      "q": "Imagine this: the School Committee wants to change its budget after adoption. Who else must approve the transfer?",
+      "options": [
+        "The City Council, by a 2/3 vote, in addition to the School Committee",
+        "No other approval is needed",
+        "Only the Mayor's signature",
+        "The State Department of Education"
+      ],
+      "correct": 0,
+      "explain": "Transferring funds between budget functions requires a 2/3 vote from both the School Committee and the City Council, in separate deliberations.",
+      "citation": "Art. V, Sec. 4",
+      "group": "V"
+    },
+    {
+      "id": 46,
+      "theme": 2,
+      "type": "myth",
+      "q": "Myth or Fact: The Mayor is Biddeford's CEO.",
+      "options": [
+        "Myth",
+        "Fact"
+      ],
+      "correct": 0,
+      "explain": "Mostly myth, with a nuance: the Charter does call the Mayor the \"Chief Executive\" — but the day-to-day, CEO-style operational management of City departments is actually the City Manager's job, as the \"chief administrative officer.\"",
+      "citation": "Art. IV, Sec. 2",
+      "group": "IV"
+    },
+    {
+      "id": 47,
+      "theme": 3,
+      "type": "myth",
+      "q": "Myth or Fact: Residents can change the Charter with a simple City Council vote.",
+      "options": [
+        "Myth",
+        "Fact"
+      ],
+      "correct": 0,
+      "explain": "Myth. Changing the Charter requires a duly elected Charter Revision Commission and, ultimately, voter approval — a much higher bar than an ordinary Council vote.",
+      "citation": "Art. XII, Sec. 6",
+      "group": "XII"
+    },
+    {
+      "id": 48,
+      "theme": 3,
+      "type": "myth",
+      "q": "Myth or Fact: Every City Council meeting can be closed to the public if the Council chooses.",
+      "options": [
+        "Myth",
+        "Fact"
+      ],
+      "correct": 0,
+      "explain": "Myth. The Charter makes City Council meetings open to the public as the default rule — the Council can't simply decide, at will, to close a meeting.",
+      "citation": "Art. III, Sec. 8",
+      "group": "III"
+    },
+    {
+      "id": 49,
+      "theme": 3,
+      "type": "myth",
+      "q": "Myth or Fact: The Charter is more difficult to change than an ordinance.",
+      "options": [
+        "Myth",
+        "Fact"
+      ],
+      "correct": 1,
+      "explain": "Fact. Ordinances just need two readings and a Council majority; changing the Charter requires a Charter Revision Commission and voter approval at referendum.",
+      "citation": "Art. XII, Sec. 6",
+      "group": "XII"
+    },
+    {
+      "id": 50,
+      "theme": 1,
+      "type": "mc",
+      "q": "A new family just moved to Biddeford and asks: \"Why should we care about the City Charter?\" Which answer best explains its importance?",
+      "options": [
+        "It establishes how the City's government is organized, who has authority to make decisions, and how residents can participate in local government",
+        "It lists every City law and regulation",
+        "It determines annual property tax rates",
+        "It only applies to elected officials"
+      ],
+      "correct": 0,
+      "explain": "That's the Charter in one sentence — and hopefully, after this quiz, a little less mysterious.",
+      "citation": "Art. I",
+      "group": "I"
+    }
+  ],
+  "themes": {
+    "1": {
+      "name": "Welcome to City Hall",
+      "tagline": "What is a charter, and why does it matter?",
+      "icon": "🏛️"
+    },
+    "2": {
+      "name": "Who Does What?",
+      "tagline": "Roles of the Mayor, City Council, City Manager, School Committee, and City departments.",
+      "icon": "🧑‍💼"
+    },
+    "3": {
+      "name": "How Decisions Are Made",
+      "tagline": "Budgets, ordinances, appointments, and public meetings.",
+      "icon": "🗳️"
+    },
+    "4": {
+      "name": "Your Voice Matters",
+      "tagline": "Elections, referendums, ethics, and public participation.",
+      "icon": "📣"
+    },
+    "5": {
+      "name": "You're in Charge!",
+      "tagline": "Apply what you've learned to realistic situations.",
+      "icon": "🧩"
+    }
+  },
+  "titles": [
+    {
+      "min": 10,
+      "max": 10,
+      "emoji": "🏛️",
+      "name": "Charter Champion",
+      "blurb": "A perfect score. You know Biddeford's Charter cold — Article, section, and all."
+    },
+    {
+      "min": 8,
+      "max": 9,
+      "emoji": "🧭",
+      "name": "Community Navigator",
+      "blurb": "You know your way around City Hall better than most. A few details to brush up on."
+    },
+    {
+      "min": 6,
+      "max": 7,
+      "emoji": "💡",
+      "name": "Policy Problem Solver",
+      "blurb": "You've got a solid handle on how decisions get made — and you're getting sharper."
+    },
+    {
+      "min": 4,
+      "max": 5,
+      "emoji": "🤝",
+      "name": "Neighborhood Connector",
+      "blurb": "You know the basics of who does what. Time to dig a little deeper into the Charter."
+    },
+    {
+      "min": 2,
+      "max": 3,
+      "emoji": "📣",
+      "name": "Civic Advocate",
+      "blurb": "You care about your City — now let's build up the Charter knowledge to match."
+    },
+    {
+      "min": 0,
+      "max": 1,
+      "emoji": "🌱",
+      "name": "Emerging Citizen",
+      "blurb": "Everyone starts somewhere. Explore the Charter and give the quiz another spin."
+    }
+  ],
+  "citations": {
+    "Art. I": {
+      "heading": "Article I: Grant of Powers to the City",
+      "text": "Sec. 1. Corporate existence of Biddeford retained.\nThe inhabitants of the City of Biddeford, in the County of York, shall continue to be a body politic and corporate by the name of the City of Biddeford, and shall have, exercise and enjoy, all the rights, immunities, powers, privileges and franchise, and shall be subject to all the duties, liabilities and obligations provided for herein, or otherwise, pertaining to, or incumbent upon the City of Biddeford as a municipal corporation or to the inhabitants or municipal authorities thereof; and may enact reasonable bylaws, regulations, and ordinances for municipal purposes, not inconsistent with the Constitution and laws of the State of Maine; and impose penalties for the breach thereof, to the maximum allowed by Maine state law to be recovered for such uses as said bylaws, regulations, or ordinances shall provide.\n\nSec. 2. Powers and duties.\nThe administration of all fiscal, prudential, and municipal affairs of the City, with the government thereof, except the general management, care, conduct, and control of the Schools, which shall be vested in the School Committee as hereinafter provided, and also except as otherwise provided by this Charter, shall be and is vested in the Mayor and one body of members, which shall constitute and be called the City Council, all of whom shall be inhabitants of the City, and shall be elected and sworn in the manner hereinafter prescribed. The Mayor and the members of the City Council shall be and constitute the municipal officers of the City of Biddeford for all purposes required by statute, and, except as otherwise herein specifically provided, shall have all powers and authority given to, and perform all duties required of, municipal officers and mayors of cities under the laws of the State of Maine. All other powers now or hereafter vested in the inhabitants of the City, and all powers granted by this Charter, except as herein otherwise provided, shall be vested in the Mayor and City Council.",
+      "recordId": "art-I"
+    },
+    "Art. XII, Sec. 2": {
+      "heading": "Art. XII, Sec. 2: Ordinances, orders, resolves.",
+      "text": "All ordinances, orders, or resolves in force at the time that this Charter takes effect, not inconsistent with this Charter, shall continue in force until amended or repealed. All rules and regulations of the Municipal Officers, or of any office of the City of Biddeford in force at the time that this Charter takes effect, not inconsistent with the provisions thereof, shall continue in force until amended or repealed.",
+      "recordId": "art-XII-sec-2"
+    },
+    "Art. XII, Sec. 6": {
+      "heading": "Art. XII, Sec. 6: Revision of Charter. [Amended 11-6-2012]",
+      "text": "The Charter may be changed in matters of form and substance only by a duly elected Charter Revision Commission consisting of nine members selected as follows: Seven members, one elected from each ward and two appointed by the Mayor and confirmed by the City Council, who shall serve in accordance with 30-A M.R.S.A, §§ 2101-2106, as amended. A candidate for the Charter Revision Commission shall be a resident of the City of Biddeford for at least six months prior to the date on/or before which nomination papers are to be filed. Charter Revision Commission members may not hold another elected office within the City.",
+      "recordId": "art-XII-sec-6"
+    },
+    "Art. II, Sec. 1": {
+      "heading": "Art. II, Sec. 1: Executive Authority of the Mayor. [Amended 11-8-2016]",
+      "text": "The Chief Executive of the City of Biddeford shall be the Mayor, who with the exception of the administration of the Department of Education, shall:\n(a) Assure that the Laws and Ordinances are enforced;\n(b) Exercise general oversight over all departments, divisions, agencies, offices, and boards created herein or that may be hereafter created;\n(c) Sign warrants to be paid from the treasury after appropriations by the City Council;\n(d) Preside at meetings of the City Council and School Committee, and shall vote only in case of a tie;\n(e) Keep the City Council advised as to the business and financial condition and future needs of the City;\n(f) Call special meetings of the City Council;\n(g) Issue warrants for calling meetings and elections for any purpose in the several wards;\n(h) Perform all other duties conferred by State Law or City Ordinances.",
+      "recordId": "art-II-sec-1"
+    },
+    "Art. IV, Sec. 2": {
+      "heading": "Art. IV, Sec. 2: Powers and duties.",
+      "text": "The City Manager shall be the chief administrative officer of the City of Biddeford, and shall:\n(a) Be responsible for the day-to-day administration of the affairs of the City in accordance with the provisions of this Charter and the Code of Ordinances;\n(b) Be responsible for implementing policies as established by the Mayor and the City Council;\n(c) Report to and receive policy guidance from the Mayor and the City Council;\n(d) Appoint, suspend, or remove after consultation with the Mayor and confirmation by the City Council, department heads and subordinate officers provided for in the Charter, except as otherwise provided by law or this Charter;\n(e) Direct and supervise the administration of all departments, offices and agencies of the City, except as otherwise provided by this Charter or by law, and evaluate the performance, at least once per calendar year, of all subordinates;\n(f) Attend meetings of the City Council, and report to the Mayor and Council upon inquiry;\n(g) See to the enforcement of all laws and ordinances of the City and of the provisions of this Charter and carry out the lawful directives of the City Council personally or through department heads or subordinate officers;\n(h) Prepare and submit the annual municipal budget, to include a Capital Improvement 5-year budget plan. [Amended 11-8-2016]\n(i) Submit to the Mayor and City Council such reports and recommendations as the Mayor and City Council shall require;\n(j) Be a non-voting member of the City Council Finance Committee;\n(k) Perform all other duties as assigned by the Mayor and City Council.",
+      "recordId": "art-IV-sec-2"
+    },
+    "Art. XI, Sec. 3": {
+      "heading": "Art. XI, Sec. 3: Appropriation resolve. [Amended 11-8-2016]",
+      "text": "The City Council shall adopt the annual appropriation resolve for the current fiscal year. Such resolve shall appropriate those amounts deemed necessary for general City purposes and for a contingent fund.\n\nThere shall be no subsequent expenditures authorized for any purpose; however, funds may be transferred from one department to another, the contingent fund, or other source of income, provided the resolution authorizing the transfer is adopted by a 2/3rds vote of the full membership of the City Council and the vote is recorded.",
+      "recordId": "art-XI-sec-3"
+    },
+    "Art. V, Sec. 3": {
+      "heading": "Art. V, Sec. 3: Powers and duties.",
+      "text": "(a) The School Committee shall have all powers and perform all duties in regard to the care and management of the City's public schools pursuant to Maine State law and except as otherwise provided in this Charter.\n(b) The Committee shall appoint a Superintendent of Schools for a term not exceeding three years, and the Superintendent shall receive compensation at a rate determined by the Committee. The duties of the Superintendent shall be those as prescribed by law and regulations. The Superintendent of Schools may be removed for just cause. The Superintendent of Schools shall establish residence within the City of Biddeford within six months of being hired, unless otherwise approved by the School Committee. The Superintendent shall cause to be published all agendas of School Committee meetings in a local newspaper at least 24 hours before such meetings are to be held, and shall cause to be posted said agendas on the City bulletin board. [Amended 11-8-2016]\n(c) With the exception of the School Committee Standing Committees, residents of Biddeford shall be allowed to serve on and chair, with full voting rights, all Subcommittees of the School Committee, including but not limited to the Policy, Capital Improvement Projects, Curriculum and Transportation Committees. [Added 11-6-2012]",
+      "recordId": "art-V-sec-3"
+    },
+    "Art. VIII, Sec. 1": {
+      "heading": "Art. VIII, Sec. 1: Regular municipal elections.",
+      "text": "On the first Tuesday following the first Monday in November, biennially, a regular municipal election shall be held and the registered voters of the City or wards, as the case may be, shall ballot for the Mayor, Councilors, School Committee, Wardens and Ward Clerks as may be necessary to fill the offices provided for by this Charter whose terms would normally expire.",
+      "recordId": "art-VIII-sec-1"
+    },
+    "Art. III, Sec. 1": {
+      "heading": "Art. III, Sec. 1: City to be divided into wards.",
+      "text": "For the purpose of all elections, the City shall be divided into seven wards. The City Council shall, once every 10 years, by ordinance establish compact and contiguous wards of approximately equal population. The City Council, for voting purposes, may by ordinance divide said wards into further voting wards.",
+      "recordId": "art-III-sec-1"
+    },
+    "Art. III, Sec. 2": {
+      "heading": "Art. III, Sec. 2: Composition; election; tenure of office; compensation; prohibition. [Amended 11-6-2012; 11-8-2016]",
+      "text": "The City Council shall be composed of nine members, who shall hold office for a term of two years and until their successors are elected and qualified. The City Council shall serve as the Municipal Officers, and be composed of the nine Council members. A candidate for City Council shall be a resident of the City of Biddeford for at least six months prior to the date on/or before which nomination papers are to be filed. Councilors shall be elected by the registered voters of the City; two shall be elected at large, and one shall be elected from each of the seven wards in which they reside and which they seek to represent. The Councilors-Elect shall be sworn to the faithful performance of their duties at 7:00 p.m. on the first Tuesday after the first Monday in December, following a biennial election, by the City Clerk or person authorized by law to administer oaths. They shall receive compensation at the rate of $100 per month, not to exceed $1,200 per year. No member of the City Council shall be employed by the City of Biddeford or Biddeford School Department as an employee or agent, or hold any office or employment, the compensation of which is payable by the City, during the term for which the Councilor was elected.",
+      "recordId": "art-III-sec-2"
+    },
+    "Art. VIII, Sec. 9": {
+      "heading": "Art. VIII, Sec. 9: State laws applicable.",
+      "text": "The laws of the State of Maine relating to the qualifications of electors, registration, the manner of voting, the duties of election officials, counting of ballots, and all other particulars in respect to preparation for conducting and managing elections, so far as they may be applicable, shall govern all municipal elections in the City of Biddeford, except as otherwise provided in this Charter.",
+      "recordId": "art-VIII-sec-9"
+    },
+    "Art. II, Sec. 4": {
+      "heading": "Art. II, Sec. 4: Election; tenure of office; prohibition; compensation. [Amended 11-6-2012]",
+      "text": "A candidate for Mayor shall be a resident of the City of Biddeford for at least six months prior to the date on/or before which nomination papers are to be filed. The Mayor shall be sworn to the faithful performance of the duties of the office at 7:00 p.m. on the first Tuesday after the first Monday in December, following a biennial election, by the City Clerk or person authorized by law to administer oaths. The Mayor shall hold the office for two years and be re-elected without limitations. The Mayor shall not directly or indirectly enter into any contract with the City, except as provided by 30-A M.R.S.A. § 2605. The salary and compensation of the Mayor shall be $10,000 per year.",
+      "recordId": "art-II-sec-4"
+    },
+    "Art. X, Sec. 1": {
+      "heading": "Art. X, Sec. 1: Appointments. [Amended 11-8-2016]",
+      "text": "(a) The City Manager and City Clerk shall be officers of the City and shall be nominated by the Mayor and confirmed by the City Council as applicable to appropriate articles of this Charter.\n(b) The City Solicitor shall be nominated by the Mayor and confirmed by the City Council for a period within the term of the office of the Mayor.\n(c) Heads of departments, offices and agencies, including those prescribed by Federal and State law, or City Ordinances shall be appointed by the City Manager and confirmed by the Mayor/City Council as follows:\n(1) Tax Assessor (per MRSA Title 36, Ch. 101).\n(2) Police Chief.\n(3) Fire Chief.\n(4) Public Works Director.\n(5) Code Enforcement Officer.\n(6) Director Economic Development.\n(7) Building Facilities Manager.\n(8) City Treasurer (per MRSA 30-A, Part 2, Sub Para 9, Ch. 221, Sec. 5602-5604).\n(9) Recreation Director.\n(10) General Assistance Administrator - MRSA, Title 22, Ch. 1161, Sec. 4301 No. 12.\n(11) Finance Director.",
+      "recordId": "art-X-sec-1"
+    },
+    "Art. X, Sec. 3": {
+      "heading": "Art. X, Sec. 3: City Clerk.",
+      "text": "The Mayor and City Council may enter into an employment contract with the City Clerk for a term not to exceed three years. The City Clerk shall be nominated by the Mayor and confirmed by the City Council. The salary and compensation of the City Clerk shall be established by the City Council. The City Clerk shall be the Clerk of the City Council and shall:\n(a) Give notice in a local newspaper of the time and place of regular and special Council meetings on Friday prior to the week of such meetings. The agenda for City Council meetings shall appear in local media sources and shall be posted on the City bulletin board, at least 24 hours in advance;\n(b) Keep a record of the proceedings of the City Council;\n(c) Record the votes of members by yeas and nays;\n(d) Perform the specific election duties enumerated in the Charter;\n(e) Review the format of all referendum questions in order to determine compliance with provisions in this Charter and applicable State Laws;\n(f) Provide educational materials to unenrolled voters advising them of their right to run for office, and guidelines for enrolling and voting;\n(g) Perform all other duties enacted by State Law and/or City Ordinances.",
+      "recordId": "art-X-sec-3"
+    },
+    "Art. IV, Sec. 1": {
+      "heading": "Art. IV, Sec. 1: Appointment; confirmation; compensation; term of office.",
+      "text": "There shall be a City Manager who shall be nominated by the Mayor and whose appointment shall be confirmed by the City Council. The City Manager shall be employed by the Mayor and City Council who shall establish compensation and contract terms of employment not to exceed three years. The City Council shall evaluate the job performance of the City Manager yearly with input from the Mayor.",
+      "recordId": "art-IV-sec-1"
+    },
+    "Art. XI, Sec. 2": {
+      "heading": "Art. XI, Sec. 2: Budget Committee.",
+      "text": "(a) There shall be a Budget Committee convened annually, not later than the first week in March which shall review and propose the Municipal and School Department budgets for the ensuing fiscal year.\n(b) The Budget Committee shall be comprised of the entire City Council. The Mayor shall serve as Chair and shall vote only in case of a tie. The City Manager and the Finance Director shall serve as nonvoting staff members to the Committee.\n(c) The Budget shall be submitted to the City Council in two parts, one by the City Manager and one by the Superintendent of Schools. The proposed budget shall be submitted by the Superintendent of Schools in the format outlined in Article V, Section 4.\n(d) The Budget Committee shall, at the latest, by the first Monday in May each year, submit to the City Council a budget showing the proposed expenditures for the various departments, other principal or subordinate departments and a contingent fund.\n(e) A summary of a proposed budget shall be published at least once in a local newspaper of general circulation within the City within 14 days following submission to the City Council.\n(f) The City Council may, before adopting the annual appropriation resolve, make appropriations for current department expenses; however, these appropriations will be included in the annual appropriation resolve.\n(g) At least one public hearing shall be held on the City budget prior to its adoption by the City Council.\n(h) The City budget shall be adopted by the City Council prior to the beginning of the next fiscal year.\n(i) Capital Improvement Program. The City Manager and School Committee shall submit to the Budget Committee, Mayor and City Council a Capital Improvement 5-Year Budget Plan at the second regular meeting of the City Council in November of each year. Annually, during the budget process, the City shall appropriate at least five hundredths of one percent (0.05%) of the previous fiscal year's total taxable valuation for the sole purpose of funding the capital improvements. Should the City Council make a determination that unusual circumstances prevent funding at this level; the City Council may override this requirement. To override the requirement, at least six members of the Council must vote in favor of an override order. Said order shall include the determination and explanation of the unusual circumstances. [Added 11-8-2016]",
+      "recordId": "art-XI-sec-2"
+    },
+    "Art. XI, Sec. 5": {
+      "heading": "Art. XI, Sec. 5: Fiscal year.",
+      "text": "The fiscal year of the City shall be July first through June thirtieth of the ensuing year.",
+      "recordId": "art-XI-sec-5"
+    },
+    "Art. XI, Sec. 6": {
+      "heading": "Art. XI, Sec. 6: Borrowing.",
+      "text": "Money may be borrowed, within the limits fixed by the Constitution and Statutes of the State, now or hereafter applying to the City of Biddeford, by the issue and sale of bonds or notes pledged on the credit of the City, the proceeds to be used for the acquisition of land, the construction, reconstruction, major alterations, extraordinary repairs, the equipment of buildings and other permanent public improvements, the purchase of department equipment, and the payment or refunding of bonds, notes, and certificates of indebtedness previously issued.",
+      "recordId": "art-XI-sec-6"
+    },
+    "Art. XII, Sec. 4": {
+      "heading": "Art. XII, Sec. 4: General meetings of citizens. [Amended 11-8-2016]",
+      "text": "General meetings of the citizens qualified to vote in the City affairs may from time to time be held to consult upon the public good, to instruct their representatives, and to take all lawful measures to obtain redress of any grievances according to the right secured to the people by the Constitution of this State; and such meetings may and shall be duly warned by the City Council, upon the requisition of 100 qualified voters of said City. A moderator shall be selected by majority vote of the citizens attending the meeting.",
+      "recordId": "art-XII-sec-4"
+    },
+    "Art. XII, Sec. 7": {
+      "heading": "Art. XII, Sec. 7: Referendum guidelines.",
+      "text": "All issues decided by referendum shall be binding on the City Council and not merely advisory. All referendum questions are to be decided at a general election or special election called for the purpose of voting on the referendum. All referendum questions shall be limited to one part questions and be stated in the affirmative.",
+      "recordId": "art-XII-sec-7"
+    },
+    "Art. XII, Sec. 8": {
+      "heading": "Art. XII, Sec. 8: City boards/commissions/committee meetings.",
+      "text": "All meetings of the City of Biddeford shall be duly posted on the central bulletin board of City Hall, at least 24 hours prior to the meeting.\n\n(a) Bond issues. No order providing for the issue of bonds pledged on the credit of the City of Biddeford shall be passed without notice of the same having been posted in a public place in the City of Biddeford and published at least once in a local newspaper of general circulation in the City of Biddeford not later than 14 days before final action of the City Council. No authorization provided for the issue of such bonds shall take effect until ratified by a majority of the voters voting thereon at a general or special election. A question seeking voter approval of the issue of such bonds shall be accompanied by a statement setting forth estimates of the total cost of such bonds, total interest, total length of term and projected effect on the mil rate. Tax anticipation notes are exempted from this provision.\n\n(b) Citizen initiated referendum.\n(1) Groups, organizations or individuals circulating petitions must clearly indicate at the top of each and every petition sheet who the group, persons or entity is and the purpose of the petition.\n(2) Fifteen percent of registered voters in the City of Biddeford at the time of filing of the petition must sign a petition to bring matters to a referendum.\n(3) A copy of the petition must be registered with the City Clerk at the commencement of the petition drive. The petitioners will have 30 calendar days from the date of filing to gather signatures. The petitions must be submitted to the City Clerk by the 30th day.\n(4) All referendum questions are to be decided by a majority vote at a general election or special election called for the purpose of voting on the referendum.",
+      "recordId": "art-XII-sec-8"
+    },
+    "Art. XII, Sec. 1": {
+      "heading": "Art. XII, Sec. 1: No personal interest. [Amended 11-6-2012; 11-8-2016]",
+      "text": "Neither the Mayor, nor any member of the City Council, School Committee or board, committee or commission thereof and no officer, agent or employee of the City or School Committee, or immediate family member of a City or School Department employee shall:\n(a) Have a substantial financial interest, direct or indirect, in any contract entered into by or on behalf of the City of Biddeford, or the School Committee, except a personal employment contract, or in the sale to or by the City, or School Committee of any land, materials, supplies or services, when such officer, agent, employee or member exercises on behalf of the City, or School Committee any function or responsibility with respect to such contract or sale. All contracts or sales made in violation thereof are void, and the City Finance Director is expressly forbidden to pay any money out of the City Treasury on account of any such transaction.\n(b) Purchase or accept anything from the City, or School Committee, other than those items or services which are offered to the public generally, and then only upon the same terms and under the same procedures offered to and used for the general public. This shall not include those items or services which are received as compensation, or as a part of such person's employment contract, or which are necessary for the performance of such person's duties.\n(c) Accept or receive from any person, firm, or corporation acting under a franchise, contract, or license from the City or School Committee, any frank, free pass, free ticket, or free service, or accept, directly or indirectly, from any such person, firm, or corporation any service upon terms more favorable than those granted to the public generally.",
+      "recordId": "art-XII-sec-1"
+    },
+    "Art. XII, Sec. 10": {
+      "heading": "Art. XII, Sec. 10: Code of Ethics. [Added 11-8-2016]",
+      "text": "The City shall maintain an ordinance (to be adopted within six months) establishing a Code of Ethics for all elected and appointed City Officials.",
+      "recordId": "art-XII-sec-10"
+    },
+    "Art. II, Sec. 3": {
+      "heading": "Art. II, Sec. 3: Veto power.",
+      "text": "Every resolve or order appropriating money, having passed the City Council, shall forthwith be presented to the Mayor for approval and signature. If disapproved, the Mayor shall return it unsigned to the City Council within seven working days of its enactment with objections in writing, which objections shall be entered into the minutes of the City Council. If, upon reconsideration, 2/3 of the members present and voting shall vote to pass the resolve or order, it shall have the same effect as if signed by the Mayor.",
+      "recordId": "art-II-sec-3"
+    },
+    "Art. X, Sec. 8": {
+      "heading": "Art. X, Sec. 8: Organizational powers.",
+      "text": "The Mayor and City Council shall have the power by Ordinance for the organization, conduct, and operation of the departments, agencies, officers, and boards/committees/commissions of the City; and for the creation of additional departments, agencies, officers, and boards/committees/commissions; and/or for the alteration, abolition, assignment, or reassignment of all such departments, divisions, agencies, offices and boards/committees/commissions.",
+      "recordId": "art-X-sec-8"
+    },
+    "Art. III, Sec. 4": {
+      "heading": "Art. III, Sec. 4: Vacancies.",
+      "text": "A vacancy in the membership of the City Council shall occur in the event of any of the following:\n(1) The death of a member;\n(2) The effective date of the resignation of a member;\n(3) The removal of a member from the ward from which the councilor was elected, except those elected at large;\n(4) The removal of a member from the City;\n(5) The conviction of a member of a felony while in office;\n(6) The recall of a member, pursuant to the provisions of Article IX; or\n(7) The employment of a member by the City of Biddeford or the Biddeford School Department as an employee or agent.\n\nA member may submit a resignation, in writing, directly to the Mayor. Once accepted by the Council, said resignation may not be withdrawn, and said member's office shall become vacant on that date.\n\nIf a vacancy in the membership of the City Council occurs within 180 days after the previous election, a special election shall be held within a period not to exceed 60 days of the vacancy. If a vacancy in the membership of the City Council occurs more than 180 days after the previous election, the Mayor shall nominate, and the City Council shall confirm, a person to fill this vacancy within a period not to exceed 30 days of its occurrence. The person elected/named to fill a vacancy shall serve until the first Tuesday after the first Monday in December following the next biennial election. [Amended 11-6-2012]",
+      "recordId": "art-III-sec-4"
+    },
+    "Art. V, Sec. 4": {
+      "heading": "Art. V, Sec. 4: The budget. [Amended 11-8-2016]",
+      "text": "The School Committee shall submit to the City Budget Committee a budget for operation of the Department of Education, to include a Capital Improvement 5-Year Budget Plan by the third Monday in March. After review, the Budget Committee shall forward their recommendations to the City Council, whose decision on the budget shall be final; subject to State mandated school budget validation requirements, if any. The proposed budget shall be comprised of: expenditures for the functions of instruction, student support, staff support services, administration, operation and maintenance, pupil transportation, adult education, debt service, and any other function(s) the Committee wishes to have funded for the fiscal year.\n\nThe total approved for each individual function by a majority vote of Council shall become the School Committee's aggregate fiscal year budget after having received its second reading. The School Committee shall not allow the transfer of funds from one function to another without first receiving 2/3 vote of the members present and voting from both the School Committee and the City Council in separate deliberations.",
+      "recordId": "art-V-sec-4"
+    },
+    "Art. III, Sec. 8": {
+      "heading": "Art. III, Sec. 8: Procedure. [Amended 11-8-2016]",
+      "text": "The City Council shall keep a record of its proceedings and shall determine its own rules of procedure and make lawful regulations for enforcing the same. The meetings of the City Council shall be open to the public. The City Council shall create an ordinance and establish procedures to allow the public to address the City Council at all City Council meetings. Said ordinance shall also establish procedures to allow any City Councilor (with concurrence of at least one other City Councilor) the authority to place any item on the agenda within 30 days. The City Council shall act only by ordinance, order, or resolve. All ordinances, orders and resolves, except orders or resolves making appropriations of money, shall be confined to one subject which shall be clearly expressed in the title. An appropriation, order or resolve shall be confined to the subject of appropriations only. No ordinance and no appropriation order or resolve shall be passed until it has been read on two separate days, except when the requirement of a second reading on a separate day has been dispensed with by the vote of 2/3 of the members present and voting. The yeas and nays shall be taken upon the passage of all ordinances and entered on the record of the proceedings of the City Council by the Clerk. The yeas and nays shall be taken on the passage of any order or resolve when called for by any member of the City Council. Every ordinance, order, and resolve shall require on the final passage the affirmative vote of the majority of the members of the City Council. No ordinance shall take effect until 30 days after its passage, except as herein otherwise provided for emergency ordinances.\n\nThe City Council may, by vote of 2/3 of the members present and voting, pass emergency ordinances, orders or resolves to take effect at the time indicated therein, but such emergency ordinances, orders or resolves shall contain a section in which the emergency is set forth and defined; provided, however, that the declaration of such emergency by the City Council shall be conclusive.",
+      "recordId": "art-III-sec-8"
+    }
+  }
+}

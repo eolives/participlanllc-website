@@ -1,0 +1,60 @@
+name: Update quiz stats
+
+# Triggered by a repository_dispatch call from the Cloudflare Worker relay
+# (see cloudflare-worker/) whenever someone completes the Charter Quiz.
+# The Worker never gets write access to this repo — it only holds a
+# fine-grained PAT scoped to "trigger workflows", nothing else. This
+# workflow does the actual commit, using GitHub's own auto-issued,
+# short-lived GITHUB_TOKEN.
+"on":
+  repository_dispatch:
+    types: [quiz_result]
+
+# If two people finish the quiz within seconds of each other, two runs could
+# start close together. This queues them (rather than canceling either one)
+# so both attempts always get counted, one commit at a time.
+concurrency:
+  group: quiz-stats
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Merge this attempt into the stats file
+        env:
+          QUIZ_PAYLOAD: ${{ toJSON(github.event.client_payload) }}
+        run: node scripts/update-quiz-stats.js
+
+      - name: Commit and push if the stats file changed
+        run: |
+          git config user.name "quiz-stats-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if git diff --quiet -- data/stats/quiz-stats.json docs/stats.json; then
+            echo "No changes to commit (this shouldn't normally happen — every accepted attempt changes totalAttempts)."
+            exit 0
+          fi
+          git add data/stats/quiz-stats.json docs/stats.json
+          git commit -m "Quiz stats: +1 attempt"
+          # Pull-rebase-push retry loop, in case another run in this queued
+          # group pushed between our checkout and our push.
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push failed (attempt $i) — pulling and retrying..."
+            git pull --rebase
+          done
+          echo "Failed to push after 5 attempts."
+          exit 1

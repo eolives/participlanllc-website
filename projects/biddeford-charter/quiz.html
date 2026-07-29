@@ -239,7 +239,7 @@
 "use strict";
 var DATA = JSON.parse(document.getElementById('quiz-data').textContent);
 var EXPLORER_URL = "index.html"; // substituted at build time by scripts/build-quiz.js
-var STATS_ENDPOINT_URL = ""; // Cloudflare Worker relay URL; empty string disables submission
+var STATS_ENDPOINT_URL = "https://biddeford-quiz-relay.participlanllc.workers.dev"; // Cloudflare Worker relay URL; empty string disables submission
 var STATS_JSON_URL = "stats.json"; // where to read the published, repo-wide stats.json from
 
 document.getElementById('footer-explorer-link').href = EXPLORER_URL;

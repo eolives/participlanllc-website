@@ -1,0 +1,13 @@
+{
+  "name": "biddeford-quiz-relay",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Relay Worker: receives Biddeford Charter Quiz attempts and triggers the repo's quiz-stats GitHub Actions workflow via repository_dispatch. See ../README.md \"Setting up live stat tracking\".",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^3.78.0"
+  }
+}

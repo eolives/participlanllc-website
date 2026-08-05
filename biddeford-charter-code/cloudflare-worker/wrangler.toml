@@ -1,0 +1,18 @@
+name = "biddeford-quiz-relay"
+main = "quiz-relay.js"
+compatibility_date = "2026-07-01"
+
+# Secrets (set via `wrangler secret put <NAME>`, never committed here):
+#   GITHUB_TOKEN  — fine-grained PAT, scoped to this one repo only,
+#                   Repository permissions > Contents: None,
+#                   Repository permissions > Actions/"Workflows": Read and write
+#                   (or "Contents: Read and write" if your GitHub plan only
+#                   exposes dispatch permission bundled that way — check what
+#                   scope the token needs to call the /dispatches endpoint
+#                   for your account type).
+#   GITHUB_OWNER  — your GitHub username or org, e.g. "yourname"
+#   GITHUB_REPO   — the repo name, e.g. "biddeford-charter-code"
+#
+# Optional (defaults to "*", i.e. any origin may POST):
+#   ALLOWED_ORIGIN — restrict to your GitHub Pages origin, e.g.
+#                    "https://yourname.github.io"

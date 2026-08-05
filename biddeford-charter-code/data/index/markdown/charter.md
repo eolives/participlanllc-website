@@ -1,0 +1,794 @@
+# City of Biddeford, ME — City Charter
+
+> As of 2026-07-09. Source: https://ecode360.com/BI3074
+
+_86 records indexed._
+
+> ⚠️ **Data quality note:** This corpus was hand-transcribed from a PDF export downloaded from ecode360.com/BI3074 on 2026-07-09, not from a bulk data feed. The source PDF's text layer interleaves some lettered sub-lists (a), (b), (c)... after later sections in the same Article, a known artifact of eCode360's two-column PDF export. Where that occurred, the sub-list has been reattached to the section it grammatically belongs to (e.g. a paragraph ending '...and shall:' followed immediately by its list), based on wording and content, not by rerunning an automated parser. Reattachments are noted per-section below via the 'reassembled' field. Always verify against the live page for anything load-bearing.
+
+---
+
+## Article I: Grant of Powers to the City
+
+**Citation:** Art. I
+
+_No text — heading/divider record only._
+
+---
+
+## Sec. 1. Corporate existence of Biddeford retained.
+
+**Citation:** Art. I, Sec. 1
+
+The inhabitants of the City of Biddeford, in the County of York, shall continue to be a body politic and corporate by the name of the City of Biddeford, and shall have, exercise and enjoy, all the rights, immunities, powers, privileges and franchise, and shall be subject to all the duties, liabilities and obligations provided for herein, or otherwise, pertaining to, or incumbent upon the City of Biddeford as a municipal corporation or to the inhabitants or municipal authorities thereof; and may enact reasonable bylaws, regulations, and ordinances for municipal purposes, not inconsistent with the Constitution and laws of the State of Maine; and impose penalties for the breach thereof, to the maximum allowed by Maine state law to be recovered for such uses as said bylaws, regulations, or ordinances shall provide.
+
+---
+
+## Sec. 2. Powers and duties.
+
+**Citation:** Art. I, Sec. 2
+
+The administration of all fiscal, prudential, and municipal affairs of the City, with the government thereof, except the general management, care, conduct, and control of the Schools, which shall be vested in the School Committee as hereinafter provided, and also except as otherwise provided by this Charter, shall be and is vested in the Mayor and one body of members, which shall constitute and be called the City Council, all of whom shall be inhabitants of the City, and shall be elected and sworn in the manner hereinafter prescribed. The Mayor and the members of the City Council shall be and constitute the municipal officers of the City of Biddeford for all purposes required by statute, and, except as otherwise herein specifically provided, shall have all powers and authority given to, and perform all duties required of, municipal officers and mayors of cities under the laws of the State of Maine. All other powers now or hereafter vested in the inhabitants of the City, and all powers granted by this Charter, except as herein otherwise provided, shall be vested in the Mayor and City Council.
+
+---
+
+## Article II: Office of the Mayor
+
+**Citation:** Art. II
+
+_No text — heading/divider record only._
+
+---
+
+## Sec. 1. Executive Authority of the Mayor.
+
+**Citation:** Art. II, Sec. 1
+
+The Chief Executive of the City of Biddeford shall be the Mayor, who with the exception of the administration of the Department of Education, shall:
+(a) Assure that the Laws and Ordinances are enforced;
+(b) Exercise general oversight over all departments, divisions, agencies, offices, and boards created herein or that may be hereafter created;
+(c) Sign warrants to be paid from the treasury after appropriations by the City Council;
+(d) Preside at meetings of the City Council and School Committee, and shall vote only in case of a tie;
+(e) Keep the City Council advised as to the business and financial condition and future needs of the City;
+(f) Call special meetings of the City Council;
+(g) Issue warrants for calling meetings and elections for any purpose in the several wards;
+(h) Perform all other duties conferred by State Law or City Ordinances.
+
+---
+
+## Sec. 2. Appointments/nominations.
+
+**Citation:** Art. II, Sec. 2
+
+On the first Tuesday after the first Monday in December, biennially, or no later than one month after taking office, Council members will be nominated by the Mayor to all standing committees and all other committees, boards or commissions as prescribed by Ordinances or City Charter. All nominees are subject to confirmation by the City Council.
+
+---
+
+## Sec. 2a. Appointments of Citizens.
+
+**Citation:** Art. II, Sec. 2a
+
+In the event of a City board, commission or committee member vacancy, the Mayor and Chairperson of the board, commission or committee may each, within 30 days, nominate an individual to fill the vacancy and the City Council shall select a person to fill the vacancy from the two nominations; and to further provide that if the Mayor has not nominated a replacement within 30 days, the City Council President may present a nomination for the City Council's consideration.
+
+---
+
+## Sec. 3. Veto power.
+
+**Citation:** Art. II, Sec. 3
+
+Every resolve or order appropriating money, having passed the City Council, shall forthwith be presented to the Mayor for approval and signature. If disapproved, the Mayor shall return it unsigned to the City Council within seven working days of its enactment with objections in writing, which objections shall be entered into the minutes of the City Council. If, upon reconsideration, 2/3 of the members present and voting shall vote to pass the resolve or order, it shall have the same effect as if signed by the Mayor.
+
+---
+
+## Sec. 4. Election; tenure of office; prohibition; compensation.
+
+**Citation:** Art. II, Sec. 4
+
+A candidate for Mayor shall be a resident of the City of Biddeford for at least six months prior to the date on/or before which nomination papers are to be filed. The Mayor shall be sworn to the faithful performance of the duties of the office at 7:00 p.m. on the first Tuesday after the first Monday in December, following a biennial election, by the City Clerk or person authorized by law to administer oaths. The Mayor shall hold the office for two years and be re-elected without limitations. The Mayor shall not directly or indirectly enter into any contract with the City, except as provided by 30-A M.R.S.A. § 2605. The salary and compensation of the Mayor shall be $10,000 per year.
+
+---
+
+## Sec. 5. Vacancy.
+
+**Citation:** Art. II, Sec. 5
+
+In the event of a vacancy in the office of the Mayor due to death, resignation, recall or inability to serve, the President of the City Council shall perform all duties of the office of the Mayor. If less than 180 days remain in the unexpired term, the President of the City Council shall serve as Mayor Pro Tempore until the end of the unexpired term. If more than 180 days remain in the unexpired term, the vacancy shall be filled within 60 days at a special or general election called in accordance with Article VIII, Elections, of this Charter.
+
+---
+
+## Sec. 6. Elected Office.
+
+**Citation:** Art. II, Sec. 6
+
+Mayor will not hold any other elected city, county, state or federal office.
+
+---
+
+## Article III: City Council
+
+**Citation:** Art. III
+
+_No text — heading/divider record only._
+
+---
+
+## Sec. 1. City to be divided into wards.
+
+**Citation:** Art. III, Sec. 1
+
+For the purpose of all elections, the City shall be divided into seven wards. The City Council shall, once every 10 years, by ordinance establish compact and contiguous wards of approximately equal population. The City Council, for voting purposes, may by ordinance divide said wards into further voting wards.
+
+---
+
+## Sec. 2. Composition; election; tenure of office; compensation; prohibition.
+
+**Citation:** Art. III, Sec. 2
+
+The City Council shall be composed of nine members, who shall hold office for a term of two years and until their successors are elected and qualified. The City Council shall serve as the Municipal Officers, and be composed of the nine Council members. A candidate for City Council shall be a resident of the City of Biddeford for at least six months prior to the date on/or before which nomination papers are to be filed. Councilors shall be elected by the registered voters of the City; two shall be elected at large, and one shall be elected from each of the seven wards in which they reside and which they seek to represent. The Councilors-Elect shall be sworn to the faithful performance of their duties at 7:00 p.m. on the first Tuesday after the first Monday in December, following a biennial election, by the City Clerk or person authorized by law to administer oaths. They shall receive compensation at the rate of $100 per month, not to exceed $1,200 per year. No member of the City Council shall be employed by the City of Biddeford or Biddeford School Department as an employee or agent, or hold any office or employment, the compensation of which is payable by the City, during the term for which the Councilor was elected.
+
+---
+
+## Sec. 3. President of the Council.
+
+**Citation:** Art. III, Sec. 3
+
+On the first Tuesday after the first Monday in December following the regular municipal election, or as soon thereafter as possible, the City Council shall elect one of its members as President of the Council for the entire term, and until a successor is elected and qualified. In case of the death, resignation or inability of the Mayor to serve, the President of the City Council shall perform the duties of the Mayor. In the temporary absence or disability of the President, the Council may select a President Pro Tempore from among its number and such person shall exercise all the powers of the President.
+
+---
+
+## Sec. 4. Vacancies.
+
+**Citation:** Art. III, Sec. 4
+
+A vacancy in the membership of the City Council shall occur in the event of any of the following:
+(1) The death of a member;
+(2) The effective date of the resignation of a member;
+(3) The removal of a member from the ward from which the councilor was elected, except those elected at large;
+(4) The removal of a member from the City;
+(5) The conviction of a member of a felony while in office;
+(6) The recall of a member, pursuant to the provisions of Article IX; or
+(7) The employment of a member by the City of Biddeford or the Biddeford School Department as an employee or agent.
+
+A member may submit a resignation, in writing, directly to the Mayor. Once accepted by the Council, said resignation may not be withdrawn, and said member's office shall become vacant on that date.
+
+If a vacancy in the membership of the City Council occurs within 180 days after the previous election, a special election shall be held within a period not to exceed 60 days of the vacancy. If a vacancy in the membership of the City Council occurs more than 180 days after the previous election, the Mayor shall nominate, and the City Council shall confirm, a person to fill this vacancy within a period not to exceed 30 days of its occurrence. The person elected/named to fill a vacancy shall serve until the first Tuesday after the first Monday in December following the next biennial election. [Amended 11-6-2012]
+
+---
+
+## Sec. 5. Meetings of the Council.
+
+**Citation:** Art. III, Sec. 5
+
+The City Council shall meet at the usual place for holding meetings at 7:00 p.m. on the first Tuesday in December following the regular municipal election, or as soon thereafter as possible. The City Council shall establish a regular place and time for holding its meetings, and shall meet regularly at least twice a month. The City Council may, in the absence of the Mayor and the President of the Council, choose a President Pro Tempore, who shall preside at the meetings of the Council.
+
+---
+
+## Sec. 6. Special meetings.
+
+**Citation:** Art. III, Sec. 6
+
+Special meetings may be called by the Mayor, and in case of the Mayor's absence, disability, or refusal, may be called by a majority of the members of the City Council. Notice of such meeting shall be served in person, or left at the residence of each member of the City Council, at least 24 hours before the time for holding the special meeting, and the public shall be notified under the provisions in Article X, Section 3(a) of this Charter.
+
+---
+
+## Sec. 7. Quorum.
+
+**Citation:** Art. III, Sec. 7
+
+A majority of the members of the City Council shall constitute a quorum for the transaction of business.
+
+---
+
+## Sec. 8. Procedure.
+
+**Citation:** Art. III, Sec. 8
+
+The City Council shall keep a record of its proceedings and shall determine its own rules of procedure and make lawful regulations for enforcing the same. The meetings of the City Council shall be open to the public. The City Council shall create an ordinance and establish procedures to allow the public to address the City Council at all City Council meetings. Said ordinance shall also establish procedures to allow any City Councilor (with concurrence of at least one other City Councilor) the authority to place any item on the agenda within 30 days. The City Council shall act only by ordinance, order, or resolve. All ordinances, orders and resolves, except orders or resolves making appropriations of money, shall be confined to one subject which shall be clearly expressed in the title. An appropriation, order or resolve shall be confined to the subject of appropriations only. No ordinance and no appropriation order or resolve shall be passed until it has been read on two separate days, except when the requirement of a second reading on a separate day has been dispensed with by the vote of 2/3 of the members present and voting. The yeas and nays shall be taken upon the passage of all ordinances and entered on the record of the proceedings of the City Council by the Clerk. The yeas and nays shall be taken on the passage of any order or resolve when called for by any member of the City Council. Every ordinance, order, and resolve shall require on the final passage the affirmative vote of the majority of the members of the City Council. No ordinance shall take effect until 30 days after its passage, except as herein otherwise provided for emergency ordinances.
+
+The City Council may, by vote of 2/3 of the members present and voting, pass emergency ordinances, orders or resolves to take effect at the time indicated therein, but such emergency ordinances, orders or resolves shall contain a section in which the emergency is set forth and defined; provided, however, that the declaration of such emergency by the City Council shall be conclusive.
+
+---
+
+## Sec. 9. Audit.
+
+**Citation:** Art. III, Sec. 9
+
+The City Council shall provide for an independent annual audit of all City accounts and may provide for such more frequent auditing, as it deems necessary.
+
+---
+
+## Article IV: City Manager
+
+**Citation:** Art. IV
+
+_No text — heading/divider record only._
+
+---
+
+## Sec. 1. Appointment; confirmation; compensation; term of office.
+
+**Citation:** Art. IV, Sec. 1
+
+There shall be a City Manager who shall be nominated by the Mayor and whose appointment shall be confirmed by the City Council. The City Manager shall be employed by the Mayor and City Council who shall establish compensation and contract terms of employment not to exceed three years. The City Council shall evaluate the job performance of the City Manager yearly with input from the Mayor.
+
+---
+
+## Sec. 2. Powers and duties.
+
+**Citation:** Art. IV, Sec. 2
+
+The City Manager shall be the chief administrative officer of the City of Biddeford, and shall:
+(a) Be responsible for the day-to-day administration of the affairs of the City in accordance with the provisions of this Charter and the Code of Ordinances;
+(b) Be responsible for implementing policies as established by the Mayor and the City Council;
+(c) Report to and receive policy guidance from the Mayor and the City Council;
+(d) Appoint, suspend, or remove after consultation with the Mayor and confirmation by the City Council, department heads and subordinate officers provided for in the Charter, except as otherwise provided by law or this Charter;
+(e) Direct and supervise the administration of all departments, offices and agencies of the City, except as otherwise provided by this Charter or by law, and evaluate the performance, at least once per calendar year, of all subordinates;
+(f) Attend meetings of the City Council, and report to the Mayor and Council upon inquiry;
+(g) See to the enforcement of all laws and ordinances of the City and of the provisions of this Charter and carry out the lawful directives of the City Council personally or through department heads or subordinate officers;
+(h) Prepare and submit the annual municipal budget, to include a Capital Improvement 5-year budget plan. [Amended 11-8-2016]
+(i) Submit to the Mayor and City Council such reports and recommendations as the Mayor and City Council shall require;
+(j) Be a non-voting member of the City Council Finance Committee;
+(k) Perform all other duties as assigned by the Mayor and City Council.
+
+---
+
+## Sec. 3. Residency.
+
+**Citation:** Art. IV, Sec. 3
+
+The City Manager shall establish residence within the City of Biddeford within six months from the date of hire, unless otherwise approved by the City Council.
+
+---
+
+## Article V: School Committee
+
+**Citation:** Art. V
+
+_No text — heading/divider record only._
+
+---
+
+## Sec. 1. Composition; election; tenure of office; organization; compensation.
+
+**Citation:** Art. V, Sec. 1
+
+The School Committee shall be composed of seven members who shall hold office for a term of two years and until their successors are qualified. A candidate for School Committee members shall be a resident of the City of Biddeford for at least six months prior to the date on/or before which nomination papers are to be filed. Each Committee member shall be elected at large by the registered voters of the City of Biddeford; however, there shall be no more than two members from any one ward. The Committee members-elect shall be sworn to the faithful performance of their duties at 7:00 p.m. on the first Tuesday after the first Monday in December, following a regular municipal election, by the City Clerk or person authorized by law to administer oaths. School Committee members shall receive compensation at the rate of $10 for every regularly scheduled full Committee meeting attended, not to exceed $500 per year. The Committee shall meet regularly, twice a month.
+
+---
+
+## Sec. 2. Chair.
+
+**Citation:** Art. V, Sec. 2
+
+The Mayor shall be the ex officio chair of the School Committee and shall:
+(a) Have no veto power;
+(b) Not make a motion; and
+(c) Only vote to break a tie.
+
+---
+
+## Sec. 3. Powers and duties.
+
+**Citation:** Art. V, Sec. 3
+
+(a) The School Committee shall have all powers and perform all duties in regard to the care and management of the City's public schools pursuant to Maine State law and except as otherwise provided in this Charter.
+(b) The Committee shall appoint a Superintendent of Schools for a term not exceeding three years, and the Superintendent shall receive compensation at a rate determined by the Committee. The duties of the Superintendent shall be those as prescribed by law and regulations. The Superintendent of Schools may be removed for just cause. The Superintendent of Schools shall establish residence within the City of Biddeford within six months of being hired, unless otherwise approved by the School Committee. The Superintendent shall cause to be published all agendas of School Committee meetings in a local newspaper at least 24 hours before such meetings are to be held, and shall cause to be posted said agendas on the City bulletin board. [Amended 11-8-2016]
+(c) With the exception of the School Committee Standing Committees, residents of Biddeford shall be allowed to serve on and chair, with full voting rights, all Subcommittees of the School Committee, including but not limited to the Policy, Capital Improvement Projects, Curriculum and Transportation Committees. [Added 11-6-2012]
+
+---
+
+## Sec. 4. The budget.
+
+**Citation:** Art. V, Sec. 4
+
+The School Committee shall submit to the City Budget Committee a budget for operation of the Department of Education, to include a Capital Improvement 5-Year Budget Plan by the third Monday in March. After review, the Budget Committee shall forward their recommendations to the City Council, whose decision on the budget shall be final; subject to State mandated school budget validation requirements, if any. The proposed budget shall be comprised of: expenditures for the functions of instruction, student support, staff support services, administration, operation and maintenance, pupil transportation, adult education, debt service, and any other function(s) the Committee wishes to have funded for the fiscal year.
+
+The total approved for each individual function by a majority vote of Council shall become the School Committee's aggregate fiscal year budget after having received its second reading. The School Committee shall not allow the transfer of funds from one function to another without first receiving 2/3 vote of the members present and voting from both the School Committee and the City Council in separate deliberations.
+
+---
+
+## Sec. 5. Vacancies.
+
+**Citation:** Art. V, Sec. 5
+
+A vacancy in the membership of the School Committee shall occur in the event of the following:
+(1) The death of a member;
+(2) The effective date of the resignation of a member;
+(3) The removal of a member from the City;
+(4) The conviction of a member of a felony while in office;
+(5) The recall of a member, pursuant to the provisions of Article IX.
+(6) The employment of a member by the City of Biddeford or the Biddeford School Department as an employee or agent. [Added 11-8-2016]
+
+A member may submit a resignation, in writing directly to the School Committee Chairperson. Once accepted by the School Committee, the resignation may not be withdrawn and the member's office shall become vacant on that date indicated.
+
+If a vacancy in the membership of the School Committee occurs, the School Committee Chairperson shall nominate a person, consistent with Article V, Section 1, and Article VIII, Section 3 of this Charter, to fill the vacancy in a time period not to exceed 30 days of its occurrence. The nomination shall be subject to the confirmation of the School Committee. The person named to fill a vacancy shall serve until the first Tuesday after the first Monday in December following the next biennial election.
+
+---
+
+## Article VI: Police Advisory Committee
+
+**Citation:** Art. VI
+
+_No text — heading/divider record only._
+
+---
+
+## Police Advisory Committee.
+
+**Citation:** Art. VI
+
+The City Council shall create an ordinance to establish a Police Advisory Committee in the Code of Ordinances.
+
+---
+
+## Article VII: Fire Advisory Committee
+
+**Citation:** Art. VII
+
+_No text — heading/divider record only._
+
+---
+
+## Fire Advisory Committee.
+
+**Citation:** Art. VII
+
+The City Council shall create an ordinance to establish a Fire Advisory Committee in the Code of Ordinances.
+
+---
+
+## Article VIII: Elections
+
+**Citation:** Art. VIII
+
+_No text — heading/divider record only._
+
+---
+
+## Sec. 1. Regular municipal elections.
+
+**Citation:** Art. VIII, Sec. 1
+
+On the first Tuesday following the first Monday in November, biennially, a regular municipal election shall be held and the registered voters of the City or wards, as the case may be, shall ballot for the Mayor, Councilors, School Committee, Wardens and Ward Clerks as may be necessary to fill the offices provided for by this Charter whose terms would normally expire.
+
+---
+
+## Sec. 1A. (Reserved)
+
+**Citation:** Art. VIII, Sec. 1A
+
+_No text — heading/divider record only._
+
+---
+
+## Sec. 2. Wardens and Ward Clerks.
+
+**Citation:** Art. VIII, Sec. 2
+
+The Wardens and Ward Clerks shall be and remain residents of the Ward for which they qualify and hold their offices for two years and until others have been chosen and qualified in their stead. The Warden and the Ward Clerk shall be sworn to the faithful performance of their duties by a person qualified under the statutes of the State to administer oaths, and a certificate of such oath shall be entered by the City Clerk on the records of said ward.
+
+---
+
+## Sec. 3. Nominations/eligibility.
+
+**Citation:** Art. VIII, Sec. 3
+
+The nomination of all candidates for elective offices provided for by this Charter shall be by petition. The petition of a candidate for Mayor shall be signed by no fewer than 125 qualified voters of the City. The petition of a candidate for Councilor-at-Large shall be signed by no fewer than 50 qualified voters of the City. The petition of a candidate for a Ward Council seat shall be signed by no fewer than 25 qualified voters of the respective wards. The petition of a candidate for School Committee shall be signed by no fewer than 25 qualified voters of the City. The petition of a candidate for Warden and Ward Clerk shall be signed by no fewer than 20 qualified voters of the respective wards. The petition of a candidate for the Charter Revision Commission shall be signed by no fewer than 25 qualified voters of the respective wards. Employees of the City of Biddeford or Biddeford School Department are not eligible to seek or accept nomination, appointment or election to any elected political office in the City of Biddeford.
+
+---
+
+## Sec. 4. Form of nomination petition.
+
+**Citation:** Art. VIII, Sec. 4
+
+The signatures to nomination petitions need not all be affixed to one nomination petition, but to each separate petition there shall be attached an affidavit of the circulator thereof stating the number of signers of each petition, and that each signature appended thereto was made in his or her presence and is the genuine signature of the person whose name it purports to be. With each signature shall be stated the place of residence of the signer, giving the street and number of the street or their description sufficient to identify the same. The form of the nomination petition shall be determined by the City Clerk and shall declare the office in which the candidate is petitioning for prior to receiving signatures.
+
+---
+
+## Sec. 5. Filing of nomination petitions and acceptance of nomination.
+
+**Citation:** Art. VIII, Sec. 5
+
+The nomination petitions for any one candidate must be assembled and united into one petition and filed with the City Clerk during normal business hours not later than 45 days before the date of election. No nomination shall be valid unless the candidate shall file with the City Clerk in writing at the time of filing of said nomination petitions his or her consent accepting nomination, agreeing not to withdraw, and if elected, to hold office. Nomination, petitions and consent, once filed, may not be withdrawn. Any challenge to a nomination petition must be submitted to the City Clerk in writing, setting forth the specific reasons for the objection, no later than five business days from its date of filing or it is barred. No person shall be nominated, nor shall any person consent to being nominated, at the same election for any other elective office provided for by this Charter, and no person shall simultaneously hold more than one elective office provided for by this Charter.
+
+---
+
+## Sec. 6. Form of ballot.
+
+**Citation:** Art. VIII, Sec. 6
+
+All official ballots for use in all municipal elections shall be prepared by the City Clerk and furnished by the City. Ballots for use in elections under this Charter shall contain the names of the various candidates with their residence, and the office for which they are candidates. The candidates for each office shall be grouped under the title of each office, plainly and distinctly marked. There shall be as many blank spaces under the name of each office as there are vacancies to be filled. These spaces may be used by a voter to write in the name of any person for whom the voter desires to vote. No stickers shall be used. Such ballots shall also contain such measures as may be submitted to the voters of the City by the Maine Legislature or by the City Council and shall be without party mark or designation.
+
+In preparing all ballots for election under this Charter, the City Clerk shall conduct a random lottery drawing, in a public forum within 14 days after closing of nominations. The City Clerk shall then arrange the names of all qualified candidates for each office based on the outcome of that drawing.
+
+---
+
+## Sec. 7. Sample ballots.
+
+**Citation:** Art. VIII, Sec. 7
+
+The City Clerk shall cause ballots to be prepared from the arrangement of the first group of ballots as provided above and to be posted in public places in each ward and/or voting precinct, and advertised in a local newspaper at least once no later than 10 days prior to a municipal election. Sample ballots shall be printed on colored paper and marked "Sample Ballot" and shall contain the names of the certified candidates with the residence of each, instructions to voters, and such measures as may be submitted to the voters by the Legislature or by the City Council. Such sample ballots shall also be without party mark or designation.
+
+---
+
+## Sec. 8. Write-In Candidate.
+
+**Citation:** Art. VIII, Sec. 8
+
+A write-in candidate shall mean a person whose name does not appear on the ballot under the office designation to which the voter may wish to elect the candidate and who has filed a declaration of write-in candidacy. To be elected as a write-in candidate, a person must file a declaration of write-in candidacy in the City Clerk's Office on a form provided by the City Clerk, on or before close of business on the 5th day prior to the election.
+
+---
+
+## Sec. 9. State laws applicable.
+
+**Citation:** Art. VIII, Sec. 9
+
+The laws of the State of Maine relating to the qualifications of electors, registration, the manner of voting, the duties of election officials, counting of ballots, and all other particulars in respect to preparation for conducting and managing elections, so far as they may be applicable, shall govern all municipal elections in the City of Biddeford, except as otherwise provided in this Charter.
+
+---
+
+## Article IX: Recall
+
+**Citation:** Art. IX
+
+_No text — heading/divider record only._
+
+---
+
+## Sec. 1. Applicability.
+
+**Citation:** Art. IX, Sec. 1
+
+The Mayor, or any member of the City Council or School Committee may be recalled and removed from office by the qualified voters of the City of Biddeford as hereinafter provided.
+
+---
+
+## Sec. 2. Petition for recall.
+
+**Citation:** Art. IX, Sec. 2
+
+In the case of the Mayor, Councilor-at-Large and School Committee Member, the recall must be signed by not less than 15% of registered voters from the City who voted in the previous Gubernatorial Election. In the case of a Ward Councilor, who has been elected as such by the registered voters of said ward, the petition must be signed by not less than 15% of the qualified voters in that ward at the time of the previous municipal election.
+
+---
+
+## Sec. 3. Verification of recall petition.
+
+**Citation:** Art. IX, Sec. 3
+
+Within seven days of the receipt of the petitions, the City Clerk shall ascertain whether or not the petitions have been signed by the requisite number of qualified voters. If there are insufficient signatures, the City Clerk will notify in writing by certified mail those responsible for the petition who shall have an additional five days from receipt of the notice to obtain a sufficient number of signatures.
+
+---
+
+## Sec. 4. Calling of recall election.
+
+**Citation:** Art. IX, Sec. 4
+
+If the City Clerk's certification should show that the petitions are sufficient, the petitions and the Clerk's certification shall be submitted by the City Clerk to the City Council at its next regular meeting following certification and shall also notify the person or persons whose removal is sought. The City Council shall, within 14 days of receipt of the City Clerk's certification, direct the City Clerk to issue a warrant for a municipal election within 60 days.
+
+---
+
+## Sec. 5. Count of ballot.
+
+**Citation:** Art. IX, Sec. 5
+
+In case of a majority voting for and against the recall for any official shall vote in favor of the recall, such official shall be thereby removed and the City Council shall declare a vacancy in that office in accordance with Article II, Section 5 of this Charter in the case of the Mayor; Article III, Section 4 of this Charter in the case of a City Councilor; or Article V, Section 5 of this Charter in the case of a School Committee Member.
+
+---
+
+## Article X: Departments, Offices or Agencies
+
+**Citation:** Art. X
+
+_No text — heading/divider record only._
+
+---
+
+## Sec. 1. Appointments.
+
+**Citation:** Art. X, Sec. 1
+
+(a) The City Manager and City Clerk shall be officers of the City and shall be nominated by the Mayor and confirmed by the City Council as applicable to appropriate articles of this Charter.
+(b) The City Solicitor shall be nominated by the Mayor and confirmed by the City Council for a period within the term of the office of the Mayor.
+(c) Heads of departments, offices and agencies, including those prescribed by Federal and State law, or City Ordinances shall be appointed by the City Manager and confirmed by the Mayor/City Council as follows:
+(1) Tax Assessor (per MRSA Title 36, Ch. 101).
+(2) Police Chief.
+(3) Fire Chief.
+(4) Public Works Director.
+(5) Code Enforcement Officer.
+(6) Director Economic Development.
+(7) Building Facilities Manager.
+(8) City Treasurer (per MRSA 30-A, Part 2, Sub Para 9, Ch. 221, Sec. 5602-5604).
+(9) Recreation Director.
+(10) General Assistance Administrator - MRSA, Title 22, Ch. 1161, Sec. 4301 No. 12.
+(11) Finance Director.
+
+---
+
+## Sec. 2. (Reserved)
+
+**Citation:** Art. X, Sec. 2
+
+_No text — heading/divider record only._
+
+---
+
+## Sec. 3. City Clerk.
+
+**Citation:** Art. X, Sec. 3
+
+The Mayor and City Council may enter into an employment contract with the City Clerk for a term not to exceed three years. The City Clerk shall be nominated by the Mayor and confirmed by the City Council. The salary and compensation of the City Clerk shall be established by the City Council. The City Clerk shall be the Clerk of the City Council and shall:
+(a) Give notice in a local newspaper of the time and place of regular and special Council meetings on Friday prior to the week of such meetings. The agenda for City Council meetings shall appear in local media sources and shall be posted on the City bulletin board, at least 24 hours in advance;
+(b) Keep a record of the proceedings of the City Council;
+(c) Record the votes of members by yeas and nays;
+(d) Perform the specific election duties enumerated in the Charter;
+(e) Review the format of all referendum questions in order to determine compliance with provisions in this Charter and applicable State Laws;
+(f) Provide educational materials to unenrolled voters advising them of their right to run for office, and guidelines for enrolling and voting;
+(g) Perform all other duties enacted by State Law and/or City Ordinances.
+
+---
+
+## Sec. 4. Finance Director.
+
+**Citation:** Art. X, Sec. 4
+
+The Finance Director shall:
+(a) Be a nonvoting member of the Finance Committee;
+(b) Direct and supervise the accounts and bookkeeping of the City;
+(c) Designate the appropriation and the department for all bills and claims and certify that they are in proper form and legal for presentation to the Finance Committee or for a warrant for the Mayor's signature;
+(d) Cause to be prepared and submitted annually by an independent auditor to the Mayor and the City Council a report on the receipts, expenditures, property holdings, debts and liabilities of the City;
+(e) Perform any other duties outlined in State Law and/or City Ordinances and prepare other reports as assigned by the Mayor, City Council, or the City Manager.
+
+---
+
+## Sec. 5. City Assessor.
+
+**Citation:** Art. X, Sec. 5
+
+The powers and duties of the Assessor are prescribed by State Law, M.R.S.A., Title 36, Ch. 101, Property within the City shall be revaluated by a total City wide assessment, which includes all residential and commercial properties.
+
+---
+
+## Sec. 6. General Assistance Administrator.
+
+**Citation:** Art. X, Sec. 6
+
+The General Assistance Administrator is subject to the supervision of the Municipal Officers. The powers and duties of this position are prescribed by State Law.
+
+---
+
+## Sec. 7. Harbor Master.
+
+**Citation:** Art. X, Sec. 7
+
+The Harbor Master shall implement the river and harbor regulations emanating from the City Council, and such other duties as the City Council may prescribe.
+
+---
+
+## Sec. 8. Organizational powers.
+
+**Citation:** Art. X, Sec. 8
+
+The Mayor and City Council shall have the power by Ordinance for the organization, conduct, and operation of the departments, agencies, officers, and boards/committees/commissions of the City; and for the creation of additional departments, agencies, officers, and boards/committees/commissions; and/or for the alteration, abolition, assignment, or reassignment of all such departments, divisions, agencies, offices and boards/committees/commissions.
+
+---
+
+## Sec. 9. Civil service rule.
+
+**Citation:** Art. X, Sec. 9
+
+The Mayor and City Council shall provide by Ordinance for a system of civil services rules for the appointment, promotion, demotion, lay-off, reinstatement, suspension, or removal of City employees not covered by union contracts.
+
+---
+
+## Sec. 10. Remuneration of appointees.
+
+**Citation:** Art. X, Sec. 10
+
+The Mayor and City Council shall fix by order the remuneration of the appointees of the Mayor and City Council.
+
+---
+
+## Sec. 11. Duties.
+
+**Citation:** Art. X, Sec. 11
+
+The duties of the Administrative Officers shall be prescribed by the appointive power, but such duties shall not be inconsistent with this Charter or any Ordinance enacted by the City Council as provided herein.
+
+---
+
+## Sec. 12. Continuity of office.
+
+**Citation:** Art. X, Sec. 12
+
+Any and all Administrative Officers and employees of the City of Biddeford on the effective date of this Charter shall continue in such capacity until a successor is appointed and qualified as provided herein, unless sooner removed by the appointive power as designated herein.
+
+---
+
+## Article XI: Business and Financial Provisions
+
+**Citation:** Art. XI
+
+_No text — heading/divider record only._
+
+---
+
+## Sec. 1. The City Council Finance Committee.
+
+**Citation:** Art. XI, Sec. 1
+
+The Finance Committee shall be comprised of the Mayor, Council President and two other members of the City Council; one Council member being nominated by the Council President and confirmed by the City Council, the other being nominated by the Mayor and confirmed by the City Council. In addition, the Finance Director and the City Manager shall be nonvoting members.
+
+---
+
+## Sec. 2. Budget Committee.
+
+**Citation:** Art. XI, Sec. 2
+
+(a) There shall be a Budget Committee convened annually, not later than the first week in March which shall review and propose the Municipal and School Department budgets for the ensuing fiscal year.
+(b) The Budget Committee shall be comprised of the entire City Council. The Mayor shall serve as Chair and shall vote only in case of a tie. The City Manager and the Finance Director shall serve as nonvoting staff members to the Committee.
+(c) The Budget shall be submitted to the City Council in two parts, one by the City Manager and one by the Superintendent of Schools. The proposed budget shall be submitted by the Superintendent of Schools in the format outlined in Article V, Section 4.
+(d) The Budget Committee shall, at the latest, by the first Monday in May each year, submit to the City Council a budget showing the proposed expenditures for the various departments, other principal or subordinate departments and a contingent fund.
+(e) A summary of a proposed budget shall be published at least once in a local newspaper of general circulation within the City within 14 days following submission to the City Council.
+(f) The City Council may, before adopting the annual appropriation resolve, make appropriations for current department expenses; however, these appropriations will be included in the annual appropriation resolve.
+(g) At least one public hearing shall be held on the City budget prior to its adoption by the City Council.
+(h) The City budget shall be adopted by the City Council prior to the beginning of the next fiscal year.
+(i) Capital Improvement Program. The City Manager and School Committee shall submit to the Budget Committee, Mayor and City Council a Capital Improvement 5-Year Budget Plan at the second regular meeting of the City Council in November of each year. Annually, during the budget process, the City shall appropriate at least five hundredths of one percent (0.05%) of the previous fiscal year's total taxable valuation for the sole purpose of funding the capital improvements. Should the City Council make a determination that unusual circumstances prevent funding at this level; the City Council may override this requirement. To override the requirement, at least six members of the Council must vote in favor of an override order. Said order shall include the determination and explanation of the unusual circumstances. [Added 11-8-2016]
+
+---
+
+## Sec. 3. Appropriation resolve.
+
+**Citation:** Art. XI, Sec. 3
+
+The City Council shall adopt the annual appropriation resolve for the current fiscal year. Such resolve shall appropriate those amounts deemed necessary for general City purposes and for a contingent fund.
+
+There shall be no subsequent expenditures authorized for any purpose; however, funds may be transferred from one department to another, the contingent fund, or other source of income, provided the resolution authorizing the transfer is adopted by a 2/3rds vote of the full membership of the City Council and the vote is recorded.
+
+---
+
+## Sec. 4. Accounts and records.
+
+**Citation:** Art. XI, Sec. 4
+
+Accounts and records shall be supervised by the Finance Director, showing transactions of all departments included in the budget of the City, the Fire Department, the Police Department, and the School Department. A general accounting system for the budget shall be recommended by the Finance Director and approved by the Municipal Officers. Accounts shall be kept in such a manner as to show fully at all times the financial condition of the City.
+
+---
+
+## Sec. 5. Fiscal year.
+
+**Citation:** Art. XI, Sec. 5
+
+The fiscal year of the City shall be July first through June thirtieth of the ensuing year.
+
+---
+
+## Sec. 6. Borrowing.
+
+**Citation:** Art. XI, Sec. 6
+
+Money may be borrowed, within the limits fixed by the Constitution and Statutes of the State, now or hereafter applying to the City of Biddeford, by the issue and sale of bonds or notes pledged on the credit of the City, the proceeds to be used for the acquisition of land, the construction, reconstruction, major alterations, extraordinary repairs, the equipment of buildings and other permanent public improvements, the purchase of department equipment, and the payment or refunding of bonds, notes, and certificates of indebtedness previously issued.
+
+---
+
+## Sec. 7. Payments.
+
+**Citation:** Art. XI, Sec. 7
+
+Money shall be paid only in warrants on the City Treasury examined by the City Finance Director and signed by the Mayor. The Finance Director shall examine all payrolls, bills, and other claims and demands against the City and shall issue no warrant for payment until satisfied that the claim is in proper form, correctly computed, duly certified, and legally due and payable.
+
+---
+
+## Sec. 8. Collection and custody of City monies.
+
+**Citation:** Art. XI, Sec. 8
+
+All monies received by any officer, employee, or agent of the City belonging to the City, or for or in connection with the business of the City, shall forthwith be paid by the officer, employee, or agent receiving the same into the City Treasury, and shall then be deposited with a federally insured financial institution or institutions to be chosen by the City Council. All interest from all deposits of money belonging to the City shall accrue to the benefit of the City.
+
+---
+
+## Sec. 9. Contributions.
+
+**Citation:** Art. XI, Sec. 9
+
+The City may invest, lend or otherwise contribute to any private entity for the purposes of assisting that private entity. If there is no exchange of any goods or services, the entity receiving the funds shall provide an annual report to the City regarding the use of the funds which shall be available to the public within 14 days following submission of the proposed budget to the City Council.
+
+---
+
+## Article XII: Miscellaneous Provisions
+
+**Citation:** Art. XII
+
+_No text — heading/divider record only._
+
+---
+
+## Sec. 1. No personal interest.
+
+**Citation:** Art. XII, Sec. 1
+
+Neither the Mayor, nor any member of the City Council, School Committee or board, committee or commission thereof and no officer, agent or employee of the City or School Committee, or immediate family member of a City or School Department employee shall:
+(a) Have a substantial financial interest, direct or indirect, in any contract entered into by or on behalf of the City of Biddeford, or the School Committee, except a personal employment contract, or in the sale to or by the City, or School Committee of any land, materials, supplies or services, when such officer, agent, employee or member exercises on behalf of the City, or School Committee any function or responsibility with respect to such contract or sale. All contracts or sales made in violation thereof are void, and the City Finance Director is expressly forbidden to pay any money out of the City Treasury on account of any such transaction.
+(b) Purchase or accept anything from the City, or School Committee, other than those items or services which are offered to the public generally, and then only upon the same terms and under the same procedures offered to and used for the general public. This shall not include those items or services which are received as compensation, or as a part of such person's employment contract, or which are necessary for the performance of such person's duties.
+(c) Accept or receive from any person, firm, or corporation acting under a franchise, contract, or license from the City or School Committee, any frank, free pass, free ticket, or free service, or accept, directly or indirectly, from any such person, firm, or corporation any service upon terms more favorable than those granted to the public generally.
+
+---
+
+## Sec. 2. Ordinances, orders, resolves.
+
+**Citation:** Art. XII, Sec. 2
+
+All ordinances, orders, or resolves in force at the time that this Charter takes effect, not inconsistent with this Charter, shall continue in force until amended or repealed. All rules and regulations of the Municipal Officers, or of any office of the City of Biddeford in force at the time that this Charter takes effect, not inconsistent with the provisions thereof, shall continue in force until amended or repealed.
+
+---
+
+## Sec. 3. Continuity of actions.
+
+**Citation:** Art. XII, Sec. 3
+
+All rights, actions, proceedings, prosecutions and contracts of the City, or any of its boards, committees, commissions or departments, pending or unexecuted when this Charter goes into effect, and not inconsistent therewith, shall be enforced, continued, or completed in all respects as though begun or executed hereunder.
+
+---
+
+## Sec. 4. General meetings of citizens.
+
+**Citation:** Art. XII, Sec. 4
+
+General meetings of the citizens qualified to vote in the City affairs may from time to time be held to consult upon the public good, to instruct their representatives, and to take all lawful measures to obtain redress of any grievances according to the right secured to the people by the Constitution of this State; and such meetings may and shall be duly warned by the City Council, upon the requisition of 100 qualified voters of said City. A moderator shall be selected by majority vote of the citizens attending the meeting.
+
+---
+
+## Sec. 5. Tidal right-of-way.
+
+**Citation:** Art. XII, Sec. 5
+
+Any highway, town way, or bridge which has been, or may hereafter be, located within the City between high and low mark shall nevertheless be deemed to be legally located and established.
+
+---
+
+## Sec. 6. Revision of Charter.
+
+**Citation:** Art. XII, Sec. 6
+
+The Charter may be changed in matters of form and substance only by a duly elected Charter Revision Commission consisting of nine members selected as follows: Seven members, one elected from each ward and two appointed by the Mayor and confirmed by the City Council, who shall serve in accordance with 30-A M.R.S.A, §§ 2101-2106, as amended. A candidate for the Charter Revision Commission shall be a resident of the City of Biddeford for at least six months prior to the date on/or before which nomination papers are to be filed. Charter Revision Commission members may not hold another elected office within the City.
+
+---
+
+## Sec. 7. Referendum guidelines.
+
+**Citation:** Art. XII, Sec. 7
+
+All issues decided by referendum shall be binding on the City Council and not merely advisory. All referendum questions are to be decided at a general election or special election called for the purpose of voting on the referendum. All referendum questions shall be limited to one part questions and be stated in the affirmative.
+
+---
+
+## Sec. 8. City boards/commissions/committee meetings.
+
+**Citation:** Art. XII, Sec. 8
+
+All meetings of the City of Biddeford shall be duly posted on the central bulletin board of City Hall, at least 24 hours prior to the meeting.
+
+(a) Bond issues. No order providing for the issue of bonds pledged on the credit of the City of Biddeford shall be passed without notice of the same having been posted in a public place in the City of Biddeford and published at least once in a local newspaper of general circulation in the City of Biddeford not later than 14 days before final action of the City Council. No authorization provided for the issue of such bonds shall take effect until ratified by a majority of the voters voting thereon at a general or special election. A question seeking voter approval of the issue of such bonds shall be accompanied by a statement setting forth estimates of the total cost of such bonds, total interest, total length of term and projected effect on the mil rate. Tax anticipation notes are exempted from this provision.
+
+(b) Citizen initiated referendum.
+(1) Groups, organizations or individuals circulating petitions must clearly indicate at the top of each and every petition sheet who the group, persons or entity is and the purpose of the petition.
+(2) Fifteen percent of registered voters in the City of Biddeford at the time of filing of the petition must sign a petition to bring matters to a referendum.
+(3) A copy of the petition must be registered with the City Clerk at the commencement of the petition drive. The petitioners will have 30 calendar days from the date of filing to gather signatures. The petitions must be submitted to the City Clerk by the 30th day.
+(4) All referendum questions are to be decided by a majority vote at a general election or special election called for the purpose of voting on the referendum.
+
+---
+
+## Sec. 9. Residency requirement.
+
+**Citation:** Art. XII, Sec. 9
+
+Any and all members of boards, committees and commissions nominated by the Mayor shall be residents of the City of Biddeford for at least six months prior to their appointment, and must be domiciled in the City of Biddeford throughout their term.
+
+---
+
+## Sec. 10. Code of Ethics.
+
+**Citation:** Art. XII, Sec. 10
+
+The City shall maintain an ordinance (to be adopted within six months) establishing a Code of Ethics for all elected and appointed City Officials.
+
+---

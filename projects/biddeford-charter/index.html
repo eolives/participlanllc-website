@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biddeford Municipal Code — Explorer</title>
+<meta name="description" content="Searchable, sortable copy of the City of Biddeford, ME City Charter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #F0E9DA;
+    --paper-raised: #F7F2E7;
+    --ink: #1E2A33;
+    --charcoal: #2A2621;
+    --brick: #9C4A32;
+    --river: #3E6E73;
+    --river-dim: #5C8A8E;
+    --gold: #A9812E;
+    --rule: rgba(30,42,51,0.14);
+    --rule-strong: rgba(30,42,51,0.28);
+    --shadow: 0 1px 2px rgba(30,42,51,0.06), 0 6px 20px -8px rgba(30,42,51,0.18);
+    --radius: 3px;
+    --sidebar-w: 264px;
+    --display: "Fraunces", Georgia, serif;
+    --body: "Newsreader", Georgia, "Times New Roman", serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  html[data-theme="dark"]{
+    --paper: #171E24;
+    --paper-raised: #1D262D;
+    --ink: #EDE6D6;
+    --charcoal: #E9E2D3;
+    --brick: #D97F62;
+    --river: #86C0C4;
+    --river-dim: #5F9498;
+    --gold: #D8B15C;
+    --rule: rgba(237,230,214,0.14);
+    --rule-strong: rgba(237,230,214,0.26);
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 28px -10px rgba(0,0,0,0.55);
+  }
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+  body{
+    margin:0;
+    background: var(--paper);
+    color: var(--charcoal);
+    font-family: var(--body);
+    font-size: 16.5px;
+    line-height: 1.6;
+    background-image:
+      radial-gradient(circle at 15% 8%, rgba(30,42,51,0.035), transparent 40%),
+      radial-gradient(circle at 85% 92%, rgba(30,42,51,0.03), transparent 45%);
+  }
+  a{ color: var(--river); text-decoration-color: rgba(62,110,115,0.4); text-underline-offset: 3px; }
+  a:hover{ color: var(--brick); }
+  :focus-visible{ outline: 2px solid var(--river); outline-offset: 2px; }
+
+  .seam{
+    height: 10px;
+    background-image: repeating-linear-gradient(90deg, var(--rule-strong) 0 8px, transparent 8px 16px);
+    background-position: center; background-repeat: repeat-x; background-size: 16px 1.5px;
+    opacity: 0.9;
+  }
+  .stitch-badge{
+    display:inline-flex; align-items:center; gap:.35em;
+    font-family: var(--mono); font-size: 11px; letter-spacing:.02em;
+    color: var(--river-dim);
+    border: 1px dashed var(--rule-strong);
+    border-radius: 999px; padding: 2px 9px 2px 7px; cursor: help;
+    background: color-mix(in srgb, var(--river) 6%, transparent);
+  }
+  .stitch-badge svg{ width:12px; height:12px; flex:none; }
+  .stitch-badge:hover, .stitch-badge:focus-visible{ color: var(--river); border-color: var(--river); }
+
+  .quality-badge{
+    font-family: var(--mono); font-size: 9.5px; letter-spacing:.03em; text-transform:uppercase;
+    border-radius: 999px; padding: 1.5px 7px; white-space:nowrap;
+  }
+  .quality-badge.verified{ color: var(--river); border:1px solid color-mix(in srgb, var(--river) 55%, transparent); background: color-mix(in srgb, var(--river) 8%, transparent); }
+  .quality-badge.auto{ color: var(--gold); border:1px solid color-mix(in srgb, var(--gold) 55%, transparent); background: color-mix(in srgb, var(--gold) 8%, transparent); }
+
+  header.site{ position: sticky; top:0; z-index: 30; background: var(--paper); border-bottom: 1px solid var(--rule); }
+  .header-inner{
+    max-width: 1220px; margin: 0 auto; padding: 18px clamp(16px,3vw,32px) 12px;
+    display:flex; align-items:flex-start; justify-content:space-between; gap: 24px; flex-wrap: wrap;
+  }
+  .brand{ display:flex; gap:14px; align-items:flex-start; }
+  .seal{
+    width:46px; height:46px; flex:none; margin-top:2px; border-radius:50%;
+    border: 1.5px solid var(--rule-strong); display:flex; align-items:center; justify-content:center;
+    font-family: var(--display); font-weight:600; font-size: 13px; color: var(--ink); background: var(--paper-raised);
+    position:relative;
+  }
+  .seal::before{ content:""; position:absolute; inset:4px; border-radius:50%; border: 1px dotted var(--rule-strong); }
+  h1.wordmark{ font-family: var(--display); font-weight:600; font-size: clamp(20px,3vw,28px); margin:0 0 2px; letter-spacing: -0.01em; color: var(--ink); }
+  .tagline{ margin:0; font-size:13.5px; color: var(--river-dim); max-width:56ch; font-style: italic; }
+  .header-meta{ font-family: var(--mono); font-size:11px; color: color-mix(in srgb, var(--charcoal) 60%, transparent); text-align:right; line-height:1.7; padding-top:6px; }
+  .header-meta a{ color: inherit; }
+  .theme-toggle{ margin-top:6px; display:inline-flex; border:1px solid var(--rule-strong); border-radius:999px; overflow:hidden; font-family: var(--mono); font-size:10.5px; }
+  .theme-toggle button{ border:0; background:transparent; color: var(--charcoal); padding:4px 9px; cursor:pointer; font-family:inherit; font-size:inherit; }
+  .theme-toggle button[aria-pressed="true"]{ background: var(--ink); color: var(--paper); }
+
+  /* document tabs */
+  .doc-tabs{
+    max-width: 1220px; margin: 0 auto; padding: 0 clamp(16px,3vw,32px) 12px;
+    display:flex; gap:8px; flex-wrap:wrap;
+  }
+  .doc-tab{
+    all:unset; cursor:pointer; display:flex; align-items:center; gap:8px;
+    padding: 9px 14px; border-radius: var(--radius); border: 1px solid var(--rule-strong);
+    background: var(--paper-raised); font-family: var(--body); font-size: 14px; color: var(--charcoal);
+  }
+  .doc-tab .count{ font-family: var(--mono); font-size: 10.5px; color: var(--river-dim); }
+  .doc-tab.active{ background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .doc-tab.active .count{ color: color-mix(in srgb, var(--paper) 70%, transparent); }
+  .doc-tab.active .quality-badge{ filter: brightness(1.3); }
+
+  .controls{ max-width: 1220px; margin: 0 auto; padding: 4px clamp(16px,3vw,32px) 16px; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+  .search-wrap{ position:relative; flex: 1 1 280px; min-width: 220px; }
+  .search-wrap svg{ position:absolute; left:11px; top:50%; transform:translateY(-50%); width:15px; height:15px; opacity:.55; pointer-events:none; }
+  input#search{ width:100%; padding:9px 34px 9px 32px; border-radius: var(--radius); border:1px solid var(--rule-strong); background: var(--paper-raised); color: var(--charcoal); font-family: var(--body); font-size:15px; }
+  .kbd-hint{ position:absolute; right:8px; top:50%; transform:translateY(-50%); font-family: var(--mono); font-size:10px; color: color-mix(in srgb, var(--charcoal) 50%, transparent); border:1px solid var(--rule); border-radius:4px; padding:1px 5px; pointer-events:none; }
+  select, .chk{ padding: 8px 10px; border-radius: var(--radius); border:1px solid var(--rule-strong); background: var(--paper-raised); color: var(--charcoal); font-family: var(--body); font-size: 14px; }
+  label.chk{ display:inline-flex; align-items:center; gap:7px; cursor:pointer; user-select:none; }
+  label.chk input{ accent-color: var(--brick); }
+  label.chk.hidden{ display:none; }
+  .result-count{ font-family: var(--mono); font-size: 12px; color: var(--river-dim); margin-left: auto; white-space:nowrap; }
+
+  .layout{ max-width: 1220px; margin: 0 auto; padding: 4px clamp(16px,3vw,32px) 60px; display:grid; grid-template-columns: var(--sidebar-w) 1fr; gap: 30px; align-items:start; }
+  nav.toc{ position: sticky; top: 218px; max-height: calc(100vh - 238px); overflow-y:auto; padding-right: 6px; }
+  nav.toc ul{ list-style:none; margin:0; padding:0; }
+  nav.toc li{ margin:0; }
+  nav.toc button{ all:unset; display:flex; justify-content:space-between; gap:8px; cursor:pointer; width:100%; padding: 7px 10px; border-radius: var(--radius); font-size: 12.8px; color: var(--charcoal); line-height:1.35; }
+  nav.toc button:hover{ background: var(--paper-raised); }
+  nav.toc button.active{ background: var(--ink); color: var(--paper); }
+  nav.toc .n{ font-family: var(--mono); font-size:10.5px; opacity:.65; flex:none; }
+  nav.toc .reset{ font-family: var(--mono); font-size: 11px; text-transform:uppercase; letter-spacing:.05em; color: var(--river-dim); padding: 4px 10px 10px; display:block; cursor:pointer; }
+  nav.toc .toc-doc-label{ font-family: var(--mono); font-size:10px; text-transform:uppercase; letter-spacing:.06em; color: var(--river-dim); padding: 10px 10px 4px; }
+
+  main#results{ min-width:0; }
+  .empty{ padding: 48px 20px; text-align:center; color: var(--river-dim); font-family: var(--mono); font-size: 13px; border: 1px dashed var(--rule-strong); border-radius: var(--radius); }
+
+  article.card{ background: var(--paper-raised); border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 22px 22px; margin-bottom: 16px; scroll-margin-top: 230px; }
+  article.card.divider{ background:transparent; box-shadow:none; border:0; padding: 26px 4px 6px; margin-bottom: 4px; }
+  article.card.divider h2{ font-family: var(--display); font-weight:600; font-size: 20px; margin:0 0 4px; color: var(--ink); }
+  .card-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:14px; flex-wrap:wrap; margin-bottom: 6px; }
+  .citation-row{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .citation{ font-family: var(--mono); font-size: 11.5px; letter-spacing:.03em; color: var(--brick); text-transform: uppercase; }
+  .corpus-chip{ font-family: var(--mono); font-size: 9.5px; text-transform:uppercase; letter-spacing:.04em; color: var(--river-dim); border:1px solid var(--rule-strong); border-radius:999px; padding:1px 7px; }
+  .breadcrumb{ font-family: var(--mono); font-size: 11px; color: color-mix(in srgb, var(--charcoal) 65%, transparent); margin: 2px 0 6px; }
+  .badges{ display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+  .tag{ font-family: var(--mono); font-size: 10.5px; color: var(--gold); border: 1px solid color-mix(in srgb, var(--gold) 55%, transparent); border-radius: 999px; padding: 2px 8px; }
+  h3.heading{ font-family: var(--display); font-weight:500; font-size: 18px; margin: 2px 0 10px; color: var(--ink); }
+  .body-text{ white-space: pre-line; font-size: 15.5px; color: var(--charcoal); }
+  .body-text mark{ background: color-mix(in srgb, var(--gold) 35%, transparent); color: inherit; border-radius:2px; padding:0 1px; }
+  .card-foot{ margin-top: 12px; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+  .copy-link{ all:unset; cursor:pointer; font-family: var(--mono); font-size: 11px; color: var(--river-dim); border-bottom: 1px dotted var(--river-dim); }
+  .copy-link:hover{ color:var(--river); }
+  .reassembled-note{ display:none; margin-top: 10px; padding: 10px 12px; border-radius: var(--radius); background: color-mix(in srgb, var(--river) 8%, transparent); border: 1px dashed var(--rule-strong); font-size: 13px; color: var(--charcoal); }
+  article.card.show-note .reassembled-note{ display:block; }
+
+  .load-more-wrap{ display:flex; justify-content:center; padding: 12px 0 30px; }
+  .load-more{ all:unset; cursor:pointer; font-family: var(--mono); font-size: 12.5px; color: var(--ink); border: 1px solid var(--rule-strong); border-radius: 999px; padding: 10px 20px; background: var(--paper-raised); }
+  .load-more:hover{ border-color: var(--river); color: var(--river); }
+
+  footer.site{ border-top: 1px solid var(--rule); padding: 26px clamp(16px,3vw,32px) 46px; }
+  footer.site .inner{ max-width: 1220px; margin:0 auto; }
+  footer.site p{ font-size: 13px; color: color-mix(in srgb, var(--charcoal) 78%, transparent); max-width: 78ch; }
+  footer.site .disclaimer{ font-size:12px; color: var(--river-dim); }
+  footer.site a{ color: var(--river); }
+
+  .mobile-toc-toggle{ display:none; }
+  @media (max-width: 860px){
+    .layout{ grid-template-columns: 1fr; }
+    nav.toc{ position: static; max-height:none; overflow:visible; display:none; background: var(--paper-raised); border:1px solid var(--rule); border-radius: var(--radius); padding: 8px; margin-bottom: 14px; }
+    nav.toc.open{ display:block; }
+    .mobile-toc-toggle{ display:inline-flex; align-items:center; gap:6px; font-family: var(--mono); font-size:12px; border:1px solid var(--rule-strong); border-radius: var(--radius); background: var(--paper-raised); color: var(--charcoal); padding:8px 12px; cursor:pointer; margin-bottom: 10px; }
+    .result-count{ margin-left:0; width:100%; order:5; }
+    .doc-tab{ flex: 1 1 auto; justify-content:center; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="seal" aria-hidden="true">CB<br></div>
+      <div>
+        <h1 class="wordmark">Biddeford Municipal Code</h1>
+        <p class="tagline">A resident's copy of the city's founding law — searchable, article by article.</p>
+      </div>
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:flex-end;">
+      <div class="header-meta" id="header-meta"></div>
+      <div class="theme-toggle" role="group" aria-label="Theme">
+        <button data-theme-choice="light" aria-pressed="false">Light</button>
+        <button data-theme-choice="dark" aria-pressed="false">Dark</button>
+        <button data-theme-choice="auto" aria-pressed="true">Auto</button>
+      </div>
+    </div>
+  </div>
+  <div class="doc-tabs" id="doc-tabs"></div>
+  <div class="controls">
+    <div class="search-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="search" type="text" placeholder="Search…" autocomplete="off">
+      <span class="kbd-hint">/</span>
+    </div>
+    <select id="sort">
+      <option value="charter">Document order</option>
+      <option value="az">A–Z by heading</option>
+      <option value="len">Longest first</option>
+    </select>
+    <select id="group-filter"><option value="">All chapters/articles</option></select>
+    <label class="chk" id="reassembled-wrap"><input type="checkbox" id="reassembled-only"> Reassembled only</label>
+    <span class="result-count" id="result-count"></span>
+  </div>
+  <div class="seam" aria-hidden="true"></div>
+</header>
+
+<button class="mobile-toc-toggle" id="mobile-toc-toggle" aria-expanded="false">☰ Chapters / Articles</button>
+
+<div class="layout">
+  <nav class="toc" id="toc" aria-label="Chapters and Articles">
+    <span class="reset" id="toc-reset" role="button" tabindex="0">Clear chapter/article filter</span>
+    <div id="toc-groups"></div>
+  </nav>
+  <main id="results" aria-live="polite"></main>
+</div>
+
+<footer class="site">
+  <div class="inner">
+    <div class="seam" aria-hidden="true" style="margin-bottom:22px;"></div>
+    <p class="disclaimer">⚠️ For research and informational purposes only — not legal advice. City codes and state statutes are amended over time; always verify the current text at <a href="https://ecode360.com/BI3074" target="_blank" rel="noopener">ecode360.com/BI3074</a> (municipal code) before acting on any information. For legal, permitting, or zoning matters, consult a licensed attorney or the City of Biddeford directly.</p>
+    <p id="data-quality-text"></p>
+    <p>🏛️ New: test what you've learned with the <a href="quiz.html">Biddeford Charter Quiz</a> — ten random questions, five themes, and a civic title at the end.</p>
+    <p>Built from the <a href="https://github.com/BetaNYC/nyc-charter-laws-rules" target="_blank" rel="noopener">nyc-charter-laws-rules</a> data model, adapted for Biddeford. Dashed "stitched" badges (Charter only) mark sections whose sub-lists were repositioned during transcription — hover or tap one for details.</p>
+  </div>
+</footer>
+
+<script id="charter-data" type="application/json">{"meta":{"corpora":{"charter":{"label":"City Charter","short":"Charter","sourceUrl":"https://ecode360.com/BI3074","sourceLabel":"ecode360.com/BI3074","asOf":"2026-07-09","sectionCount":74,"dataQuality":"hand-verified"}}},"groups":[{"corpus":"charter","group":"I","label":"Article I: Grant of Powers to the City","citation":"Art. I","count":2},{"corpus":"charter","group":"II","label":"Article II: Office of the Mayor","citation":"Art. II","count":7},{"corpus":"charter","group":"III","label":"Article III: City Council","citation":"Art. III","count":9},{"corpus":"charter","group":"IV","label":"Article IV: City Manager","citation":"Art. IV","count":3},{"corpus":"charter","group":"V","label":"Article V: School Committee","citation":"Art. V","count":5},{"corpus":"charter","group":"VI","label":"Article VI: Police Advisory Committee","citation":"Art. VI","count":1},{"corpus":"charter","group":"VII","label":"Article VII: Fire Advisory Committee","citation":"Art. VII","count":1},{"corpus":"charter","group":"VIII","label":"Article VIII: Elections","citation":"Art. VIII","count":10},{"corpus":"charter","group":"IX","label":"Article IX: Recall","citation":"Art. IX","count":5},{"corpus":"charter","group":"X","label":"Article X: Departments, Offices or Agencies","citation":"Art. X","count":12},{"corpus":"charter","group":"XI","label":"Article XI: Business and Financial Provisions","citation":"Art. XI","count":9},{"corpus":"charter","group":"XII","label":"Article XII: Miscellaneous Provisions","citation":"Art. XII","count":10}],"sections":[{"corpus":"charter","id":"art-I","group":"I","groupLabel":"Article I: Grant of Powers to the City","citation":"Art. I","heading":"Article I: Grant of Powers to the City","text":"","isDivider":true},{"corpus":"charter","id":"art-I-sec-1","group":"I","groupLabel":"Article I: Grant of Powers to the City","citation":"Art. I, Sec. 1","heading":"Sec. 1. Corporate existence of Biddeford retained.","tag":null,"text":"The inhabitants of the City of Biddeford, in the County of York, shall continue to be a body politic and corporate by the name of the City of Biddeford, and shall have, exercise and enjoy, all the rights, immunities, powers, privileges and franchise, and shall be subject to all the duties, liabilities and obligations provided for herein, or otherwise, pertaining to, or incumbent upon the City of Biddeford as a municipal corporation or to the inhabitants or municipal authorities thereof; and may enact reasonable bylaws, regulations, and ordinances for municipal purposes, not inconsistent with the Constitution and laws of the State of Maine; and impose penalties for the breach thereof, to the maximum allowed by Maine state law to be recovered for such uses as said bylaws, regulations, or ordinances shall provide.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-I-sec-2","group":"I","groupLabel":"Article I: Grant of Powers to the City","citation":"Art. I, Sec. 2","heading":"Sec. 2. Powers and duties.","tag":"Amended 11-8-2016","text":"The administration of all fiscal, prudential, and municipal affairs of the City, with the government thereof, except the general management, care, conduct, and control of the Schools, which shall be vested in the School Committee as hereinafter provided, and also except as otherwise provided by this Charter, shall be and is vested in the Mayor and one body of members, which shall constitute and be called the City Council, all of whom shall be inhabitants of the City, and shall be elected and sworn in the manner hereinafter prescribed. The Mayor and the members of the City Council shall be and constitute the municipal officers of the City of Biddeford for all purposes required by statute, and, except as otherwise herein specifically provided, shall have all powers and authority given to, and perform all duties required of, municipal officers and mayors of cities under the laws of the State of Maine. All other powers now or hereafter vested in the inhabitants of the City, and all powers granted by this Charter, except as herein otherwise provided, shall be vested in the Mayor and City Council.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-II","group":"II","groupLabel":"Article II: Office of the Mayor","citation":"Art. II","heading":"Article II: Office of the Mayor","text":"","isDivider":true},{"corpus":"charter","id":"art-II-sec-1","group":"II","groupLabel":"Article II: Office of the Mayor","citation":"Art. II, Sec. 1","heading":"Sec. 1. Executive Authority of the Mayor.","tag":"Amended 11-8-2016","text":"The Chief Executive of the City of Biddeford shall be the Mayor, who with the exception of the administration of the Department of Education, shall:\n(a) Assure that the Laws and Ordinances are enforced;\n(b) Exercise general oversight over all departments, divisions, agencies, offices, and boards created herein or that may be hereafter created;\n(c) Sign warrants to be paid from the treasury after appropriations by the City Council;\n(d) Preside at meetings of the City Council and School Committee, and shall vote only in case of a tie;\n(e) Keep the City Council advised as to the business and financial condition and future needs of the City;\n(f) Call special meetings of the City Council;\n(g) Issue warrants for calling meetings and elections for any purpose in the several wards;\n(h) Perform all other duties conferred by State Law or City Ordinances.","reassembled":"List (a)-(h) appeared after Sec. 6 in the source PDF; reattached here where the intro clause ('...and shall:') points to it.","isDivider":false},{"corpus":"charter","id":"art-II-sec-2","group":"II","groupLabel":"Article II: Office of the Mayor","citation":"Art. II, Sec. 2","heading":"Sec. 2. Appointments/nominations.","tag":null,"text":"On the first Tuesday after the first Monday in December, biennially, or no later than one month after taking office, Council members will be nominated by the Mayor to all standing committees and all other committees, boards or commissions as prescribed by Ordinances or City Charter. All nominees are subject to confirmation by the City Council.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-II-sec-2a","group":"II","groupLabel":"Article II: Office of the Mayor","citation":"Art. II, Sec. 2a","heading":"Sec. 2a. Appointments of Citizens.","tag":"Added 11-8-2016","text":"In the event of a City board, commission or committee member vacancy, the Mayor and Chairperson of the board, commission or committee may each, within 30 days, nominate an individual to fill the vacancy and the City Council shall select a person to fill the vacancy from the two nominations; and to further provide that if the Mayor has not nominated a replacement within 30 days, the City Council President may present a nomination for the City Council's consideration.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-II-sec-3","group":"II","groupLabel":"Article II: Office of the Mayor","citation":"Art. II, Sec. 3","heading":"Sec. 3. Veto power.","tag":null,"text":"Every resolve or order appropriating money, having passed the City Council, shall forthwith be presented to the Mayor for approval and signature. If disapproved, the Mayor shall return it unsigned to the City Council within seven working days of its enactment with objections in writing, which objections shall be entered into the minutes of the City Council. If, upon reconsideration, 2/3 of the members present and voting shall vote to pass the resolve or order, it shall have the same effect as if signed by the Mayor.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-II-sec-4","group":"II","groupLabel":"Article II: Office of the Mayor","citation":"Art. II, Sec. 4","heading":"Sec. 4. Election; tenure of office; prohibition; compensation.","tag":"Amended 11-6-2012","text":"A candidate for Mayor shall be a resident of the City of Biddeford for at least six months prior to the date on/or before which nomination papers are to be filed. The Mayor shall be sworn to the faithful performance of the duties of the office at 7:00 p.m. on the first Tuesday after the first Monday in December, following a biennial election, by the City Clerk or person authorized by law to administer oaths. The Mayor shall hold the office for two years and be re-elected without limitations. The Mayor shall not directly or indirectly enter into any contract with the City, except as provided by 30-A M.R.S.A. § 2605. The salary and compensation of the Mayor shall be $10,000 per year.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-II-sec-5","group":"II","groupLabel":"Article II: Office of the Mayor","citation":"Art. II, Sec. 5","heading":"Sec. 5. Vacancy.","tag":null,"text":"In the event of a vacancy in the office of the Mayor due to death, resignation, recall or inability to serve, the President of the City Council shall perform all duties of the office of the Mayor. If less than 180 days remain in the unexpired term, the President of the City Council shall serve as Mayor Pro Tempore until the end of the unexpired term. If more than 180 days remain in the unexpired term, the vacancy shall be filled within 60 days at a special or general election called in accordance with Article VIII, Elections, of this Charter.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-II-sec-6","group":"II","groupLabel":"Article II: Office of the Mayor","citation":"Art. II, Sec. 6","heading":"Sec. 6. Elected Office.","tag":"Added 11-8-2016","text":"Mayor will not hold any other elected city, county, state or federal office.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-III","group":"III","groupLabel":"Article III: City Council","citation":"Art. III","heading":"Article III: City Council","text":"","isDivider":true},{"corpus":"charter","id":"art-III-sec-1","group":"III","groupLabel":"Article III: City Council","citation":"Art. III, Sec. 1","heading":"Sec. 1. City to be divided into wards.","tag":null,"text":"For the purpose of all elections, the City shall be divided into seven wards. The City Council shall, once every 10 years, by ordinance establish compact and contiguous wards of approximately equal population. The City Council, for voting purposes, may by ordinance divide said wards into further voting wards.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-III-sec-2","group":"III","groupLabel":"Article III: City Council","citation":"Art. III, Sec. 2","heading":"Sec. 2. Composition; election; tenure of office; compensation; prohibition.","tag":"Amended 11-6-2012; 11-8-2016","text":"The City Council shall be composed of nine members, who shall hold office for a term of two years and until their successors are elected and qualified. The City Council shall serve as the Municipal Officers, and be composed of the nine Council members. A candidate for City Council shall be a resident of the City of Biddeford for at least six months prior to the date on/or before which nomination papers are to be filed. Councilors shall be elected by the registered voters of the City; two shall be elected at large, and one shall be elected from each of the seven wards in which they reside and which they seek to represent. The Councilors-Elect shall be sworn to the faithful performance of their duties at 7:00 p.m. on the first Tuesday after the first Monday in December, following a biennial election, by the City Clerk or person authorized by law to administer oaths. They shall receive compensation at the rate of $100 per month, not to exceed $1,200 per year. No member of the City Council shall be employed by the City of Biddeford or Biddeford School Department as an employee or agent, or hold any office or employment, the compensation of which is payable by the City, during the term for which the Councilor was elected.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-III-sec-3","group":"III","groupLabel":"Article III: City Council","citation":"Art. III, Sec. 3","heading":"Sec. 3. President of the Council.","tag":null,"text":"On the first Tuesday after the first Monday in December following the regular municipal election, or as soon thereafter as possible, the City Council shall elect one of its members as President of the Council for the entire term, and until a successor is elected and qualified. In case of the death, resignation or inability of the Mayor to serve, the President of the City Council shall perform the duties of the Mayor. In the temporary absence or disability of the President, the Council may select a President Pro Tempore from among its number and such person shall exercise all the powers of the President.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-III-sec-4","group":"III","groupLabel":"Article III: City Council","citation":"Art. III, Sec. 4","heading":"Sec. 4. Vacancies.","tag":null,"text":"A vacancy in the membership of the City Council shall occur in the event of any of the following:\n(1) The death of a member;\n(2) The effective date of the resignation of a member;\n(3) The removal of a member from the ward from which the councilor was elected, except those elected at large;\n(4) The removal of a member from the City;\n(5) The conviction of a member of a felony while in office;\n(6) The recall of a member, pursuant to the provisions of Article IX; or\n(7) The employment of a member by the City of Biddeford or the Biddeford School Department as an employee or agent.\n\nA member may submit a resignation, in writing, directly to the Mayor. Once accepted by the Council, said resignation may not be withdrawn, and said member's office shall become vacant on that date.\n\nIf a vacancy in the membership of the City Council occurs within 180 days after the previous election, a special election shall be held within a period not to exceed 60 days of the vacancy. If a vacancy in the membership of the City Council occurs more than 180 days after the previous election, the Mayor shall nominate, and the City Council shall confirm, a person to fill this vacancy within a period not to exceed 30 days of its occurrence. The person elected/named to fill a vacancy shall serve until the first Tuesday after the first Monday in December following the next biennial election. [Amended 11-6-2012]","reassembled":"Two paragraphs (resignation; special-election timeline) appeared displaced after Sec. 8 in the source PDF; reattached here — both are substantively about Council vacancies and the second carries the same [Amended 11-6-2012] tag as the surrounding Vacancies text.","isDivider":false},{"corpus":"charter","id":"art-III-sec-5","group":"III","groupLabel":"Article III: City Council","citation":"Art. III, Sec. 5","heading":"Sec. 5. Meetings of the Council.","tag":null,"text":"The City Council shall meet at the usual place for holding meetings at 7:00 p.m. on the first Tuesday in December following the regular municipal election, or as soon thereafter as possible. The City Council shall establish a regular place and time for holding its meetings, and shall meet regularly at least twice a month. The City Council may, in the absence of the Mayor and the President of the Council, choose a President Pro Tempore, who shall preside at the meetings of the Council.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-III-sec-6","group":"III","groupLabel":"Article III: City Council","citation":"Art. III, Sec. 6","heading":"Sec. 6. Special meetings.","tag":null,"text":"Special meetings may be called by the Mayor, and in case of the Mayor's absence, disability, or refusal, may be called by a majority of the members of the City Council. Notice of such meeting shall be served in person, or left at the residence of each member of the City Council, at least 24 hours before the time for holding the special meeting, and the public shall be notified under the provisions in Article X, Section 3(a) of this Charter.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-III-sec-7","group":"III","groupLabel":"Article III: City Council","citation":"Art. III, Sec. 7","heading":"Sec. 7. Quorum.","tag":null,"text":"A majority of the members of the City Council shall constitute a quorum for the transaction of business.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-III-sec-8","group":"III","groupLabel":"Article III: City Council","citation":"Art. III, Sec. 8","heading":"Sec. 8. Procedure.","tag":"Amended 11-8-2016","text":"The City Council shall keep a record of its proceedings and shall determine its own rules of procedure and make lawful regulations for enforcing the same. The meetings of the City Council shall be open to the public. The City Council shall create an ordinance and establish procedures to allow the public to address the City Council at all City Council meetings. Said ordinance shall also establish procedures to allow any City Councilor (with concurrence of at least one other City Councilor) the authority to place any item on the agenda within 30 days. The City Council shall act only by ordinance, order, or resolve. All ordinances, orders and resolves, except orders or resolves making appropriations of money, shall be confined to one subject which shall be clearly expressed in the title. An appropriation, order or resolve shall be confined to the subject of appropriations only. No ordinance and no appropriation order or resolve shall be passed until it has been read on two separate days, except when the requirement of a second reading on a separate day has been dispensed with by the vote of 2/3 of the members present and voting. The yeas and nays shall be taken upon the passage of all ordinances and entered on the record of the proceedings of the City Council by the Clerk. The yeas and nays shall be taken on the passage of any order or resolve when called for by any member of the City Council. Every ordinance, order, and resolve shall require on the final passage the affirmative vote of the majority of the members of the City Council. No ordinance shall take effect until 30 days after its passage, except as herein otherwise provided for emergency ordinances.\n\nThe City Council may, by vote of 2/3 of the members present and voting, pass emergency ordinances, orders or resolves to take effect at the time indicated therein, but such emergency ordinances, orders or resolves shall contain a section in which the emergency is set forth and defined; provided, however, that the declaration of such emergency by the City Council shall be conclusive.","reassembled":"Two paragraphs originally following this section (resignation; vacancy timeline) were moved to Sec. 4, Vacancies, where they belong; the emergency-ordinance paragraph that followed them here is kept.","isDivider":false},{"corpus":"charter","id":"art-III-sec-9","group":"III","groupLabel":"Article III: City Council","citation":"Art. III, Sec. 9","heading":"Sec. 9. Audit.","tag":null,"text":"The City Council shall provide for an independent annual audit of all City accounts and may provide for such more frequent auditing, as it deems necessary.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-IV","group":"IV","groupLabel":"Article IV: City Manager","citation":"Art. IV","heading":"Article IV: City Manager","text":"","isDivider":true},{"corpus":"charter","id":"art-IV-sec-1","group":"IV","groupLabel":"Article IV: City Manager","citation":"Art. IV, Sec. 1","heading":"Sec. 1. Appointment; confirmation; compensation; term of office.","tag":null,"text":"There shall be a City Manager who shall be nominated by the Mayor and whose appointment shall be confirmed by the City Council. The City Manager shall be employed by the Mayor and City Council who shall establish compensation and contract terms of employment not to exceed three years. The City Council shall evaluate the job performance of the City Manager yearly with input from the Mayor.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-IV-sec-2","group":"IV","groupLabel":"Article IV: City Manager","citation":"Art. IV, Sec. 2","heading":"Sec. 2. Powers and duties.","tag":null,"text":"The City Manager shall be the chief administrative officer of the City of Biddeford, and shall:\n(a) Be responsible for the day-to-day administration of the affairs of the City in accordance with the provisions of this Charter and the Code of Ordinances;\n(b) Be responsible for implementing policies as established by the Mayor and the City Council;\n(c) Report to and receive policy guidance from the Mayor and the City Council;\n(d) Appoint, suspend, or remove after consultation with the Mayor and confirmation by the City Council, department heads and subordinate officers provided for in the Charter, except as otherwise provided by law or this Charter;\n(e) Direct and supervise the administration of all departments, offices and agencies of the City, except as otherwise provided by this Charter or by law, and evaluate the performance, at least once per calendar year, of all subordinates;\n(f) Attend meetings of the City Council, and report to the Mayor and Council upon inquiry;\n(g) See to the enforcement of all laws and ordinances of the City and of the provisions of this Charter and carry out the lawful directives of the City Council personally or through department heads or subordinate officers;\n(h) Prepare and submit the annual municipal budget, to include a Capital Improvement 5-year budget plan. [Amended 11-8-2016]\n(i) Submit to the Mayor and City Council such reports and recommendations as the Mayor and City Council shall require;\n(j) Be a non-voting member of the City Council Finance Committee;\n(k) Perform all other duties as assigned by the Mayor and City Council.","reassembled":"List (a)-(k) appeared after Sec. 3 in the source PDF; reattached here where the intro clause ('...and shall:') points to it.","isDivider":false},{"corpus":"charter","id":"art-IV-sec-3","group":"IV","groupLabel":"Article IV: City Manager","citation":"Art. IV, Sec. 3","heading":"Sec. 3. Residency.","tag":"Amended 11-8-2016","text":"The City Manager shall establish residence within the City of Biddeford within six months from the date of hire, unless otherwise approved by the City Council.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-V","group":"V","groupLabel":"Article V: School Committee","citation":"Art. V","heading":"Article V: School Committee","text":"","isDivider":true},{"corpus":"charter","id":"art-V-sec-1","group":"V","groupLabel":"Article V: School Committee","citation":"Art. V, Sec. 1","heading":"Sec. 1. Composition; election; tenure of office; organization; compensation.","tag":"Amended 11-6-2012","text":"The School Committee shall be composed of seven members who shall hold office for a term of two years and until their successors are qualified. A candidate for School Committee members shall be a resident of the City of Biddeford for at least six months prior to the date on/or before which nomination papers are to be filed. Each Committee member shall be elected at large by the registered voters of the City of Biddeford; however, there shall be no more than two members from any one ward. The Committee members-elect shall be sworn to the faithful performance of their duties at 7:00 p.m. on the first Tuesday after the first Monday in December, following a regular municipal election, by the City Clerk or person authorized by law to administer oaths. School Committee members shall receive compensation at the rate of $10 for every regularly scheduled full Committee meeting attended, not to exceed $500 per year. The Committee shall meet regularly, twice a month.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-V-sec-2","group":"V","groupLabel":"Article V: School Committee","citation":"Art. V, Sec. 2","heading":"Sec. 2. Chair.","tag":null,"text":"The Mayor shall be the ex officio chair of the School Committee and shall:\n(a) Have no veto power;\n(b) Not make a motion; and\n(c) Only vote to break a tie.","reassembled":"List (a)-(c) appeared after Sec. 4 in the source PDF, alongside a second unrelated list; separated and reattached here by content (veto/motion/tie-vote rules belong to the Mayor's role as ex officio chair).","isDivider":false},{"corpus":"charter","id":"art-V-sec-3","group":"V","groupLabel":"Article V: School Committee","citation":"Art. V, Sec. 3","heading":"Sec. 3. Powers and duties.","tag":null,"text":"(a) The School Committee shall have all powers and perform all duties in regard to the care and management of the City's public schools pursuant to Maine State law and except as otherwise provided in this Charter.\n(b) The Committee shall appoint a Superintendent of Schools for a term not exceeding three years, and the Superintendent shall receive compensation at a rate determined by the Committee. The duties of the Superintendent shall be those as prescribed by law and regulations. The Superintendent of Schools may be removed for just cause. The Superintendent of Schools shall establish residence within the City of Biddeford within six months of being hired, unless otherwise approved by the School Committee. The Superintendent shall cause to be published all agendas of School Committee meetings in a local newspaper at least 24 hours before such meetings are to be held, and shall cause to be posted said agendas on the City bulletin board. [Amended 11-8-2016]\n(c) With the exception of the School Committee Standing Committees, residents of Biddeford shall be allowed to serve on and chair, with full voting rights, all Subcommittees of the School Committee, including but not limited to the Policy, Capital Improvement Projects, Curriculum and Transportation Committees. [Added 11-6-2012]","reassembled":"This section's body (list (a)-(c)) appeared after Sec. 4 in the source PDF, alongside the Sec. 2 list; separated and reattached here by content.","isDivider":false},{"corpus":"charter","id":"art-V-sec-4","group":"V","groupLabel":"Article V: School Committee","citation":"Art. V, Sec. 4","heading":"Sec. 4. The budget.","tag":"Amended 11-8-2016","text":"The School Committee shall submit to the City Budget Committee a budget for operation of the Department of Education, to include a Capital Improvement 5-Year Budget Plan by the third Monday in March. After review, the Budget Committee shall forward their recommendations to the City Council, whose decision on the budget shall be final; subject to State mandated school budget validation requirements, if any. The proposed budget shall be comprised of: expenditures for the functions of instruction, student support, staff support services, administration, operation and maintenance, pupil transportation, adult education, debt service, and any other function(s) the Committee wishes to have funded for the fiscal year.\n\nThe total approved for each individual function by a majority vote of Council shall become the School Committee's aggregate fiscal year budget after having received its second reading. The School Committee shall not allow the transfer of funds from one function to another without first receiving 2/3 vote of the members present and voting from both the School Committee and the City Council in separate deliberations.","reassembled":"The Sec. 2 and Sec. 3 lists were interleaved into the middle of this section's paragraph in the source PDF; removed here and the paragraph rejoined.","isDivider":false},{"corpus":"charter","id":"art-V-sec-5","group":"V","groupLabel":"Article V: School Committee","citation":"Art. V, Sec. 5","heading":"Sec. 5. Vacancies.","tag":null,"text":"A vacancy in the membership of the School Committee shall occur in the event of the following:\n(1) The death of a member;\n(2) The effective date of the resignation of a member;\n(3) The removal of a member from the City;\n(4) The conviction of a member of a felony while in office;\n(5) The recall of a member, pursuant to the provisions of Article IX.\n(6) The employment of a member by the City of Biddeford or the Biddeford School Department as an employee or agent. [Added 11-8-2016]\n\nA member may submit a resignation, in writing directly to the School Committee Chairperson. Once accepted by the School Committee, the resignation may not be withdrawn and the member's office shall become vacant on that date indicated.\n\nIf a vacancy in the membership of the School Committee occurs, the School Committee Chairperson shall nominate a person, consistent with Article V, Section 1, and Article VIII, Section 3 of this Charter, to fill the vacancy in a time period not to exceed 30 days of its occurrence. The nomination shall be subject to the confirmation of the School Committee. The person named to fill a vacancy shall serve until the first Tuesday after the first Monday in December following the next biennial election.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-VI","group":"VI","groupLabel":"Article VI: Police Advisory Committee","citation":"Art. VI","heading":"Article VI: Police Advisory Committee","text":"","isDivider":true},{"corpus":"charter","id":"art-VI-sec-0","group":"VI","groupLabel":"Article VI: Police Advisory Committee","citation":"Art. VI","heading":"Police Advisory Committee.","tag":"Amended 11-8-2016","text":"The City Council shall create an ordinance to establish a Police Advisory Committee in the Code of Ordinances.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-VII","group":"VII","groupLabel":"Article VII: Fire Advisory Committee","citation":"Art. VII","heading":"Article VII: Fire Advisory Committee","text":"","isDivider":true},{"corpus":"charter","id":"art-VII-sec-0","group":"VII","groupLabel":"Article VII: Fire Advisory Committee","citation":"Art. VII","heading":"Fire Advisory Committee.","tag":"Amended 11-8-2016","text":"The City Council shall create an ordinance to establish a Fire Advisory Committee in the Code of Ordinances.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-VIII","group":"VIII","groupLabel":"Article VIII: Elections","citation":"Art. VIII","heading":"Article VIII: Elections","text":"","isDivider":true},{"corpus":"charter","id":"art-VIII-sec-1","group":"VIII","groupLabel":"Article VIII: Elections","citation":"Art. VIII, Sec. 1","heading":"Sec. 1. Regular municipal elections.","tag":null,"text":"On the first Tuesday following the first Monday in November, biennially, a regular municipal election shall be held and the registered voters of the City or wards, as the case may be, shall ballot for the Mayor, Councilors, School Committee, Wardens and Ward Clerks as may be necessary to fill the offices provided for by this Charter whose terms would normally expire.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-VIII-sec-1A","group":"VIII","groupLabel":"Article VIII: Elections","citation":"Art. VIII, Sec. 1A","heading":"Sec. 1A. (Reserved)","tag":null,"text":"","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-VIII-sec-2","group":"VIII","groupLabel":"Article VIII: Elections","citation":"Art. VIII, Sec. 2","heading":"Sec. 2. Wardens and Ward Clerks.","tag":null,"text":"The Wardens and Ward Clerks shall be and remain residents of the Ward for which they qualify and hold their offices for two years and until others have been chosen and qualified in their stead. The Warden and the Ward Clerk shall be sworn to the faithful performance of their duties by a person qualified under the statutes of the State to administer oaths, and a certificate of such oath shall be entered by the City Clerk on the records of said ward.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-VIII-sec-3","group":"VIII","groupLabel":"Article VIII: Elections","citation":"Art. VIII, Sec. 3","heading":"Sec. 3. Nominations/eligibility.","tag":null,"text":"The nomination of all candidates for elective offices provided for by this Charter shall be by petition. The petition of a candidate for Mayor shall be signed by no fewer than 125 qualified voters of the City. The petition of a candidate for Councilor-at-Large shall be signed by no fewer than 50 qualified voters of the City. The petition of a candidate for a Ward Council seat shall be signed by no fewer than 25 qualified voters of the respective wards. The petition of a candidate for School Committee shall be signed by no fewer than 25 qualified voters of the City. The petition of a candidate for Warden and Ward Clerk shall be signed by no fewer than 20 qualified voters of the respective wards. The petition of a candidate for the Charter Revision Commission shall be signed by no fewer than 25 qualified voters of the respective wards. Employees of the City of Biddeford or Biddeford School Department are not eligible to seek or accept nomination, appointment or election to any elected political office in the City of Biddeford.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-VIII-sec-4","group":"VIII","groupLabel":"Article VIII: Elections","citation":"Art. VIII, Sec. 4","heading":"Sec. 4. Form of nomination petition.","tag":null,"text":"The signatures to nomination petitions need not all be affixed to one nomination petition, but to each separate petition there shall be attached an affidavit of the circulator thereof stating the number of signers of each petition, and that each signature appended thereto was made in his or her presence and is the genuine signature of the person whose name it purports to be. With each signature shall be stated the place of residence of the signer, giving the street and number of the street or their description sufficient to identify the same. The form of the nomination petition shall be determined by the City Clerk and shall declare the office in which the candidate is petitioning for prior to receiving signatures.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-VIII-sec-5","group":"VIII","groupLabel":"Article VIII: Elections","citation":"Art. VIII, Sec. 5","heading":"Sec. 5. Filing of nomination petitions and acceptance of nomination.","tag":null,"text":"The nomination petitions for any one candidate must be assembled and united into one petition and filed with the City Clerk during normal business hours not later than 45 days before the date of election. No nomination shall be valid unless the candidate shall file with the City Clerk in writing at the time of filing of said nomination petitions his or her consent accepting nomination, agreeing not to withdraw, and if elected, to hold office. Nomination, petitions and consent, once filed, may not be withdrawn. Any challenge to a nomination petition must be submitted to the City Clerk in writing, setting forth the specific reasons for the objection, no later than five business days from its date of filing or it is barred. No person shall be nominated, nor shall any person consent to being nominated, at the same election for any other elective office provided for by this Charter, and no person shall simultaneously hold more than one elective office provided for by this Charter.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-VIII-sec-6","group":"VIII","groupLabel":"Article VIII: Elections","citation":"Art. VIII, Sec. 6","heading":"Sec. 6. Form of ballot.","tag":"Amended 11-6-2012","text":"All official ballots for use in all municipal elections shall be prepared by the City Clerk and furnished by the City. Ballots for use in elections under this Charter shall contain the names of the various candidates with their residence, and the office for which they are candidates. The candidates for each office shall be grouped under the title of each office, plainly and distinctly marked. There shall be as many blank spaces under the name of each office as there are vacancies to be filled. These spaces may be used by a voter to write in the name of any person for whom the voter desires to vote. No stickers shall be used. Such ballots shall also contain such measures as may be submitted to the voters of the City by the Maine Legislature or by the City Council and shall be without party mark or designation.\n\nIn preparing all ballots for election under this Charter, the City Clerk shall conduct a random lottery drawing, in a public forum within 14 days after closing of nominations. The City Clerk shall then arrange the names of all qualified candidates for each office based on the outcome of that drawing.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-VIII-sec-7","group":"VIII","groupLabel":"Article VIII: Elections","citation":"Art. VIII, Sec. 7","heading":"Sec. 7. Sample ballots.","tag":null,"text":"The City Clerk shall cause ballots to be prepared from the arrangement of the first group of ballots as provided above and to be posted in public places in each ward and/or voting precinct, and advertised in a local newspaper at least once no later than 10 days prior to a municipal election. Sample ballots shall be printed on colored paper and marked \"Sample Ballot\" and shall contain the names of the certified candidates with the residence of each, instructions to voters, and such measures as may be submitted to the voters by the Legislature or by the City Council. Such sample ballots shall also be without party mark or designation.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-VIII-sec-8","group":"VIII","groupLabel":"Article VIII: Elections","citation":"Art. VIII, Sec. 8","heading":"Sec. 8. Write-In Candidate.","tag":"Added 11-6-2012","text":"A write-in candidate shall mean a person whose name does not appear on the ballot under the office designation to which the voter may wish to elect the candidate and who has filed a declaration of write-in candidacy. To be elected as a write-in candidate, a person must file a declaration of write-in candidacy in the City Clerk's Office on a form provided by the City Clerk, on or before close of business on the 5th day prior to the election.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-VIII-sec-9","group":"VIII","groupLabel":"Article VIII: Elections","citation":"Art. VIII, Sec. 9","heading":"Sec. 9. State laws applicable.","tag":null,"text":"The laws of the State of Maine relating to the qualifications of electors, registration, the manner of voting, the duties of election officials, counting of ballots, and all other particulars in respect to preparation for conducting and managing elections, so far as they may be applicable, shall govern all municipal elections in the City of Biddeford, except as otherwise provided in this Charter.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-IX","group":"IX","groupLabel":"Article IX: Recall","citation":"Art. IX","heading":"Article IX: Recall","text":"","isDivider":true},{"corpus":"charter","id":"art-IX-sec-1","group":"IX","groupLabel":"Article IX: Recall","citation":"Art. IX, Sec. 1","heading":"Sec. 1. Applicability.","tag":null,"text":"The Mayor, or any member of the City Council or School Committee may be recalled and removed from office by the qualified voters of the City of Biddeford as hereinafter provided.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-IX-sec-2","group":"IX","groupLabel":"Article IX: Recall","citation":"Art. IX, Sec. 2","heading":"Sec. 2. Petition for recall.","tag":"Amended 11-8-2016","text":"In the case of the Mayor, Councilor-at-Large and School Committee Member, the recall must be signed by not less than 15% of registered voters from the City who voted in the previous Gubernatorial Election. In the case of a Ward Councilor, who has been elected as such by the registered voters of said ward, the petition must be signed by not less than 15% of the qualified voters in that ward at the time of the previous municipal election.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-IX-sec-3","group":"IX","groupLabel":"Article IX: Recall","citation":"Art. IX, Sec. 3","heading":"Sec. 3. Verification of recall petition.","tag":null,"text":"Within seven days of the receipt of the petitions, the City Clerk shall ascertain whether or not the petitions have been signed by the requisite number of qualified voters. If there are insufficient signatures, the City Clerk will notify in writing by certified mail those responsible for the petition who shall have an additional five days from receipt of the notice to obtain a sufficient number of signatures.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-IX-sec-4","group":"IX","groupLabel":"Article IX: Recall","citation":"Art. IX, Sec. 4","heading":"Sec. 4. Calling of recall election.","tag":null,"text":"If the City Clerk's certification should show that the petitions are sufficient, the petitions and the Clerk's certification shall be submitted by the City Clerk to the City Council at its next regular meeting following certification and shall also notify the person or persons whose removal is sought. The City Council shall, within 14 days of receipt of the City Clerk's certification, direct the City Clerk to issue a warrant for a municipal election within 60 days.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-IX-sec-5","group":"IX","groupLabel":"Article IX: Recall","citation":"Art. IX, Sec. 5","heading":"Sec. 5. Count of ballot.","tag":"Amended 11-6-2012","text":"In case of a majority voting for and against the recall for any official shall vote in favor of the recall, such official shall be thereby removed and the City Council shall declare a vacancy in that office in accordance with Article II, Section 5 of this Charter in the case of the Mayor; Article III, Section 4 of this Charter in the case of a City Councilor; or Article V, Section 5 of this Charter in the case of a School Committee Member.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-X","group":"X","groupLabel":"Article X: Departments, Offices or Agencies","citation":"Art. X","heading":"Article X: Departments, Offices or Agencies","text":"","isDivider":true},{"corpus":"charter","id":"art-X-sec-1","group":"X","groupLabel":"Article X: Departments, Offices or Agencies","citation":"Art. X, Sec. 1","heading":"Sec. 1. Appointments.","tag":"Amended 11-8-2016","text":"(a) The City Manager and City Clerk shall be officers of the City and shall be nominated by the Mayor and confirmed by the City Council as applicable to appropriate articles of this Charter.\n(b) The City Solicitor shall be nominated by the Mayor and confirmed by the City Council for a period within the term of the office of the Mayor.\n(c) Heads of departments, offices and agencies, including those prescribed by Federal and State law, or City Ordinances shall be appointed by the City Manager and confirmed by the Mayor/City Council as follows:\n(1) Tax Assessor (per MRSA Title 36, Ch. 101).\n(2) Police Chief.\n(3) Fire Chief.\n(4) Public Works Director.\n(5) Code Enforcement Officer.\n(6) Director Economic Development.\n(7) Building Facilities Manager.\n(8) City Treasurer (per MRSA 30-A, Part 2, Sub Para 9, Ch. 221, Sec. 5602-5604).\n(9) Recreation Director.\n(10) General Assistance Administrator - MRSA, Title 22, Ch. 1161, Sec. 4301 No. 12.\n(11) Finance Director.","reassembled":"This section's body (list (a)-(c), with a nested (1)-(11)) appeared displaced after Sec. 3's intro clause in the source PDF; reattached here by content — it concerns appointment of officers, matching this section's heading, not Sec. 3's City Clerk topic.","isDivider":false},{"corpus":"charter","id":"art-X-sec-2","group":"X","groupLabel":"Article X: Departments, Offices or Agencies","citation":"Art. X, Sec. 2","heading":"Sec. 2. (Reserved)","tag":null,"text":"","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-X-sec-3","group":"X","groupLabel":"Article X: Departments, Offices or Agencies","citation":"Art. X, Sec. 3","heading":"Sec. 3. City Clerk.","tag":null,"text":"The Mayor and City Council may enter into an employment contract with the City Clerk for a term not to exceed three years. The City Clerk shall be nominated by the Mayor and confirmed by the City Council. The salary and compensation of the City Clerk shall be established by the City Council. The City Clerk shall be the Clerk of the City Council and shall:\n(a) Give notice in a local newspaper of the time and place of regular and special Council meetings on Friday prior to the week of such meetings. The agenda for City Council meetings shall appear in local media sources and shall be posted on the City bulletin board, at least 24 hours in advance;\n(b) Keep a record of the proceedings of the City Council;\n(c) Record the votes of members by yeas and nays;\n(d) Perform the specific election duties enumerated in the Charter;\n(e) Review the format of all referendum questions in order to determine compliance with provisions in this Charter and applicable State Laws;\n(f) Provide educational materials to unenrolled voters advising them of their right to run for office, and guidelines for enrolling and voting;\n(g) Perform all other duties enacted by State Law and/or City Ordinances.","reassembled":"List (a)-(g) of Clerk duties appeared displaced after Sec. 8 in the source PDF, split across a page break; reattached here where the intro clause ('...and shall:') points to it.","isDivider":false},{"corpus":"charter","id":"art-X-sec-4","group":"X","groupLabel":"Article X: Departments, Offices or Agencies","citation":"Art. X, Sec. 4","heading":"Sec. 4. Finance Director.","tag":null,"text":"The Finance Director shall:\n(a) Be a nonvoting member of the Finance Committee;\n(b) Direct and supervise the accounts and bookkeeping of the City;\n(c) Designate the appropriation and the department for all bills and claims and certify that they are in proper form and legal for presentation to the Finance Committee or for a warrant for the Mayor's signature;\n(d) Cause to be prepared and submitted annually by an independent auditor to the Mayor and the City Council a report on the receipts, expenditures, property holdings, debts and liabilities of the City;\n(e) Perform any other duties outlined in State Law and/or City Ordinances and prepare other reports as assigned by the Mayor, City Council, or the City Manager.","reassembled":"List (a)-(e) appeared displaced after Sec. 8 in the source PDF; reattached here where the intro clause ('...shall:') points to it.","isDivider":false},{"corpus":"charter","id":"art-X-sec-5","group":"X","groupLabel":"Article X: Departments, Offices or Agencies","citation":"Art. X, Sec. 5","heading":"Sec. 5. City Assessor.","tag":"Amended 11-8-2016","text":"The powers and duties of the Assessor are prescribed by State Law, M.R.S.A., Title 36, Ch. 101, Property within the City shall be revaluated by a total City wide assessment, which includes all residential and commercial properties.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-X-sec-6","group":"X","groupLabel":"Article X: Departments, Offices or Agencies","citation":"Art. X, Sec. 6","heading":"Sec. 6. General Assistance Administrator.","tag":null,"text":"The General Assistance Administrator is subject to the supervision of the Municipal Officers. The powers and duties of this position are prescribed by State Law.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-X-sec-7","group":"X","groupLabel":"Article X: Departments, Offices or Agencies","citation":"Art. X, Sec. 7","heading":"Sec. 7. Harbor Master.","tag":null,"text":"The Harbor Master shall implement the river and harbor regulations emanating from the City Council, and such other duties as the City Council may prescribe.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-X-sec-8","group":"X","groupLabel":"Article X: Departments, Offices or Agencies","citation":"Art. X, Sec. 8","heading":"Sec. 8. Organizational powers.","tag":null,"text":"The Mayor and City Council shall have the power by Ordinance for the organization, conduct, and operation of the departments, agencies, officers, and boards/committees/commissions of the City; and for the creation of additional departments, agencies, officers, and boards/committees/commissions; and/or for the alteration, abolition, assignment, or reassignment of all such departments, divisions, agencies, offices and boards/committees/commissions.","reassembled":"This section's closing words ('and boards/committees/commissions.') were separated from the rest of the sentence by a page break and the Sec. 3 / Sec. 4 lists in the source PDF; rejoined here.","isDivider":false},{"corpus":"charter","id":"art-X-sec-9","group":"X","groupLabel":"Article X: Departments, Offices or Agencies","citation":"Art. X, Sec. 9","heading":"Sec. 9. Civil service rule.","tag":null,"text":"The Mayor and City Council shall provide by Ordinance for a system of civil services rules for the appointment, promotion, demotion, lay-off, reinstatement, suspension, or removal of City employees not covered by union contracts.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-X-sec-10","group":"X","groupLabel":"Article X: Departments, Offices or Agencies","citation":"Art. X, Sec. 10","heading":"Sec. 10. Remuneration of appointees.","tag":null,"text":"The Mayor and City Council shall fix by order the remuneration of the appointees of the Mayor and City Council.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-X-sec-11","group":"X","groupLabel":"Article X: Departments, Offices or Agencies","citation":"Art. X, Sec. 11","heading":"Sec. 11. Duties.","tag":null,"text":"The duties of the Administrative Officers shall be prescribed by the appointive power, but such duties shall not be inconsistent with this Charter or any Ordinance enacted by the City Council as provided herein.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-X-sec-12","group":"X","groupLabel":"Article X: Departments, Offices or Agencies","citation":"Art. X, Sec. 12","heading":"Sec. 12. Continuity of office.","tag":null,"text":"Any and all Administrative Officers and employees of the City of Biddeford on the effective date of this Charter shall continue in such capacity until a successor is appointed and qualified as provided herein, unless sooner removed by the appointive power as designated herein.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-XI","group":"XI","groupLabel":"Article XI: Business and Financial Provisions","citation":"Art. XI","heading":"Article XI: Business and Financial Provisions","text":"","isDivider":true},{"corpus":"charter","id":"art-XI-sec-1","group":"XI","groupLabel":"Article XI: Business and Financial Provisions","citation":"Art. XI, Sec. 1","heading":"Sec. 1. The City Council Finance Committee.","tag":null,"text":"The Finance Committee shall be comprised of the Mayor, Council President and two other members of the City Council; one Council member being nominated by the Council President and confirmed by the City Council, the other being nominated by the Mayor and confirmed by the City Council. In addition, the Finance Director and the City Manager shall be nonvoting members.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-XI-sec-2","group":"XI","groupLabel":"Article XI: Business and Financial Provisions","citation":"Art. XI, Sec. 2","heading":"Sec. 2. Budget Committee.","tag":null,"text":"(a) There shall be a Budget Committee convened annually, not later than the first week in March which shall review and propose the Municipal and School Department budgets for the ensuing fiscal year.\n(b) The Budget Committee shall be comprised of the entire City Council. The Mayor shall serve as Chair and shall vote only in case of a tie. The City Manager and the Finance Director shall serve as nonvoting staff members to the Committee.\n(c) The Budget shall be submitted to the City Council in two parts, one by the City Manager and one by the Superintendent of Schools. The proposed budget shall be submitted by the Superintendent of Schools in the format outlined in Article V, Section 4.\n(d) The Budget Committee shall, at the latest, by the first Monday in May each year, submit to the City Council a budget showing the proposed expenditures for the various departments, other principal or subordinate departments and a contingent fund.\n(e) A summary of a proposed budget shall be published at least once in a local newspaper of general circulation within the City within 14 days following submission to the City Council.\n(f) The City Council may, before adopting the annual appropriation resolve, make appropriations for current department expenses; however, these appropriations will be included in the annual appropriation resolve.\n(g) At least one public hearing shall be held on the City budget prior to its adoption by the City Council.\n(h) The City budget shall be adopted by the City Council prior to the beginning of the next fiscal year.\n(i) Capital Improvement Program. The City Manager and School Committee shall submit to the Budget Committee, Mayor and City Council a Capital Improvement 5-Year Budget Plan at the second regular meeting of the City Council in November of each year. Annually, during the budget process, the City shall appropriate at least five hundredths of one percent (0.05%) of the previous fiscal year's total taxable valuation for the sole purpose of funding the capital improvements. Should the City Council make a determination that unusual circumstances prevent funding at this level; the City Council may override this requirement. To override the requirement, at least six members of the Council must vote in favor of an override order. Said order shall include the determination and explanation of the unusual circumstances. [Added 11-8-2016]","reassembled":"This section's body (list (a)-(i)) appeared displaced after Sec. 3's intro clause in the source PDF; reattached here — content matches this section's heading, not Sec. 3's Appropriation resolve topic.","isDivider":false},{"corpus":"charter","id":"art-XI-sec-3","group":"XI","groupLabel":"Article XI: Business and Financial Provisions","citation":"Art. XI, Sec. 3","heading":"Sec. 3. Appropriation resolve.","tag":"Amended 11-8-2016","text":"The City Council shall adopt the annual appropriation resolve for the current fiscal year. Such resolve shall appropriate those amounts deemed necessary for general City purposes and for a contingent fund.\n\nThere shall be no subsequent expenditures authorized for any purpose; however, funds may be transferred from one department to another, the contingent fund, or other source of income, provided the resolution authorizing the transfer is adopted by a 2/3rds vote of the full membership of the City Council and the vote is recorded.","reassembled":"This section's closing paragraph was separated from its opening paragraph by the Sec. 2 list in the source PDF; rejoined here.","isDivider":false},{"corpus":"charter","id":"art-XI-sec-4","group":"XI","groupLabel":"Article XI: Business and Financial Provisions","citation":"Art. XI, Sec. 4","heading":"Sec. 4. Accounts and records.","tag":null,"text":"Accounts and records shall be supervised by the Finance Director, showing transactions of all departments included in the budget of the City, the Fire Department, the Police Department, and the School Department. A general accounting system for the budget shall be recommended by the Finance Director and approved by the Municipal Officers. Accounts shall be kept in such a manner as to show fully at all times the financial condition of the City.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-XI-sec-5","group":"XI","groupLabel":"Article XI: Business and Financial Provisions","citation":"Art. XI, Sec. 5","heading":"Sec. 5. Fiscal year.","tag":null,"text":"The fiscal year of the City shall be July first through June thirtieth of the ensuing year.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-XI-sec-6","group":"XI","groupLabel":"Article XI: Business and Financial Provisions","citation":"Art. XI, Sec. 6","heading":"Sec. 6. Borrowing.","tag":null,"text":"Money may be borrowed, within the limits fixed by the Constitution and Statutes of the State, now or hereafter applying to the City of Biddeford, by the issue and sale of bonds or notes pledged on the credit of the City, the proceeds to be used for the acquisition of land, the construction, reconstruction, major alterations, extraordinary repairs, the equipment of buildings and other permanent public improvements, the purchase of department equipment, and the payment or refunding of bonds, notes, and certificates of indebtedness previously issued.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-XI-sec-7","group":"XI","groupLabel":"Article XI: Business and Financial Provisions","citation":"Art. XI, Sec. 7","heading":"Sec. 7. Payments.","tag":null,"text":"Money shall be paid only in warrants on the City Treasury examined by the City Finance Director and signed by the Mayor. The Finance Director shall examine all payrolls, bills, and other claims and demands against the City and shall issue no warrant for payment until satisfied that the claim is in proper form, correctly computed, duly certified, and legally due and payable.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-XI-sec-8","group":"XI","groupLabel":"Article XI: Business and Financial Provisions","citation":"Art. XI, Sec. 8","heading":"Sec. 8. Collection and custody of City monies.","tag":null,"text":"All monies received by any officer, employee, or agent of the City belonging to the City, or for or in connection with the business of the City, shall forthwith be paid by the officer, employee, or agent receiving the same into the City Treasury, and shall then be deposited with a federally insured financial institution or institutions to be chosen by the City Council. All interest from all deposits of money belonging to the City shall accrue to the benefit of the City.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-XI-sec-9","group":"XI","groupLabel":"Article XI: Business and Financial Provisions","citation":"Art. XI, Sec. 9","heading":"Sec. 9. Contributions.","tag":"Added 11-8-2016","text":"The City may invest, lend or otherwise contribute to any private entity for the purposes of assisting that private entity. If there is no exchange of any goods or services, the entity receiving the funds shall provide an annual report to the City regarding the use of the funds which shall be available to the public within 14 days following submission of the proposed budget to the City Council.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-XII","group":"XII","groupLabel":"Article XII: Miscellaneous Provisions","citation":"Art. XII","heading":"Article XII: Miscellaneous Provisions","text":"","isDivider":true},{"corpus":"charter","id":"art-XII-sec-1","group":"XII","groupLabel":"Article XII: Miscellaneous Provisions","citation":"Art. XII, Sec. 1","heading":"Sec. 1. No personal interest.","tag":"Amended 11-6-2012; 11-8-2016","text":"Neither the Mayor, nor any member of the City Council, School Committee or board, committee or commission thereof and no officer, agent or employee of the City or School Committee, or immediate family member of a City or School Department employee shall:\n(a) Have a substantial financial interest, direct or indirect, in any contract entered into by or on behalf of the City of Biddeford, or the School Committee, except a personal employment contract, or in the sale to or by the City, or School Committee of any land, materials, supplies or services, when such officer, agent, employee or member exercises on behalf of the City, or School Committee any function or responsibility with respect to such contract or sale. All contracts or sales made in violation thereof are void, and the City Finance Director is expressly forbidden to pay any money out of the City Treasury on account of any such transaction.\n(b) Purchase or accept anything from the City, or School Committee, other than those items or services which are offered to the public generally, and then only upon the same terms and under the same procedures offered to and used for the general public. This shall not include those items or services which are received as compensation, or as a part of such person's employment contract, or which are necessary for the performance of such person's duties.\n(c) Accept or receive from any person, firm, or corporation acting under a franchise, contract, or license from the City or School Committee, any frank, free pass, free ticket, or free service, or accept, directly or indirectly, from any such person, firm, or corporation any service upon terms more favorable than those granted to the public generally.","reassembled":"List (a)-(c) appeared after Sec. 5 in the source PDF; reattached here where the intro clause ('...shall:') points to it.","isDivider":false},{"corpus":"charter","id":"art-XII-sec-2","group":"XII","groupLabel":"Article XII: Miscellaneous Provisions","citation":"Art. XII, Sec. 2","heading":"Sec. 2. Ordinances, orders, resolves.","tag":null,"text":"All ordinances, orders, or resolves in force at the time that this Charter takes effect, not inconsistent with this Charter, shall continue in force until amended or repealed. All rules and regulations of the Municipal Officers, or of any office of the City of Biddeford in force at the time that this Charter takes effect, not inconsistent with the provisions thereof, shall continue in force until amended or repealed.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-XII-sec-3","group":"XII","groupLabel":"Article XII: Miscellaneous Provisions","citation":"Art. XII, Sec. 3","heading":"Sec. 3. Continuity of actions.","tag":null,"text":"All rights, actions, proceedings, prosecutions and contracts of the City, or any of its boards, committees, commissions or departments, pending or unexecuted when this Charter goes into effect, and not inconsistent therewith, shall be enforced, continued, or completed in all respects as though begun or executed hereunder.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-XII-sec-4","group":"XII","groupLabel":"Article XII: Miscellaneous Provisions","citation":"Art. XII, Sec. 4","heading":"Sec. 4. General meetings of citizens.","tag":"Amended 11-8-2016","text":"General meetings of the citizens qualified to vote in the City affairs may from time to time be held to consult upon the public good, to instruct their representatives, and to take all lawful measures to obtain redress of any grievances according to the right secured to the people by the Constitution of this State; and such meetings may and shall be duly warned by the City Council, upon the requisition of 100 qualified voters of said City. A moderator shall be selected by majority vote of the citizens attending the meeting.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-XII-sec-5","group":"XII","groupLabel":"Article XII: Miscellaneous Provisions","citation":"Art. XII, Sec. 5","heading":"Sec. 5. Tidal right-of-way.","tag":null,"text":"Any highway, town way, or bridge which has been, or may hereafter be, located within the City between high and low mark shall nevertheless be deemed to be legally located and established.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-XII-sec-6","group":"XII","groupLabel":"Article XII: Miscellaneous Provisions","citation":"Art. XII, Sec. 6","heading":"Sec. 6. Revision of Charter.","tag":"Amended 11-6-2012","text":"The Charter may be changed in matters of form and substance only by a duly elected Charter Revision Commission consisting of nine members selected as follows: Seven members, one elected from each ward and two appointed by the Mayor and confirmed by the City Council, who shall serve in accordance with 30-A M.R.S.A, §§ 2101-2106, as amended. A candidate for the Charter Revision Commission shall be a resident of the City of Biddeford for at least six months prior to the date on/or before which nomination papers are to be filed. Charter Revision Commission members may not hold another elected office within the City.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-XII-sec-7","group":"XII","groupLabel":"Article XII: Miscellaneous Provisions","citation":"Art. XII, Sec. 7","heading":"Sec. 7. Referendum guidelines.","tag":null,"text":"All issues decided by referendum shall be binding on the City Council and not merely advisory. All referendum questions are to be decided at a general election or special election called for the purpose of voting on the referendum. All referendum questions shall be limited to one part questions and be stated in the affirmative.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-XII-sec-8","group":"XII","groupLabel":"Article XII: Miscellaneous Provisions","citation":"Art. XII, Sec. 8","heading":"Sec. 8. City boards/commissions/committee meetings.","tag":null,"text":"All meetings of the City of Biddeford shall be duly posted on the central bulletin board of City Hall, at least 24 hours prior to the meeting.\n\n(a) Bond issues. No order providing for the issue of bonds pledged on the credit of the City of Biddeford shall be passed without notice of the same having been posted in a public place in the City of Biddeford and published at least once in a local newspaper of general circulation in the City of Biddeford not later than 14 days before final action of the City Council. No authorization provided for the issue of such bonds shall take effect until ratified by a majority of the voters voting thereon at a general or special election. A question seeking voter approval of the issue of such bonds shall be accompanied by a statement setting forth estimates of the total cost of such bonds, total interest, total length of term and projected effect on the mil rate. Tax anticipation notes are exempted from this provision.\n\n(b) Citizen initiated referendum.\n(1) Groups, organizations or individuals circulating petitions must clearly indicate at the top of each and every petition sheet who the group, persons or entity is and the purpose of the petition.\n(2) Fifteen percent of registered voters in the City of Biddeford at the time of filing of the petition must sign a petition to bring matters to a referendum.\n(3) A copy of the petition must be registered with the City Clerk at the commencement of the petition drive. The petitioners will have 30 calendar days from the date of filing to gather signatures. The petitions must be submitted to the City Clerk by the 30th day.\n(4) All referendum questions are to be decided by a majority vote at a general election or special election called for the purpose of voting on the referendum.","reassembled":"The (a) Bond issues and (b) Citizen initiated referendum sub-sections appeared after Sec. 9 in the source PDF; reattached here where the opening sentence introduces this section's topic.","isDivider":false},{"corpus":"charter","id":"art-XII-sec-9","group":"XII","groupLabel":"Article XII: Miscellaneous Provisions","citation":"Art. XII, Sec. 9","heading":"Sec. 9. Residency requirement.","tag":"Amended 11-6-2012","text":"Any and all members of boards, committees and commissions nominated by the Mayor shall be residents of the City of Biddeford for at least six months prior to their appointment, and must be domiciled in the City of Biddeford throughout their term.","reassembled":null,"isDivider":false},{"corpus":"charter","id":"art-XII-sec-10","group":"XII","groupLabel":"Article XII: Miscellaneous Provisions","citation":"Art. XII, Sec. 10","heading":"Sec. 10. Code of Ethics.","tag":"Added 11-8-2016","text":"The City shall maintain an ordinance (to be adopted within six months) establishing a Code of Ethics for all elected and appointed City Officials.","reassembled":null,"isDivider":false}]}</script>
+<script>
+(function(){
+  "use strict";
+  var DATA = JSON.parse(document.getElementById('charter-data').textContent);
+  var sections = DATA.sections;
+  var groups = DATA.groups;
+  var meta = DATA.meta;
+  var CORPUS_KEYS = Object.keys(meta.corpora);
+  var PAGE_SIZE = 40;
+
+  // ---------- header meta ----------
+  var totalSections = CORPUS_KEYS.reduce(function(n,k){ return n + meta.corpora[k].sectionCount; }, 0);
+  var seenSources = {};
+  var sourceLinks = [];
+  CORPUS_KEYS.forEach(function(k){
+    var c = meta.corpora[k];
+    if(seenSources[c.sourceUrl]) return;
+    seenSources[c.sourceUrl] = true;
+    sourceLinks.push('<a href="' + c.sourceUrl + '" target="_blank" rel="noopener">' + c.sourceLabel + '</a>');
+  });
+  document.getElementById('header-meta').innerHTML =
+    'Sources: ' + sourceLinks.join(' · ') + '<br>' +
+    totalSections + ' sections across ' + CORPUS_KEYS.length + ' documents';
+  document.getElementById('data-quality-text').innerHTML =
+    CORPUS_KEYS.map(function(k){
+      var c = meta.corpora[k];
+      var badge = c.dataQuality === 'hand-verified'
+        ? '<span class="quality-badge verified">hand-verified</span>'
+        : '<span class="quality-badge auto">auto-parsed</span>';
+      return '<strong>' + c.label + '</strong> ' + badge + ' — as of ' + c.asOf + ', ' + c.sectionCount + ' sections.';
+    }).join('<br>');
+
+  // ---------- theme ----------
+  var root = document.documentElement;
+  function applyTheme(choice){
+    if(choice === 'auto'){ root.removeAttribute('data-theme'); } else { root.setAttribute('data-theme', choice); }
+    document.querySelectorAll('.theme-toggle button').forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.themeChoice === choice)); });
+    try{ localStorage.setItem('biddeford-code-theme', choice); }catch(e){}
+  }
+  document.querySelectorAll('.theme-toggle button').forEach(function(b){ b.addEventListener('click', function(){ applyTheme(b.dataset.themeChoice); }); });
+  applyTheme((function(){ try{ return localStorage.getItem('biddeford-code-theme') || 'auto'; }catch(e){ return 'auto'; } })());
+
+  // ---------- document tabs ----------
+  var docTabs = document.getElementById('doc-tabs');
+  function tabHtml(key, label, count, quality){
+    var badge = quality ? (quality === 'hand-verified'
+      ? '<span class="quality-badge verified">verified</span>'
+      : '<span class="quality-badge auto">auto</span>') : '';
+    return '<button class="doc-tab" data-corpus="' + key + '">' + label + ' <span class="count">' + count + '</span>' + badge + '</button>';
+  }
+  docTabs.innerHTML =
+    tabHtml('', 'All Documents', totalSections, null) +
+    CORPUS_KEYS.map(function(k){ return tabHtml(k, meta.corpora[k].short, meta.corpora[k].sectionCount, meta.corpora[k].dataQuality); }).join('');
+
+  // ---------- state ----------
+  var state = { q: '', sort: 'charter', corpus: '', group: '', reassembledOnly: false, page: 1 };
+
+  function parseURL(){
+    var p = new URLSearchParams(location.search);
+    state.q = p.get('q') || '';
+    state.sort = p.get('sort') || 'charter';
+    state.corpus = p.get('doc') || '';
+    state.group = p.get('grp') || '';
+    state.reassembledOnly = p.get('stitched') === '1';
+  }
+  function syncURL(){
+    var p = new URLSearchParams();
+    if(state.q) p.set('q', state.q);
+    if(state.sort !== 'charter') p.set('sort', state.sort);
+    if(state.corpus) p.set('doc', state.corpus);
+    if(state.group) p.set('grp', state.group);
+    if(state.reassembledOnly) p.set('stitched', '1');
+    var qs = p.toString();
+    history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
+  }
+
+  var searchInput = document.getElementById('search');
+  var sortSelect = document.getElementById('sort');
+  var groupSelect = document.getElementById('group-filter');
+  var reassembledCheckbox = document.getElementById('reassembled-only');
+  var reassembledWrap = document.getElementById('reassembled-wrap');
+  var tocEl = document.getElementById('toc');
+  var tocGroupsEl = document.getElementById('toc-groups');
+  var mobileToggle = document.getElementById('mobile-toc-toggle');
+
+  function rebuildGroupControls(){
+    var scoped = state.corpus ? groups.filter(function(g){ return g.corpus === state.corpus; }) : groups;
+
+    groupSelect.innerHTML = '<option value="">' + (state.corpus ? 'All chapters/articles' : 'Select a document first') + '</option>' +
+      scoped.map(function(g){ return '<option value="' + g.corpus + '::' + g.group + '">' + g.label + '</option>'; }).join('');
+    groupSelect.disabled = !state.corpus;
+
+    if(!state.corpus){
+      tocGroupsEl.innerHTML = '<p style="font-size:12px; color:var(--river-dim); padding:8px 10px;">Choose a document above to browse by chapter/article.</p>';
+    } else {
+      var byCorpus = {};
+      scoped.forEach(function(g){ (byCorpus[g.corpus] = byCorpus[g.corpus] || []).push(g); });
+      tocGroupsEl.innerHTML = Object.keys(byCorpus).map(function(ck){
+        return '<ul>' + byCorpus[ck].map(function(g){
+          return '<li><button data-group="' + g.corpus + '::' + g.group + '"><span>' + g.label + '</span><span class="n">' + g.count + '</span></button></li>';
+        }).join('') + '</ul>';
+      }).join('');
+      tocGroupsEl.querySelectorAll('button[data-group]').forEach(function(btn){
+        btn.addEventListener('click', function(){ setGroupFilter(btn.dataset.group); });
+      });
+    }
+  }
+
+  function setCorpusFilter(corpus){
+    state.corpus = corpus;
+    state.group = '';
+    state.page = 1;
+    document.querySelectorAll('.doc-tab').forEach(function(b){ b.classList.toggle('active', b.dataset.corpus === corpus); });
+    reassembledWrap.classList.toggle('hidden', corpus !== 'charter' && corpus !== '');
+    rebuildGroupControls();
+    render();
+    syncURL();
+  }
+
+  function setGroupFilter(group){
+    state.group = group;
+    state.page = 1;
+    groupSelect.value = group;
+    tocGroupsEl.querySelectorAll('button[data-group]').forEach(function(b){ b.classList.toggle('active', b.dataset.group === group); });
+    if(window.innerWidth <= 860){ tocEl.classList.remove('open'); mobileToggle.setAttribute('aria-expanded','false'); }
+    render();
+    syncURL();
+  }
+
+  docTabs.addEventListener('click', function(e){
+    var btn = e.target.closest('.doc-tab');
+    if(btn) setCorpusFilter(btn.dataset.corpus);
+  });
+  document.getElementById('toc-reset').addEventListener('click', function(){ setGroupFilter(''); });
+  document.getElementById('toc-reset').addEventListener('keydown', function(e){ if(e.key==='Enter') setGroupFilter(''); });
+  groupSelect.addEventListener('change', function(){ setGroupFilter(groupSelect.value); });
+  mobileToggle.addEventListener('click', function(){
+    var open = tocEl.classList.toggle('open');
+    mobileToggle.setAttribute('aria-expanded', String(open));
+  });
+
+  searchInput.addEventListener('input', function(){ state.q = searchInput.value; state.page = 1; render(); syncURL(); });
+  sortSelect.addEventListener('change', function(){ state.sort = sortSelect.value; state.page = 1; render(); syncURL(); });
+  reassembledCheckbox.addEventListener('change', function(){ state.reassembledOnly = reassembledCheckbox.checked; state.page = 1; render(); syncURL(); });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === '/' && document.activeElement !== searchInput){ e.preventDefault(); searchInput.focus(); }
+    if(e.key === 'Escape' && document.activeElement === searchInput){ searchInput.value=''; state.q=''; state.page=1; render(); syncURL(); searchInput.blur(); }
+  });
+
+  // ---------- search / sort / filter ----------
+  function escapeRe(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+  function score(rec, q){
+    var heading = rec.heading.toLowerCase(), citation = rec.citation.toLowerCase(), text = (rec.text||'').toLowerCase();
+    var inH = heading.indexOf(q) > -1, inC = citation.indexOf(q) > -1, inT = text.indexOf(q) > -1;
+    if(!inH && !inC && !inT) return -1;
+    var wordRe = new RegExp('\\b' + escapeRe(q) + '\\b', 'i');
+    var s = 0;
+    if(inH) s += 100 + (wordRe.test(rec.heading) ? 30 : 0);
+    if(inC) s += 50 + (wordRe.test(rec.citation) ? 15 : 0);
+    if(inT) s += 10 + (wordRe.test(rec.text) ? 5 : 0);
+    return s;
+  }
+  function escapeHtml(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function highlight(text, q){
+    if(!q) return escapeHtml(text);
+    return escapeHtml(text).replace(new RegExp('(' + escapeRe(q) + ')', 'ig'), '<mark>$1</mark>');
+  }
+
+  var CORPUS_SHORT = {};
+  CORPUS_KEYS.forEach(function(k){ CORPUS_SHORT[k] = meta.corpora[k].short; });
+
+  var resultsEl = document.getElementById('results');
+  var countEl = document.getElementById('result-count');
+
+  function computeList(){
+    var q = state.q.trim().toLowerCase();
+    var list = sections;
+
+    if(state.corpus){ list = list.filter(function(r){ return r.corpus === state.corpus; }); }
+    if(state.group){
+      var parts = state.group.split('::');
+      list = list.filter(function(r){ return r.corpus === parts[0] && r.group === parts[1]; });
+    }
+    if(state.reassembledOnly){ list = list.filter(function(r){ return !!r.reassembled; }); }
+
+    if(q){
+      list = list.map(function(r){ return { r: r, s: score(r, q) }; })
+                 .filter(function(x){ return x.s >= 0; })
+                 .sort(function(a,b){ return b.s - a.s; })
+                 .map(function(x){ return x.r; });
+    } else if(state.sort === 'az'){
+      list = list.filter(function(r){ return !r.isDivider; }).slice().sort(function(a,b){ return a.heading.localeCompare(b.heading); });
+    } else if(state.sort === 'len'){
+      list = list.filter(function(r){ return !r.isDivider; }).slice().sort(function(a,b){ return (b.text||'').length - (a.text||'').length; });
+    }
+    return list;
+  }
+
+  function cardHtml(r, q){
+    if(r.isDivider){
+      return '<article class="card divider" id="' + r.id + '"><h2>' + escapeHtml(r.heading) + '</h2></article>';
+    }
+    var tagHtml = r.tag ? '<span class="tag">' + escapeHtml(r.tag) + '</span>' : '';
+    var stitchHtml = r.reassembled
+      ? '<span class="stitch-badge" tabindex="0" title="' + escapeHtml(r.reassembled) + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h4M10 12h4M16 12h4" stroke-dasharray="2 3"/></svg>stitched</span>'
+      : '';
+    var bodyHtml = q ? highlight(r.text, q) : escapeHtml(r.text);
+    var breadcrumbHtml = r.breadcrumb ? '<div class="breadcrumb">' + escapeHtml(r.breadcrumb) + '</div>' : '';
+    return (
+      '<article class="card" id="' + r.id + '">' +
+        '<div class="card-top">' +
+          '<span class="citation-row"><span class="corpus-chip">' + CORPUS_SHORT[r.corpus] + '</span><span class="citation">' + escapeHtml(r.citation) + '</span></span>' +
+          '<span class="badges">' + tagHtml + stitchHtml + '</span>' +
+        '</div>' +
+        breadcrumbHtml +
+        '<h3 class="heading">' + (q ? highlight(r.heading, q) : escapeHtml(r.heading)) + '</h3>' +
+        '<div class="body-text">' + (bodyHtml || '<em>No text on file.</em>') + '</div>' +
+        (r.reassembled ? '<div class="reassembled-note">🧵 ' + escapeHtml(r.reassembled) + '</div>' : '') +
+        '<div class="card-foot"><button class="copy-link" data-id="' + r.id + '">copy link</button></div>' +
+      '</article>'
+    );
+  }
+
+  function render(){
+    searchInput.value = state.q;
+    sortSelect.value = state.sort;
+    sortSelect.disabled = !!state.q.trim();
+    reassembledCheckbox.checked = state.reassembledOnly;
+
+    var full = computeList();
+    var q = state.q.trim().toLowerCase();
+    countEl.textContent = full.length + (full.length === 1 ? ' result' : ' results');
+
+    if(full.length === 0){
+      resultsEl.innerHTML = '<div class="empty">No sections match. Try a different term, or clear filters.</div>';
+      return;
+    }
+
+    var shown = full.slice(0, state.page * PAGE_SIZE);
+    var html = shown.map(function(r){ return cardHtml(r, q); }).join('');
+
+    if(shown.length < full.length){
+      html += '<div class="load-more-wrap"><button class="load-more" id="load-more">Show ' + Math.min(PAGE_SIZE, full.length - shown.length) + ' more (' + (full.length - shown.length) + ' remaining)</button></div>';
+    }
+
+    resultsEl.innerHTML = html;
+
+    var loadMoreBtn = document.getElementById('load-more');
+    if(loadMoreBtn){ loadMoreBtn.addEventListener('click', function(){ state.page += 1; render(); }); }
+
+    resultsEl.querySelectorAll('.copy-link').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var url = location.origin + location.pathname + location.search + '#' + btn.dataset.id;
+        navigator.clipboard && navigator.clipboard.writeText(url).then(function(){
+          var old = btn.textContent; btn.textContent = 'copied ✓';
+          setTimeout(function(){ btn.textContent = old; }, 1400);
+        });
+      });
+    });
+    resultsEl.querySelectorAll('.stitch-badge').forEach(function(b){
+      b.addEventListener('click', function(){ b.closest('article').classList.toggle('show-note'); });
+      b.addEventListener('keydown', function(e){ if(e.key==='Enter'){ b.closest('article').classList.toggle('show-note'); } });
+    });
+  }
+
+  parseURL();
+  rebuildGroupControls();
+  document.querySelectorAll('.doc-tab').forEach(function(b){ b.classList.toggle('active', b.dataset.corpus === state.corpus); });
+  reassembledWrap.classList.toggle('hidden', state.corpus !== 'charter' && state.corpus !== '');
+  if(state.group){
+    groupSelect.value = state.group;
+    tocGroupsEl.querySelectorAll('button[data-group]').forEach(function(b){ b.classList.toggle('active', b.dataset.group === state.group); });
+  }
+  render();
+  if(location.hash){
+    var el = document.getElementById(location.hash.slice(1));
+    if(el){ setTimeout(function(){ el.scrollIntoView({block:'start'}); }, 80); }
+  }
+})();
+</script>
+</body>
+</html>

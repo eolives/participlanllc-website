@@ -1,0 +1,49 @@
+{
+  "name": "biddeford-charter-code",
+  "version": "0.1.0",
+  "description": "MCP server for the City of Biddeford, ME City Charter",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai-assistant",
+    "biddeford",
+    "maine",
+    "civic-tech",
+    "open-government",
+    "city-charter",
+    "municipal-law",
+    "legal"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "biddeford-charter-code": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "data/index"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "prepare": "npm run build",
+    "build-index": "node scripts/build-index.js",
+    "build-site": "node scripts/build-site.js",
+    "build-quiz": "node scripts/build-quiz.js",
+    "pretest": "npm run build",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

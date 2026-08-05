@@ -33,8 +33,10 @@ jobs:
           node-version: "20"
 
       - name: Merge this attempt into the stats file
+        working-directory: biddeford-charter-code
         env:
           QUIZ_PAYLOAD: ${{ toJSON(github.event.client_payload) }}
+          DOCS_STATS_PATH: ${{ github.workspace }}/projects/biddeford-charter/stats.json
         run: node scripts/update-quiz-stats.js
 
       - name: Commit and push if the stats file changed

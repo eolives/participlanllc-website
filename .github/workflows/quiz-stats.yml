@@ -48,7 +48,6 @@ jobs:
             echo "No changes to commit (this shouldn't normally happen — every accepted attempt changes totalAttempts)."
             exit 0
           fi
-          git add data/stats/quiz-stats.json docs/stats.json
           git commit -m "Quiz stats: +1 attempt"
           # Pull-rebase-push retry loop, in case another run in this queued
           # group pushed between our checkout and our push.

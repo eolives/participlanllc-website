@@ -1,8 +1,12 @@
 {
-  "totalAttempts": 1,
-  "lastUpdated": "2026-08-05T21:38:53.933Z",
+  "totalAttempts": 2,
+  "lastUpdated": "2026-08-06T22:53:47.671Z",
   "questions": {
     "2": {
+      "seen": 2,
+      "correct": 2
+    },
+    "10": {
       "seen": 1,
       "correct": 1
     },
@@ -14,15 +18,39 @@
       "seen": 1,
       "correct": 1
     },
+    "19": {
+      "seen": 1,
+      "correct": 1
+    },
     "20": {
       "seen": 1,
       "correct": 1
     },
     "24": {
+      "seen": 2,
+      "correct": 2
+    },
+    "25": {
+      "seen": 1,
+      "correct": 1
+    },
+    "26": {
+      "seen": 1,
+      "correct": 1
+    },
+    "27": {
       "seen": 1,
       "correct": 1
     },
     "31": {
+      "seen": 1,
+      "correct": 1
+    },
+    "38": {
+      "seen": 1,
+      "correct": 1
+    },
+    "39": {
       "seen": 1,
       "correct": 1
     },
@@ -39,33 +67,33 @@
       "correct": 1
     },
     "50": {
-      "seen": 1,
-      "correct": 1
+      "seen": 2,
+      "correct": 2
     }
   },
   "themes": {
     "1": {
-      "seen": 2,
-      "correct": 2
+      "seen": 4,
+      "correct": 4
     },
     "2": {
-      "seen": 2,
-      "correct": 2
+      "seen": 4,
+      "correct": 4
     },
     "3": {
-      "seen": 2,
-      "correct": 2
+      "seen": 4,
+      "correct": 4
     },
     "4": {
-      "seen": 2,
-      "correct": 2
+      "seen": 4,
+      "correct": 4
     },
     "5": {
-      "seen": 2,
-      "correct": 2
+      "seen": 4,
+      "correct": 4
     }
   },
   "scoreDistribution": {
-    "10": 1
+    "10": 2
   }
 }

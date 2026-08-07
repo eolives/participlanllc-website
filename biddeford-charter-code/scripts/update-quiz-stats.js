@@ -20,8 +20,8 @@ import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
-const STATS_PATH = join(ROOT, "data", "stats", "quiz-stats.json");
-const DOCS_STATS_PATH = join(ROOT, "docs", "stats.json");
+const STATS_PATH = process.env.STATS_PATH || join(ROOT, "data", "stats", "quiz-stats.json");
+const DOCS_STATS_PATH = process.env.DOCS_STATS_PATH || join(ROOT, "docs", "stats.json");
 const QUESTIONS_PATH = join(ROOT, "data", "source", "quiz-questions.json");
 
 function fail(msg) {

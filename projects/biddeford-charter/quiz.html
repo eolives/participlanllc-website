@@ -445,7 +445,7 @@ function handleAnswer(q, chosenIdx){
   var hasData = !!(qStat && qStat.seen > 0);
   var pct = hasData ? Math.round((qStat.correct / qStat.seen) * 100) : 0;
   var statLineHtml = hasData
-    ? pct + '% of ' + (qStat.seen === 1 ? ' respondent' : ' respondents') + ' got this one right' +
+    ? pct + '% of respondents got this one right' +
       '<span class="stat-bar"><div style="width:' + pct + '%"></div></span>'
     : 'No data yet for this question — be one of the first to answer it.';
 

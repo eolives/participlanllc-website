@@ -382,18 +382,6 @@ async function renderLanding(){
       '<p class="live-stat" id="live-stat"></p>' +
     '</div>';
   document.getElementById('start-btn').addEventListener('click', startQuiz);
-  var statEl = document.getElementById('live-stat');
-  if(realStats && realStats.totalAttempts > 0){
-    statEl.innerHTML = realStats.totalAttempts + (realStats.totalAttempts === 1 ? ' person has' : ' people have') +
-      ' taken this quiz. <a href="?stats=1">See full stats →</a>';
-  } else {
-    var totalStarts = await readStat('quiz:totalStarts');
-    if(totalStarts.seen > 0){
-      statEl.textContent = (sharedAvailable ? '' : '(this device) ') + totalStarts.seen + (totalStarts.seen === 1 ? ' person has' : ' people have') + ' taken this quiz so far.';
-    } else {
-      statEl.textContent = 'Be the first to take this quiz today.';
-    }
-  }
 }
 
 async function startQuiz(){

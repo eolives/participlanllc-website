@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Biddeford Municipal Code — Explorer</title>
-<meta name="description" content="Searchable, sortable copy of the City of Biddeford, ME City Charter.">
+<meta name="description" content="A resident's copy of the city's founding law - searchable, article by article.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -158,7 +158,7 @@
   .tag{ font-family: var(--mono); font-size: 10.5px; color: var(--gold); border: 1px solid color-mix(in srgb, var(--gold) 55%, transparent); border-radius: 999px; padding: 2px 8px; }
   h3.heading{ font-family: var(--display); font-weight:500; font-size: 18px; margin: 2px 0 10px; color: var(--ink); }
   .body-text{ white-space: pre-line; font-size: 15.5px; color: var(--charcoal); }
-  .body-text mark{ background: color-mix(in srgb, var(--gold) 35%, transparent); color: inherit; border-radius:2px; padding:0 1px; }
+  mark, .body-text mark{ background: color-mix(in srgb, var(--gold) 35%, transparent); color: inherit; border-radius:2px; padding:0 1px; }
   .card-foot{ margin-top: 12px; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
   .copy-link{ all:unset; cursor:pointer; font-family: var(--mono); font-size: 11px; color: var(--river-dim); border-bottom: 1px dotted var(--river-dim); }
   .copy-link:hover{ color:var(--river); }
@@ -166,6 +166,57 @@
   article.card.show-note .reassembled-note{ display:block; }
 
   .load-more-wrap{ display:flex; justify-content:center; padding: 12px 0 30px; }
+
+  /* ---------- compare picks (browse mode) ---------- */
+  .card.picked{ border-color: var(--gold); box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold) 55%, transparent), var(--shadow); }
+  .compare-toggle{ all:unset; cursor:pointer; font-family: var(--mono); font-size: 11px; color: var(--river-dim); border: 1px solid var(--rule-strong); border-radius: 999px; padding: 3px 10px; }
+  .compare-toggle:hover{ border-color: var(--river); color: var(--river); }
+  .compare-toggle.active{ background: color-mix(in srgb, var(--gold) 18%, transparent); border-color: var(--gold); color: var(--gold); }
+  .compare-bar{
+    position: fixed; left:50%; bottom: -80px; transform: translateX(-50%);
+    display:flex; align-items:center; gap:12px;
+    background: var(--ink); color: var(--paper); border-radius: 999px;
+    padding: 10px 12px 10px 18px; box-shadow: var(--shadow-lg, 0 10px 28px -10px rgba(0,0,0,0.4));
+    font-family: var(--mono); font-size: 12.5px; z-index: 40;
+    transition: bottom .25s ease;
+  }
+  .compare-bar.show{ bottom: 26px; }
+  .btn-mini{ all:unset; cursor:pointer; font-family: var(--mono); font-size: 12px; background: var(--paper); color: var(--ink); border-radius: 999px; padding: 7px 14px; }
+  .btn-mini.secondary{ background: transparent; color: var(--paper); border: 1px solid rgba(240,233,218,0.4); }
+
+  /* ---------- compare mode (separate page/tab) ---------- */
+  body.compare-mode .doc-tabs, body.compare-mode .controls, body.compare-mode .layout, body.compare-mode .compare-bar, body.compare-mode .mobile-toc-toggle{ display:none !important; }
+  #compare-root{ display:none; max-width: 1500px; margin: 0 auto; padding: 24px clamp(16px,3vw,32px) 70px; }
+  body.compare-mode #compare-root{ display:block; }
+  .compare-header{ margin-bottom: 22px; }
+  .compare-header h1{ font-family: var(--display); font-weight:700; font-size: clamp(22px,4.5vw,28px); margin:0 0 6px; color: var(--ink); }
+  .compare-header p{ font-size:14px; color: var(--river-dim); margin:0; }
+  .compare-row{ display:flex; gap:16px; align-items:flex-start; overflow-x:auto; padding-bottom: 16px; }
+  .compare-col{
+    flex: 0 0 380px; background: var(--paper-raised); border:1px solid var(--rule); border-radius: var(--radius);
+    box-shadow: var(--shadow); padding: 18px 20px; max-height: calc(100vh - 230px); overflow-y:auto;
+  }
+  .compare-col-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:8px; }
+  .compare-col .corpus-chip{ margin-bottom:4px; display:inline-block; }
+  .compare-col .citation{ display:block; margin-top:2px; }
+  .compare-col .remove-col{ all:unset; cursor:pointer; font-family: var(--mono); font-size:17px; line-height:1; color: var(--river-dim); padding: 2px 7px; border-radius:5px; flex:none; }
+  .compare-col .remove-col:hover{ color: var(--brick); background: var(--rule); }
+  .compare-col h3{ font-family: var(--display); font-weight:500; font-size:17px; margin: 6px 0 12px; color: var(--ink); }
+  .compare-col .body-text{ white-space: pre-line; font-size: 14.5px; color: var(--charcoal); }
+  .compare-add{
+    flex: 0 0 340px; min-height: 200px; border: 1.5px dashed var(--rule-strong); border-radius: var(--radius);
+    display:flex; align-items:center; justify-content:center; padding: 16px;
+  }
+  .compare-add .add-trigger{ all:unset; cursor:pointer; font-family: var(--mono); font-size:14px; color: var(--river-dim); padding: 14px 20px; text-align:center; }
+  .compare-add .add-trigger:hover{ color: var(--river); }
+  .compare-picker{ width:100%; }
+  .compare-picker input{ width:100%; padding:9px 12px; border-radius: var(--radius); border:1px solid var(--rule-strong); background: var(--paper); font-family: var(--body); font-size:14px; margin-bottom:10px; }
+  .compare-picker-results{ max-height: 280px; overflow-y:auto; display:flex; flex-direction:column; gap:4px; }
+  .compare-picker-results button{ all:unset; cursor:pointer; display:block; padding:8px 10px; border-radius:4px; font-size:12.5px; color: var(--charcoal); }
+  .compare-picker-results button:hover{ background: var(--rule); }
+  .compare-picker-results .pr-cite{ font-family: var(--mono); font-size:10.5px; color: var(--brick); margin-right:6px; }
+  .compare-empty{ text-align:center; padding: 60px 20px; color: var(--river-dim); font-family: var(--mono); font-size:13px; }
+
   .load-more{ all:unset; cursor:pointer; font-family: var(--mono); font-size: 12.5px; color: var(--ink); border: 1px solid var(--rule-strong); border-radius: 999px; padding: 10px 20px; background: var(--paper-raised); }
   .load-more:hover{ border-color: var(--river); color: var(--river); }
 
@@ -194,7 +245,7 @@
       <div class="seal" aria-hidden="true">CB<br></div>
       <div>
         <h1 class="wordmark">Biddeford Municipal Code</h1>
-        <p class="tagline">A resident's copy of the city's founding law — searchable, article by article.</p>
+        <p class="tagline">Charter, Code of Ordinances, Land Development Regulations, and the state Home Rule statute — searchable, in one place.</p>
       </div>
     </div>
     <div style="display:flex; flex-direction:column; align-items:flex-end;">
@@ -210,7 +261,7 @@
   <div class="controls">
     <div class="search-wrap">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-      <input id="search" type="text" placeholder="Search…" autocomplete="off">
+      <input id="search" type="text" placeholder="Search…" autocomplete="off" title="Supports AND, OR, NOT (or -term), and &quot;exact phrases&quot;. e.g. mayor AND veto, budget OR ordinance, NOT election">
       <span class="kbd-hint">/</span>
     </div>
     <select id="sort">
@@ -235,10 +286,14 @@
   <main id="results" aria-live="polite"></main>
 </div>
 
+<div class="compare-bar" id="compare-bar"></div>
+
+<main id="compare-root"></main>
+
 <footer class="site">
   <div class="inner">
     <div class="seam" aria-hidden="true" style="margin-bottom:22px;"></div>
-    <p class="disclaimer">⚠️ For research and informational purposes only — not legal advice. City codes and state statutes are amended over time; always verify the current text at <a href="https://ecode360.com/BI3074" target="_blank" rel="noopener">ecode360.com/BI3074</a> (municipal code) before acting on any information. For legal, permitting, or zoning matters, consult a licensed attorney or the City of Biddeford directly.</p>
+    <p class="disclaimer">⚠️ For research and informational purposes only — not legal advice. City codes and state statutes are amended over time; always verify the current text at <a href="https://ecode360.com/BI3074" target="_blank" rel="noopener">ecode360.com/BI3074</a> (municipal code) or <a href="https://legislature.maine.gov/statutes/30-A/title30-Ach111sec0.html" target="_blank" rel="noopener">legislature.maine.gov</a> (Home Rule statute) before acting on any information. For legal, permitting, or zoning matters, consult a licensed attorney or the City of Biddeford directly.</p>
     <p id="data-quality-text"></p>
     <p>🏛️ New: test what you've learned with the <a href="quiz.html">Biddeford Charter Quiz</a> — ten random questions, five themes, and a civic title at the end.</p>
     <p>Built from the <a href="https://github.com/BetaNYC/nyc-charter-laws-rules" target="_blank" rel="noopener">nyc-charter-laws-rules</a> data model, adapted for Biddeford. Dashed "stitched" badges (Charter only) mark sections whose sub-lists were repositioned during transcription — hover or tap one for details.</p>
@@ -301,13 +356,13 @@
     CORPUS_KEYS.map(function(k){ return tabHtml(k, meta.corpora[k].short, meta.corpora[k].sectionCount, meta.corpora[k].dataQuality); }).join('');
 
   // ---------- state ----------
-  var state = { q: '', sort: 'charter', corpus: '', group: '', reassembledOnly: false, page: 1 };
+  var state = { q: '', sort: 'charter', corpora: [], group: '', reassembledOnly: false, page: 1, comparePicks: [] };
 
   function parseURL(){
     var p = new URLSearchParams(location.search);
     state.q = p.get('q') || '';
     state.sort = p.get('sort') || 'charter';
-    state.corpus = p.get('doc') || '';
+    state.corpora = (p.get('doc') || '').split(',').filter(Boolean);
     state.group = p.get('grp') || '';
     state.reassembledOnly = p.get('stitched') === '1';
   }
@@ -315,7 +370,7 @@
     var p = new URLSearchParams();
     if(state.q) p.set('q', state.q);
     if(state.sort !== 'charter') p.set('sort', state.sort);
-    if(state.corpus) p.set('doc', state.corpus);
+    if(state.corpora.length) p.set('doc', state.corpora.join(','));
     if(state.group) p.set('grp', state.group);
     if(state.reassembledOnly) p.set('stitched', '1');
     var qs = p.toString();
@@ -332,34 +387,45 @@
   var mobileToggle = document.getElementById('mobile-toc-toggle');
 
   function rebuildGroupControls(){
-    var scoped = state.corpus ? groups.filter(function(g){ return g.corpus === state.corpus; }) : groups;
+    var scoped = state.corpora.length ? groups.filter(function(g){ return state.corpora.indexOf(g.corpus) > -1; }) : groups;
 
-    groupSelect.innerHTML = '<option value="">' + (state.corpus ? 'All chapters/articles' : 'Select a document first') + '</option>' +
-      scoped.map(function(g){ return '<option value="' + g.corpus + '::' + g.group + '">' + g.label + '</option>'; }).join('');
-    groupSelect.disabled = !state.corpus;
+    groupSelect.innerHTML = '<option value="">All chapters/articles</option>' +
+      scoped.map(function(g){ return '<option value="' + g.corpus + '::' + g.group + '">[' + CORPUS_SHORT[g.corpus] + '] ' + g.label + '</option>'; }).join('');
+    groupSelect.disabled = false;
 
-    if(!state.corpus){
-      tocGroupsEl.innerHTML = '<p style="font-size:12px; color:var(--river-dim); padding:8px 10px;">Choose a document above to browse by chapter/article.</p>';
-    } else {
-      var byCorpus = {};
-      scoped.forEach(function(g){ (byCorpus[g.corpus] = byCorpus[g.corpus] || []).push(g); });
-      tocGroupsEl.innerHTML = Object.keys(byCorpus).map(function(ck){
-        return '<ul>' + byCorpus[ck].map(function(g){
+    var byCorpus = {};
+    scoped.forEach(function(g){ (byCorpus[g.corpus] = byCorpus[g.corpus] || []).push(g); });
+    var multiCorpus = Object.keys(byCorpus).length > 1;
+    tocGroupsEl.innerHTML = Object.keys(byCorpus).map(function(ck){
+      return (multiCorpus ? '<div class="toc-doc-label">' + escapeHtml(CORPUS_SHORT[ck]) + '</div>' : '') +
+        '<ul>' + byCorpus[ck].map(function(g){
           return '<li><button data-group="' + g.corpus + '::' + g.group + '"><span>' + g.label + '</span><span class="n">' + g.count + '</span></button></li>';
         }).join('') + '</ul>';
-      }).join('');
-      tocGroupsEl.querySelectorAll('button[data-group]').forEach(function(btn){
-        btn.addEventListener('click', function(){ setGroupFilter(btn.dataset.group); });
-      });
-    }
+    }).join('');
+    tocGroupsEl.querySelectorAll('button[data-group]').forEach(function(btn){
+      btn.addEventListener('click', function(){ setGroupFilter(btn.dataset.group); });
+    });
   }
 
-  function setCorpusFilter(corpus){
-    state.corpus = corpus;
+  // Document filter is multi-select: clicking "All Documents" clears the
+  // selection; clicking any other tab toggles that corpus in/out of
+  // state.corpora, so e.g. Ordinances + Land Dev can be searched together
+  // while Charter and Home Rule stay excluded.
+  function toggleCorpus(key){
+    if(key === ''){
+      state.corpora = [];
+    } else {
+      var idx = state.corpora.indexOf(key);
+      if(idx > -1) state.corpora.splice(idx, 1); else state.corpora.push(key);
+    }
     state.group = '';
     state.page = 1;
-    document.querySelectorAll('.doc-tab').forEach(function(b){ b.classList.toggle('active', b.dataset.corpus === corpus); });
-    reassembledWrap.classList.toggle('hidden', corpus !== 'charter' && corpus !== '');
+    document.querySelectorAll('.doc-tab').forEach(function(b){
+      var k = b.dataset.corpus;
+      var active = k === '' ? state.corpora.length === 0 : state.corpora.indexOf(k) > -1;
+      b.classList.toggle('active', active);
+    });
+    reassembledWrap.classList.toggle('hidden', state.corpora.length > 0 && state.corpora.indexOf('charter') === -1);
     rebuildGroupControls();
     render();
     syncURL();
@@ -377,7 +443,7 @@
 
   docTabs.addEventListener('click', function(e){
     var btn = e.target.closest('.doc-tab');
-    if(btn) setCorpusFilter(btn.dataset.corpus);
+    if(btn) toggleCorpus(btn.dataset.corpus);
   });
   document.getElementById('toc-reset').addEventListener('click', function(){ setGroupFilter(''); });
   document.getElementById('toc-reset').addEventListener('keydown', function(e){ if(e.key==='Enter') setGroupFilter(''); });
@@ -396,23 +462,113 @@
     if(e.key === 'Escape' && document.activeElement === searchInput){ searchInput.value=''; state.q=''; state.page=1; render(); syncURL(); searchInput.blur(); }
   });
 
+  // ---------- compare picks + floating bar ----------
+  var compareBarEl = document.getElementById('compare-bar');
+  function toggleComparePick(corpus, id){
+    var idx = state.comparePicks.findIndex(function(p){ return p.corpus === corpus && p.id === id; });
+    if(idx > -1) state.comparePicks.splice(idx, 1);
+    else state.comparePicks.push({ corpus: corpus, id: id });
+    renderCompareBar();
+    render();
+  }
+  function compareUrl(){
+    var items = state.comparePicks.map(function(p){ return p.corpus + '::' + p.id; }).join(',');
+    return location.pathname + '?compare=1' + (items ? '&items=' + encodeURIComponent(items) : '');
+  }
+  function renderCompareBar(){
+    if(!state.comparePicks.length){ compareBarEl.classList.remove('show'); compareBarEl.innerHTML=''; return; }
+    compareBarEl.classList.add('show');
+    compareBarEl.innerHTML =
+      '<span>' + state.comparePicks.length + ' selected for comparison</span>' +
+      '<button class="btn-mini" id="compare-open">Compare →</button>' +
+      '<button class="btn-mini secondary" id="compare-clear">Clear</button>';
+    document.getElementById('compare-open').addEventListener('click', function(){ window.open(compareUrl(), '_blank'); });
+    document.getElementById('compare-clear').addEventListener('click', function(){ state.comparePicks = []; renderCompareBar(); render(); });
+  }
+
   // ---------- search / sort / filter ----------
   function escapeRe(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
-  function score(rec, q){
+
+  // Boolean query syntax: bare words are implicitly AND'd; OR starts a new
+  // alternative group ("mayor AND veto OR council" -> [[mayor,veto],[council]]);
+  // NOT / a leading "-" negates the next term; "quoted phrases" match as a
+  // single unit. A record matches if ANY group's conditions are ALL satisfied
+  // (i.e. the query is evaluated as an OR of AND-groups) — this covers the
+  // common cases people actually type without needing full parenthesized
+  // boolean expressions.
+  function parseQuery(raw){
+    var re = /(-)?"([^"]*)"|(\bNOT\b)|(-)?(\S+)/gi;
+    var m, groups = [[]];
+    while((m = re.exec(raw))){
+      var negate, value, isPhrase;
+      if(m[2] !== undefined){
+        negate = !!m[1]; value = m[2].trim(); isPhrase = true;
+      } else if(m[3] !== undefined){
+        // standalone NOT applies to whatever term/phrase comes right after it
+        var re2 = /(-)?"([^"]*)"|(-)?(\S+)/g;
+        re2.lastIndex = re.lastIndex;
+        var m2 = re2.exec(raw);
+        if(!m2) continue;
+        re.lastIndex = re2.lastIndex;
+        if(m2[2] !== undefined){ value = m2[2].trim(); isPhrase = true; }
+        else { value = m2[4]; isPhrase = false; }
+        negate = true;
+      } else {
+        var word = m[5];
+        var upper = word.toUpperCase();
+        if(!m[4] && upper === 'OR'){ groups.push([]); continue; }
+        if(!m[4] && upper === 'AND'){ continue; }
+        negate = !!m[4]; value = word; isPhrase = false;
+      }
+      if(!value) continue;
+      groups[groups.length-1].push({ value: value.toLowerCase(), negate: negate, phrase: isPhrase });
+    }
+    return groups.filter(function(g){ return g.length > 0; });
+  }
+
+  function scoreGroup(rec, group){
     var heading = rec.heading.toLowerCase(), citation = rec.citation.toLowerCase(), text = (rec.text||'').toLowerCase();
-    var inH = heading.indexOf(q) > -1, inC = citation.indexOf(q) > -1, inT = text.indexOf(q) > -1;
-    if(!inH && !inC && !inT) return -1;
-    var wordRe = new RegExp('\\b' + escapeRe(q) + '\\b', 'i');
     var s = 0;
-    if(inH) s += 100 + (wordRe.test(rec.heading) ? 30 : 0);
-    if(inC) s += 50 + (wordRe.test(rec.citation) ? 15 : 0);
-    if(inT) s += 10 + (wordRe.test(rec.text) ? 5 : 0);
+    for(var i=0;i<group.length;i++){
+      var cond = group[i];
+      var inH = heading.indexOf(cond.value) > -1;
+      var inC = citation.indexOf(cond.value) > -1;
+      var inT = text.indexOf(cond.value) > -1;
+      var present = inH || inC || inT;
+      if(cond.negate){
+        if(present) return -1;
+        continue;
+      }
+      if(!present) return -1;
+      var wordRe = new RegExp('\\b' + escapeRe(cond.value) + '\\b', 'i');
+      if(inH) s += 100 + (wordRe.test(rec.heading) ? 30 : 0);
+      if(inC) s += 50 + (wordRe.test(rec.citation) ? 15 : 0);
+      if(inT) s += 10 + (wordRe.test(rec.text) ? 5 : 0);
+    }
     return s;
   }
+
+  function scoreRecord(rec, groups){
+    var best = -1;
+    for(var i=0;i<groups.length;i++){
+      var s = scoreGroup(rec, groups[i]);
+      if(s > best) best = s;
+    }
+    return best;
+  }
+
+  function positiveTerms(groups){
+    var seen = {}, out = [];
+    groups.forEach(function(g){ g.forEach(function(c){ if(!c.negate && !seen[c.value]){ seen[c.value] = true; out.push(c.value); } }); });
+    return out;
+  }
+
   function escapeHtml(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
-  function highlight(text, q){
-    if(!q) return escapeHtml(text);
-    return escapeHtml(text).replace(new RegExp('(' + escapeRe(q) + ')', 'ig'), '<mark>$1</mark>');
+  function highlight(text, terms){
+    if(!terms || !terms.length) return escapeHtml(text);
+    var pattern = terms.map(escapeRe).sort(function(a,b){ return b.length - a.length; }).join('|');
+    if(!pattern) return escapeHtml(text);
+    return escapeHtml(text).replace(new RegExp('(' + pattern + ')', 'ig'), '<mark>$1</mark>');
   }
 
   var CORPUS_SHORT = {};
@@ -422,10 +578,10 @@
   var countEl = document.getElementById('result-count');
 
   function computeList(){
-    var q = state.q.trim().toLowerCase();
+    var q = state.q.trim();
     var list = sections;
 
-    if(state.corpus){ list = list.filter(function(r){ return r.corpus === state.corpus; }); }
+    if(state.corpora.length){ list = list.filter(function(r){ return state.corpora.indexOf(r.corpus) > -1; }); }
     if(state.group){
       var parts = state.group.split('::');
       list = list.filter(function(r){ return r.corpus === parts[0] && r.group === parts[1]; });
@@ -433,7 +589,8 @@
     if(state.reassembledOnly){ list = list.filter(function(r){ return !!r.reassembled; }); }
 
     if(q){
-      list = list.map(function(r){ return { r: r, s: score(r, q) }; })
+      var groups = parseQuery(q);
+      list = list.map(function(r){ return { r: r, s: scoreRecord(r, groups) }; })
                  .filter(function(x){ return x.s >= 0; })
                  .sort(function(a,b){ return b.s - a.s; })
                  .map(function(x){ return x.r; });
@@ -445,7 +602,7 @@
     return list;
   }
 
-  function cardHtml(r, q){
+  function cardHtml(r, terms){
     if(r.isDivider){
       return '<article class="card divider" id="' + r.id + '"><h2>' + escapeHtml(r.heading) + '</h2></article>';
     }
@@ -453,19 +610,23 @@
     var stitchHtml = r.reassembled
       ? '<span class="stitch-badge" tabindex="0" title="' + escapeHtml(r.reassembled) + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h4M10 12h4M16 12h4" stroke-dasharray="2 3"/></svg>stitched</span>'
       : '';
-    var bodyHtml = q ? highlight(r.text, q) : escapeHtml(r.text);
+    var bodyHtml = terms.length ? highlight(r.text, terms) : escapeHtml(r.text);
     var breadcrumbHtml = r.breadcrumb ? '<div class="breadcrumb">' + escapeHtml(r.breadcrumb) + '</div>' : '';
+    var picked = state.comparePicks.some(function(p){ return p.corpus === r.corpus && p.id === r.id; });
     return (
-      '<article class="card" id="' + r.id + '">' +
+      '<article class="card' + (picked ? ' picked' : '') + '" id="' + r.id + '">' +
         '<div class="card-top">' +
           '<span class="citation-row"><span class="corpus-chip">' + CORPUS_SHORT[r.corpus] + '</span><span class="citation">' + escapeHtml(r.citation) + '</span></span>' +
           '<span class="badges">' + tagHtml + stitchHtml + '</span>' +
         '</div>' +
         breadcrumbHtml +
-        '<h3 class="heading">' + (q ? highlight(r.heading, q) : escapeHtml(r.heading)) + '</h3>' +
+        '<h3 class="heading">' + (terms.length ? highlight(r.heading, terms) : escapeHtml(r.heading)) + '</h3>' +
         '<div class="body-text">' + (bodyHtml || '<em>No text on file.</em>') + '</div>' +
         (r.reassembled ? '<div class="reassembled-note">🧵 ' + escapeHtml(r.reassembled) + '</div>' : '') +
-        '<div class="card-foot"><button class="copy-link" data-id="' + r.id + '">copy link</button></div>' +
+        '<div class="card-foot">' +
+          '<button class="copy-link" data-id="' + r.id + '">copy link</button>' +
+          '<button class="compare-toggle' + (picked ? ' active' : '') + '" data-corpus="' + r.corpus + '" data-id="' + r.id + '">' + (picked ? '✓ added to compare' : '+ compare') + '</button>' +
+        '</div>' +
       '</article>'
     );
   }
@@ -477,7 +638,8 @@
     reassembledCheckbox.checked = state.reassembledOnly;
 
     var full = computeList();
-    var q = state.q.trim().toLowerCase();
+    var q = state.q.trim();
+    var terms = q ? positiveTerms(parseQuery(q)) : [];
     countEl.textContent = full.length + (full.length === 1 ? ' result' : ' results');
 
     if(full.length === 0){
@@ -486,7 +648,7 @@
     }
 
     var shown = full.slice(0, state.page * PAGE_SIZE);
-    var html = shown.map(function(r){ return cardHtml(r, q); }).join('');
+    var html = shown.map(function(r){ return cardHtml(r, terms); }).join('');
 
     if(shown.length < full.length){
       html += '<div class="load-more-wrap"><button class="load-more" id="load-more">Show ' + Math.min(PAGE_SIZE, full.length - shown.length) + ' more (' + (full.length - shown.length) + ' remaining)</button></div>';
@@ -510,20 +672,154 @@
       b.addEventListener('click', function(){ b.closest('article').classList.toggle('show-note'); });
       b.addEventListener('keydown', function(e){ if(e.key==='Enter'){ b.closest('article').classList.toggle('show-note'); } });
     });
+    resultsEl.querySelectorAll('.compare-toggle').forEach(function(btn){
+      btn.addEventListener('click', function(){ toggleComparePick(btn.dataset.corpus, btn.dataset.id); });
+    });
   }
 
-  parseURL();
-  rebuildGroupControls();
-  document.querySelectorAll('.doc-tab').forEach(function(b){ b.classList.toggle('active', b.dataset.corpus === state.corpus); });
-  reassembledWrap.classList.toggle('hidden', state.corpus !== 'charter' && state.corpus !== '');
-  if(state.group){
-    groupSelect.value = state.group;
-    tocGroupsEl.querySelectorAll('button[data-group]').forEach(function(b){ b.classList.toggle('active', b.dataset.group === state.group); });
+  function initBrowse(){
+    parseURL();
+    rebuildGroupControls();
+    document.querySelectorAll('.doc-tab').forEach(function(b){
+      var k = b.dataset.corpus;
+      var active = k === '' ? state.corpora.length === 0 : state.corpora.indexOf(k) > -1;
+      b.classList.toggle('active', active);
+    });
+    reassembledWrap.classList.toggle('hidden', state.corpora.length > 0 && state.corpora.indexOf('charter') === -1);
+    if(state.group){
+      groupSelect.value = state.group;
+      tocGroupsEl.querySelectorAll('button[data-group]').forEach(function(b){ b.classList.toggle('active', b.dataset.group === state.group); });
+    }
+    render();
+    if(location.hash){
+      var el = document.getElementById(location.hash.slice(1));
+      if(el){ setTimeout(function(){ el.scrollIntoView({block:'start'}); }, 80); }
+    }
   }
-  render();
-  if(location.hash){
-    var el = document.getElementById(location.hash.slice(1));
-    if(el){ setTimeout(function(){ el.scrollIntoView({block:'start'}); }, 80); }
+
+  // ---------- compare mode (rendered when ?compare=1 is present, meant to
+  // be opened in its own tab via the floating compare bar) ----------
+  function initCompare(){
+    var sectionById = {};
+    sections.forEach(function(r){ if(!r.isDivider) sectionById[r.corpus + '::' + r.id] = r; });
+
+    var items = [];
+    function loadItemsFromURL(){
+      var p = new URLSearchParams(location.search);
+      items = (p.get('items') || '').split(',').filter(Boolean).map(function(key){
+        var parts = key.split('::');
+        return { key: key, corpus: parts[0], id: parts.slice(1).join('::') };
+      }).filter(function(it){ return !!sectionById[it.corpus + '::' + it.id]; });
+    }
+    function syncCompareURL(){
+      var p = new URLSearchParams();
+      p.set('compare', '1');
+      if(items.length) p.set('items', items.map(function(it){ return it.key; }).join(','));
+      history.replaceState(null, '', location.pathname + '?' + p.toString());
+    }
+
+    var root = document.getElementById('compare-root');
+    var openPickerFor = null; // index of the add-tile currently showing its picker, or null
+
+    function renderCompare(){
+      var colsHtml = items.map(function(it, idx){
+        var r = sectionById[it.corpus + '::' + it.id];
+        return (
+          '<div class="compare-col">' +
+            '<div class="compare-col-top">' +
+              '<div><span class="corpus-chip">' + escapeHtml(CORPUS_SHORT[r.corpus] || r.corpus) + '</span><span class="citation">' + escapeHtml(r.citation) + '</span></div>' +
+              '<button class="remove-col" data-idx="' + idx + '" aria-label="Remove from comparison">×</button>' +
+            '</div>' +
+            '<h3>' + escapeHtml(r.heading) + '</h3>' +
+            '<div class="body-text">' + escapeHtml(r.text || '(no text on file)') + '</div>' +
+          '</div>'
+        );
+      }).join('');
+
+      var addTileHtml = '<div class="compare-add" id="compare-add-tile">' +
+        (openPickerFor === 'open'
+          ? '<div class="compare-picker">' +
+              '<input type="text" id="compare-picker-input" placeholder="Search a section to add…" autocomplete="off">' +
+              '<div class="compare-picker-results" id="compare-picker-results"></div>' +
+            '</div>'
+          : '<button class="add-trigger" id="compare-add-trigger">+ Add a section<br>to compare</button>') +
+        '</div>';
+
+      if(items.length === 0 && openPickerFor !== 'open'){
+        root.innerHTML =
+          '<div class="compare-header"><h1>Compare sections</h1><p>Pick two or more sections — from the same document or different ones — to view side by side.</p></div>' +
+          '<div class="compare-empty">Nothing selected yet.</div>' +
+          '<div class="compare-row">' + addTileHtml + '</div>';
+      } else {
+        root.innerHTML =
+          '<div class="compare-header"><h1>Compare sections</h1><p>' + items.length + ' section' + (items.length===1?'':'s') + ' selected. This view has its own URL, so it can be bookmarked or shared as-is.</p></div>' +
+          '<div class="compare-row">' + colsHtml + addTileHtml + '</div>';
+      }
+
+      root.querySelectorAll('.remove-col').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          items.splice(parseInt(btn.dataset.idx, 10), 1);
+          syncCompareURL();
+          renderCompare();
+        });
+      });
+
+      var trigger = document.getElementById('compare-add-trigger');
+      if(trigger){
+        trigger.addEventListener('click', function(){ openPickerFor = 'open'; renderCompare(); });
+      }
+      var pickerInput = document.getElementById('compare-picker-input');
+      if(pickerInput){
+        pickerInput.focus();
+        pickerInput.addEventListener('input', function(){ renderPickerResults(pickerInput.value); });
+        renderPickerResults('');
+      }
+    }
+
+    function renderPickerResults(q){
+      var resultsEl = document.getElementById('compare-picker-results');
+      if(!resultsEl) return;
+      var pool = sections.filter(function(r){ return !r.isDivider; });
+      var list;
+      if(q.trim()){
+        var groups = parseQuery(q.trim());
+        list = pool.map(function(r){ return { r: r, s: scoreRecord(r, groups) }; })
+                   .filter(function(x){ return x.s >= 0; })
+                   .sort(function(a,b){ return b.s - a.s; })
+                   .map(function(x){ return x.r; })
+                   .slice(0, 25);
+      } else {
+        list = pool.slice(0, 25);
+      }
+      list = list.filter(function(r){ return !items.some(function(it){ return it.corpus === r.corpus && it.id === r.id; }); });
+      if(!list.length){
+        resultsEl.innerHTML = '<p style="font-size:12px; color:var(--river-dim); padding:6px 4px;">No matches.</p>';
+        return;
+      }
+      resultsEl.innerHTML = list.map(function(r){
+        return '<button data-key="' + r.corpus + '::' + r.id + '"><span class="pr-cite">' + escapeHtml(r.citation) + '</span>' + escapeHtml(r.heading) + '</button>';
+      }).join('');
+      resultsEl.querySelectorAll('button').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          var key = btn.dataset.key;
+          var parts = key.split('::');
+          items.push({ key: key, corpus: parts[0], id: parts.slice(1).join('::') });
+          openPickerFor = null;
+          syncCompareURL();
+          renderCompare();
+        });
+      });
+    }
+
+    loadItemsFromURL();
+    renderCompare();
+  }
+
+  if(new URLSearchParams(location.search).get('compare') === '1'){
+    document.body.classList.add('compare-mode');
+    initCompare();
+  } else {
+    initBrowse();
   }
 })();
 </script>

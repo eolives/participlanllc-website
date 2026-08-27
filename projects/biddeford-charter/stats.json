@@ -1,6 +1,6 @@
 {
-  "totalAttempts": 7,
-  "lastUpdated": "2026-08-18T12:06:26.192Z",
+  "totalAttempts": 8,
+  "lastUpdated": "2026-08-27T17:38:36.555Z",
   "questions": {
     "1": {
       "seen": 1,
@@ -15,15 +15,15 @@
       "correct": 3
     },
     "4": {
+      "seen": 3,
+      "correct": 3
+    },
+    "5": {
       "seen": 2,
       "correct": 2
     },
-    "5": {
-      "seen": 1,
-      "correct": 1
-    },
     "6": {
-      "seen": 1,
+      "seen": 2,
       "correct": 1
     },
     "7": {
@@ -31,14 +31,18 @@
       "correct": 2
     },
     "9": {
-      "seen": 1,
-      "correct": 1
+      "seen": 2,
+      "correct": 2
     },
     "10": {
       "seen": 3,
       "correct": 3
     },
     "11": {
+      "seen": 2,
+      "correct": 1
+    },
+    "12": {
       "seen": 1,
       "correct": 1
     },
@@ -71,8 +75,8 @@
       "correct": 1
     },
     "23": {
-      "seen": 1,
-      "correct": 1
+      "seen": 2,
+      "correct": 2
     },
     "24": {
       "seen": 4,
@@ -119,16 +123,16 @@
       "correct": 3
     },
     "38": {
-      "seen": 1,
-      "correct": 1
+      "seen": 2,
+      "correct": 2
     },
     "39": {
       "seen": 1,
       "correct": 1
     },
     "41": {
-      "seen": 2,
-      "correct": 2
+      "seen": 3,
+      "correct": 3
     },
     "42": {
       "seen": 3,
@@ -143,8 +147,8 @@
       "correct": 1
     },
     "48": {
-      "seen": 2,
-      "correct": 2
+      "seen": 3,
+      "correct": 3
     },
     "49": {
       "seen": 2,
@@ -157,27 +161,28 @@
   },
   "themes": {
     "1": {
-      "seen": 14,
-      "correct": 14
+      "seen": 16,
+      "correct": 16
     },
     "2": {
-      "seen": 14,
-      "correct": 14
+      "seen": 16,
+      "correct": 15
     },
     "3": {
-      "seen": 14,
-      "correct": 14
+      "seen": 16,
+      "correct": 16
     },
     "4": {
-      "seen": 14,
-      "correct": 14
+      "seen": 16,
+      "correct": 15
     },
     "5": {
-      "seen": 14,
-      "correct": 14
+      "seen": 16,
+      "correct": 16
     }
   },
   "scoreDistribution": {
+    "8": 1,
     "10": 7
   }
 }

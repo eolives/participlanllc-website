@@ -1,6 +1,6 @@
 {
-  "totalAttempts": 25,
-  "lastUpdated": "2026-10-28T19:20:10.540Z",
+  "totalAttempts": 26,
+  "lastUpdated": "2026-10-28T23:56:55.129Z",
   "questions": {
     "1": {
       "seen": 3,
@@ -11,8 +11,8 @@
       "correct": 7
     },
     "3": {
-      "seen": 11,
-      "correct": 11
+      "seen": 12,
+      "correct": 12
     },
     "4": {
       "seen": 10,
@@ -23,8 +23,8 @@
       "correct": 10
     },
     "6": {
-      "seen": 4,
-      "correct": 3
+      "seen": 5,
+      "correct": 4
     },
     "7": {
       "seen": 7,
@@ -39,8 +39,8 @@
       "correct": 5
     },
     "10": {
-      "seen": 5,
-      "correct": 5
+      "seen": 6,
+      "correct": 6
     },
     "11": {
       "seen": 4,
@@ -51,16 +51,16 @@
       "correct": 1
     },
     "13": {
-      "seen": 1,
-      "correct": 1
+      "seen": 2,
+      "correct": 2
     },
     "14": {
       "seen": 5,
       "correct": 5
     },
     "15": {
-      "seen": 3,
-      "correct": 2
+      "seen": 4,
+      "correct": 3
     },
     "16": {
       "seen": 8,
@@ -95,12 +95,12 @@
       "correct": 5
     },
     "24": {
-      "seen": 11,
-      "correct": 8
+      "seen": 12,
+      "correct": 9
     },
     "25": {
-      "seen": 4,
-      "correct": 4
+      "seen": 5,
+      "correct": 5
     },
     "26": {
       "seen": 3,
@@ -155,8 +155,8 @@
       "correct": 4
     },
     "39": {
-      "seen": 3,
-      "correct": 3
+      "seen": 4,
+      "correct": 4
     },
     "40": {
       "seen": 1,
@@ -175,8 +175,8 @@
       "correct": 4
     },
     "44": {
-      "seen": 5,
-      "correct": 5
+      "seen": 6,
+      "correct": 6
     },
     "45": {
       "seen": 5,
@@ -199,30 +199,30 @@
       "correct": 9
     },
     "50": {
-      "seen": 8,
-      "correct": 7
+      "seen": 9,
+      "correct": 8
     }
   },
   "themes": {
     "1": {
-      "seen": 50,
-      "correct": 48
+      "seen": 52,
+      "correct": 50
     },
     "2": {
-      "seen": 50,
-      "correct": 44
-    },
-    "3": {
-      "seen": 50,
+      "seen": 52,
       "correct": 46
     },
+    "3": {
+      "seen": 52,
+      "correct": 48
+    },
     "4": {
-      "seen": 50,
-      "correct": 42
+      "seen": 52,
+      "correct": 44
     },
     "5": {
-      "seen": 50,
-      "correct": 47
+      "seen": 52,
+      "correct": 49
     }
   },
   "scoreDistribution": {
@@ -230,6 +230,6 @@
     "7": 1,
     "8": 3,
     "9": 9,
-    "10": 11
+    "10": 12
   }
 }
